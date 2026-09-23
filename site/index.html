@@ -1,0 +1,581 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carnet de lectures</title>
+<meta name="description" content="Tous les livres lus depuis 1988, par auteur, par année de lecture et par année de parution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Shippori+Mincho:wght@600;800&display=swap">
+<style>
+/* Estampe : papier washi, encre sumi, bleu de Prusse (Hokusai), vermillon du sceau */
+:root{
+  --washi:#F4ECDA;
+  --washi-2:#EADFC6;
+  --sumi:#1E1A17;
+  --sumi-2:#4A4038;
+  --ai:#1C3D63;         /* bleu de Prusse */
+  --ai-soft:#DCE3EA;
+  --shu:#B3322A;        /* vermillon du sceau */
+  --shu-ink:#FFF8EE;
+  --kaki:#B08A4A;       /* ocre des nuages */
+  --rule:#C9B999;
+  --focus:#B3322A;
+  --fs:21px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --washi:#101826; --washi-2:#18243A; --sumi:#F3E9D4; --sumi-2:#C8BDA6;
+    --ai:#9FC0E6; --ai-soft:#1F3150; --shu:#E0674F; --shu-ink:#1A0F0C;
+    --kaki:#C9A56A; --rule:#34466A; --focus:#F08A6E; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --washi:#101826; --washi-2:#18243A; --sumi:#F3E9D4; --sumi-2:#C8BDA6;
+  --ai:#9FC0E6; --ai-soft:#1F3150; --shu:#E0674F; --shu-ink:#1A0F0C;
+  --kaki:#C9A56A; --rule:#34466A; --focus:#F08A6E; color-scheme:dark;
+}
+:root.grand{--fs:25px}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--washi);color:var(--sumi);
+  font-family:"Atkinson Hyperlegible",Verdana,"Segoe UI",sans-serif;
+  font-size:var(--fs);line-height:1.5;
+  touch-action:manipulation;
+  padding-bottom:calc(112px + env(safe-area-inset-bottom,0px));
+}
+.mincho{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,serif}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:4px solid var(--focus);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding-inline:18px}
+
+/* --- En-tête : cartouche + sceau + vagues seigaiha --- */
+header.tete{position:relative;padding-block:18px 0}
+.ligne-tete{display:flex;align-items:center;gap:16px}
+.sceau{
+  flex:none;width:64px;height:64px;border-radius:8px;background:var(--shu);color:var(--shu-ink);
+  display:grid;place-items:center;font-size:40px;line-height:1;font-weight:800;
+  box-shadow:inset 0 0 0 3px var(--shu),inset 0 0 0 5px var(--shu-ink);
+}
+.cartouche h1{margin:0;font-size:1.65em;line-height:1.1;font-weight:800;text-wrap:balance}
+.cartouche p{margin:4px 0 0;color:var(--sumi-2);font-size:.86em}
+.taille{
+  margin-left:auto;flex:none;min-width:64px;min-height:64px;border-radius:14px;
+  border:2px solid var(--ai);background:transparent;color:var(--ai);font-weight:700;
+}
+.nami{display:block;width:100%;height:46px;margin-top:14px;color:var(--ai)}
+
+/* --- Titres de section --- */
+.titre-vue{display:flex;align-items:baseline;gap:12px;margin:22px 0 6px}
+.titre-vue h2{margin:0;font-size:1.35em;line-height:1.2;text-wrap:balance}
+.titre-vue .nb{color:var(--sumi-2);font-size:.85em;white-space:nowrap}
+.aide{margin:4px 0 16px;color:var(--sumi-2);font-size:.9em;max-width:60ch}
+
+/* --- Gros boutons --- */
+.retour{
+  display:flex;align-items:center;gap:12px;width:100%;min-height:68px;margin:16px 0 4px;
+  padding:0 18px;border-radius:14px;border:2px solid var(--sumi);background:var(--washi-2);
+  font-weight:700;text-align:left;
+}
+.retour svg{flex:none}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px;margin:8px 0 24px}
+.tuile{
+  min-height:88px;border-radius:14px;border:2px solid var(--ai);background:var(--washi);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px;
+}
+.tuile b{font-size:1.15em;color:var(--ai)}
+.tuile span{font-size:.8em;color:var(--sumi-2)}
+.tuile.lettre{min-height:76px}
+.tuile.lettre b{font-size:1.5em}
+.grille.lettres{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+
+/* --- Listes de livres (lignes d'encre, pas de cartes) --- */
+.livres{list-style:none;margin:0 0 24px;padding:0;border-top:2px solid var(--sumi)}
+.livres li{border-bottom:1px solid var(--rule)}
+.livre{
+  display:block;width:100%;min-height:76px;padding:14px 4px 14px 0;border:0;background:none;text-align:left;
+}
+.livre .t{display:block;font-size:1.08em;line-height:1.3;font-weight:800}
+.livre .a{display:block;color:var(--ai);font-weight:700;margin-top:2px}
+.livre .m{display:block;color:var(--sumi-2);font-size:.82em;margin-top:2px}
+.auteurs .livre .t{font-weight:700}
+.chip{
+  display:inline-block;font-size:.72em;font-weight:700;border-radius:999px;padding:2px 12px;margin-left:6px;
+  background:var(--shu);color:var(--shu-ink);vertical-align:.12em;
+}
+.chip.ai{background:var(--ai);color:var(--washi)}
+
+/* --- Recherche --- */
+.cherche{display:flex;flex-direction:column;gap:8px;margin:18px 0 8px}
+.cherche label{font-weight:700}
+.champ{
+  width:100%;min-height:68px;padding:12px 16px;border-radius:14px;border:2px solid var(--sumi);
+  background:var(--washi);font-size:1em;
+}
+
+/* --- Préférés --- */
+.pref{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:10px}
+.pref button{
+  width:100%;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 18px;border-radius:14px;border:2px solid var(--rule);background:var(--washi-2);text-align:left;font-weight:700;
+}
+.pref .n{color:var(--shu);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* --- Nouveautés --- */
+.nouv{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:16px}
+.nouv li{border:2px solid var(--sumi);border-radius:14px;padding:16px 18px;background:var(--washi)}
+.nouv .t{margin:0;font-size:1.12em;line-height:1.3;font-weight:800}
+.nouv .a{margin:2px 0 0;color:var(--ai);font-weight:700}
+.nouv .d{margin:6px 0 0;color:var(--sumi-2);font-size:.86em}
+.nouv .r{margin:6px 0 0;font-size:.86em}
+.nouv .lu{margin-top:12px}
+
+/* --- Boutons d'action --- */
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:68px;padding:10px 18px;
+  border-radius:14px;border:2px solid var(--ai);background:var(--ai);color:var(--washi);font-weight:700;text-align:center;
+}
+.btn.clair{background:transparent;color:var(--ai)}
+.btn.rouge{background:var(--shu);border-color:var(--shu);color:var(--shu-ink)}
+.btn.rouge-clair{background:transparent;border-color:var(--shu);color:var(--shu)}
+.pile{display:grid;gap:14px;margin:18px 0}
+
+/* --- Fiche livre et formulaire (plein écran, pas de petite croix) --- */
+.fiche{display:grid;gap:6px;margin:10px 0 8px;padding:18px 0;border-top:2px solid var(--sumi);border-bottom:2px solid var(--sumi)}
+.fiche h2{margin:0;font-size:1.45em;line-height:1.2;text-wrap:balance}
+.fiche .a{margin:0;color:var(--ai);font-weight:700;font-size:1.1em}
+.fiche dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:10px 0 0}
+.fiche dt{color:var(--sumi-2)}
+.fiche dd{margin:0;font-weight:700}
+.form{display:grid;gap:22px;margin:12px 0 24px}
+.form .f{display:grid;gap:8px}
+.form label,.form .lbl{font-weight:700}
+.stepper{display:grid;grid-template-columns:76px 1fr 76px;gap:12px;align-items:center}
+.stepper button{min-height:76px;border-radius:14px;border:2px solid var(--ai);background:var(--washi-2);color:var(--ai);font-size:1.6em;font-weight:700}
+.stepper output{text-align:center;font-size:1.5em;font-weight:800;font-variant-numeric:tabular-nums}
+.sugg{display:flex;flex-wrap:wrap;gap:10px}
+.sugg button{min-height:60px;padding:8px 16px;border-radius:999px;border:2px solid var(--rule);background:var(--washi-2);font-weight:700}
+.case{display:flex;align-items:center;gap:14px;min-height:64px}
+.case input{width:36px;height:36px;accent-color:var(--ai)}
+.note{padding:14px 16px;border-radius:14px;background:var(--ai-soft);font-size:.9em}
+.msg{padding:16px 18px;border-radius:14px;border:2px solid var(--shu);font-weight:700;margin:16px 0}
+.vide{padding:22px 0;color:var(--sumi-2)}
+
+/* --- Barre du bas : 4 onglets toujours visibles --- */
+nav.onglets{
+  position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--washi-2);
+  border-top:3px solid var(--sumi);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));
+}
+nav.onglets .in{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+nav.onglets button{
+  min-height:84px;border-radius:12px;border:2px solid transparent;background:transparent;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  font-size:.7em;font-weight:700;line-height:1.15;color:var(--sumi-2);padding:4px;
+}
+nav.onglets button svg{width:32px;height:32px}
+nav.onglets button[aria-current="page"]{background:var(--ai);color:var(--washi);border-color:var(--ai)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){ main{animation:app .25s ease-out} @keyframes app{from{opacity:.4}to{opacity:1}} }
+</style>
+
+<header class="tete">
+  <div class="wrap">
+    <div class="ligne-tete">
+      <div class="sceau mincho" aria-hidden="true">読</div>
+      <div class="cartouche">
+        <h1 class="mincho">Mes lectures</h1>
+        <p id="sous-titre">Le carnet depuis 1988</p>
+      </div>
+      <button class="taille" id="taille" aria-pressed="false" aria-label="Agrandir le texte">A+</button>
+    </div>
+  </div>
+  <svg class="nami" id="nami" aria-hidden="true" preserveAspectRatio="xMidYMax slice"></svg>
+</header>
+
+<main class="wrap" id="vue" tabindex="-1" aria-live="polite"></main>
+
+<nav class="onglets" aria-label="Rubriques">
+  <div class="in">
+    <button data-tab="lectures" aria-current="page">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="6" width="22" height="21" rx="2"/><path d="M5 12h22M11 3v6M21 3v6"/></svg>
+      Années de lecture</button>
+    <button data-tab="auteurs">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="16" cy="11" r="6"/><path d="M5 29c1-6 5.5-9 11-9s10 3 11 9"/></svg>
+      Auteurs</button>
+    <button data-tab="parution">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 5h14l6 6v16H6z"/><path d="M20 5v6h6M10 17h12M10 22h9"/></svg>
+      Années de parution</button>
+    <button data-tab="nouveautes">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M16 3l3.6 8 8.4.8-6.4 5.6 2 8.6L16 21.6 8.4 26l2-8.6L4 11.8l8.4-.8z"/></svg>
+      Nouveautés</button>
+  </div>
+</nav>
+
+<script>
+(() => {
+"use strict";
+const $ = s => document.querySelector(s);
+const vue = $("#vue");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const plain = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const ANNEE_COURANTE = new Date().getFullYear();
+
+let data = { livres: [] }, nouv = { maj: "", livres: [] };
+let etat = { tab: "lectures", ecran: null, arg: null, q: "" };
+let artifact = null, lectureSeule = false, message = "";
+
+/* ---------- Vagues seigaiha dessinées à la main (SVG) ---------- */
+function vagues() {
+  const svg = $("#nami"), w = 1200, h = 46, r = 22, pas = 44;
+  let out = "";
+  for (let rang = 0; rang < 3; rang++) {
+    const y = 14 + rang * 16, dec = rang % 2 ? pas / 2 : 0;
+    for (let x = -pas + dec; x < w + pas; x += pas) {
+      out += `<circle cx="${x}" cy="${y + r}" r="${r}" fill="var(--washi)" stroke="currentColor" stroke-width="2"/>`;
+      for (const k of [15, 9]) out += `<circle cx="${x}" cy="${y + r}" r="${k}" fill="none" stroke="currentColor" stroke-width="1.6"/>`;
+    }
+  }
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+  svg.innerHTML = out + `<line x1="0" y1="${h - 1}" x2="${w}" y2="${h - 1}" stroke="currentColor" stroke-width="2"/>`;
+}
+
+/* ---------- Données ---------- */
+const auteursDe = l => (l.auteur ? l.auteur.split(/\s+(?:&|et)\s+/) : ["Auteur inconnu"]);
+const PARTICULES = /^(de|d'|du|des|le|la|van|von|da|di|del|della|mc)$/i;
+function cleNom(nom) {
+  if (/^(collectif|écrivains|auteur inconnu|les restos)/i.test(nom)) return "~" + nom;
+  const m = nom.split(" ");
+  if (m.length === 1) return nom;
+  let i = m.length - 1;
+  while (i > 1 && PARTICULES.test(m[i - 1])) i--;
+  const nomFamille = m.slice(i).join(" ").replace(/^(d'|de |du |le |van |da |von )/i, "");
+  return nomFamille + " " + m.slice(0, i).join(" ");
+}
+function lettreDe(nom) { const c = plain(cleNom(nom))[0]; return c && /[a-z]/.test(c) ? c.toUpperCase() : "#"; }
+const anneeLecture = l => parseInt(l.lu, 10);
+function auteursIndex() {
+  const m = new Map();
+  for (const l of data.livres) for (const a of auteursDe(l)) { if (!m.has(a)) m.set(a, []); m.get(a).push(l); }
+  return m;
+}
+function metaLivre(l, sans) {
+  const p = [];
+  if (sans !== "lu") p.push("Lu en " + l.lu);
+  if (sans !== "paru") p.push(l.paru ? "Paru en " + l.paru : "Parution inconnue");
+  return p.join(" · ");
+}
+function ligneLivre(l, sans) {
+  return `<li><button class="livre" data-nav="livre" data-id="${esc(l.id)}">
+    <span class="t mincho">${esc(l.titre)}</span>
+    ${sans === "auteur" ? "" : `<span class="a">${esc(l.auteur || "Auteur inconnu")}</span>`}
+    <span class="m">${esc(metaLivre(l, sans))}</span></button></li>`;
+}
+const listeLivres = (ls, sans) => ls.length ? `<ul class="livres">${ls.map(l => ligneLivre(l, sans)).join("")}</ul>` : `<p class="vide">Aucun livre ici.</p>`;
+const pluriel = (n, s, p) => n + " " + (n > 1 ? (p || s + "s") : s);
+const retour = (txt, nav, arg) => `<button class="retour" data-nav="${nav}"${arg != null ? ` data-arg="${esc(arg)}"` : ""}>
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M18 6l-9 9 9 9"/></svg>${esc(txt)}</button>`;
+const titre = (t, nb) => `<div class="titre-vue"><h2 class="mincho">${esc(t)}</h2>${nb != null ? `<span class="nb">${esc(nb)}</span>` : ""}</div>`;
+const messageHTML = () => message ? `<p class="msg" role="status">${esc(message)}</p>` : "";
+const boutonAjout = () => artifact && !lectureSeule ? `<div class="pile"><button class="btn rouge" data-nav="ajout">+ Ajouter un livre lu</button></div>` : "";
+
+/* ---------- Écrans ---------- */
+function ecranLectures() {
+  if (etat.q.trim()) return ecranRecherche();
+  const parAnnee = new Map();
+  for (const l of data.livres) { if (!parAnnee.has(l.lu)) parAnnee.set(l.lu, []); parAnnee.get(l.lu).push(l); }
+  const annees = [...parAnnee.keys()].sort((a, b) => parseFloat(b) - parseFloat(a));
+  return `${messageHTML()}${boutonAjout()}
+  ${champRecherche()}
+  ${titre("Par année de lecture", pluriel(data.livres.length, "livre"))}
+  <p class="aide">Touchez une année pour voir les livres lus cette année-là.</p>
+  <div class="grille">${annees.map(a => `<button class="tuile" data-nav="annee" data-arg="${esc(a)}"><b>${esc(a)}</b><span>${pluriel(parAnnee.get(a).length, "livre")}</span></button>`).join("")}</div>`;
+}
+function champRecherche() {
+  return `<div class="cherche"><label for="q">Chercher un titre ou un auteur</label>
+  <input class="champ" id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="Par exemple : Modiano" value="${esc(etat.q)}"></div>`;
+}
+function ecranRecherche() {
+  const q = plain(etat.q.trim());
+  const res = data.livres.filter(l => plain(l.titre + " " + (l.auteur || "")).includes(q));
+  return `${champRecherche()}
+  <div class="pile"><button class="btn clair" data-nav="effacer">Effacer la recherche</button></div>
+  ${titre("Résultats", pluriel(res.length, "livre"))}${listeLivres(res)}`;
+}
+function ecranAnnee(a) {
+  const ls = data.livres.filter(l => l.lu === a);
+  return `${retour("Toutes les années", "tab", "lectures")}${titre("Lus en " + a, pluriel(ls.length, "livre"))}${listeLivres(ls, "lu")}`;
+}
+function ecranAuteurs() {
+  const idx = auteursIndex();
+  const pref = [...idx.entries()].filter(([a]) => !a.startsWith("~") && cleNom(a)[0] !== "~")
+    .sort((x, y) => y[1].length - x[1].length || cleNom(x[0]).localeCompare(cleNom(y[0]), "fr")).slice(0, 8);
+  const lettres = new Map();
+  for (const a of idx.keys()) { const L = lettreDe(a); lettres.set(L, (lettres.get(L) || 0) + 1); }
+  const Ls = [...lettres.keys()].sort((a, b) => a === "#" ? 1 : b === "#" ? -1 : a.localeCompare(b));
+  return `${titre("Auteurs", pluriel(idx.size, "auteur"))}
+  <p class="aide">Ses auteurs les plus lus :</p>
+  <ul class="pref">${pref.map(([a, ls]) => `<li><button data-nav="auteur" data-arg="${esc(a)}"><span>${esc(a)}</span><span class="n">${pluriel(ls.length, "livre")}</span></button></li>`).join("")}</ul>
+  <p class="aide">Ou touchez la première lettre du nom de famille :</p>
+  <div class="grille lettres">${Ls.map(L => `<button class="tuile lettre" data-nav="lettre" data-arg="${esc(L)}"><b>${L === "#" ? "Divers" : L}</b></button>`).join("")}</div>`;
+}
+function ecranLettre(L) {
+  const idx = auteursIndex();
+  const as = [...idx.keys()].filter(a => lettreDe(a) === L).sort((x, y) => cleNom(x).localeCompare(cleNom(y), "fr"));
+  return `${retour("Toutes les lettres", "tab", "auteurs")}${titre(L === "#" ? "Divers" : "Lettre " + L, pluriel(as.length, "auteur"))}
+  <ul class="pref">${as.map(a => `<li><button data-nav="auteur" data-arg="${esc(a)}"><span>${esc(a)}</span><span class="n">${pluriel(idx.get(a).length, "livre")}</span></button></li>`).join("")}</ul>`;
+}
+function ecranAuteur(a) {
+  const ls = (auteursIndex().get(a) || []).slice().sort((x, y) => anneeLecture(x) - anneeLecture(y));
+  const n = nouv.livres.filter(x => auteursDe(x).includes(a) && !dejaLu(x));
+  return `${retour("Lettre " + lettreDe(a), "lettre", lettreDe(a))}${titre(a, pluriel(ls.length, "livre lu", "livres lus"))}
+  ${listeLivres(ls, "auteur")}
+  ${n.length ? `${titre("Nouveautés de cet auteur")}<ul class="nouv">${n.map(carteNouveaute).join("")}</ul>` : ""}`;
+}
+const TRANCHES = [
+  ["Avant 1900", 0, 1899], ["1900 à 1949", 1900, 1949], ["1950 à 1979", 1950, 1979], ["Années 1980", 1980, 1989],
+  ["Années 1990", 1990, 1999], ["Années 2000", 2000, 2009], ["Années 2010", 2010, 2019], ["Depuis 2020", 2020, 2999]];
+function ecranParution() {
+  const inconnus = data.livres.filter(l => !l.paru).length;
+  return `${titre("Par année de parution")}
+  <p class="aide">L'année où le livre est sorti pour la première fois. Touchez une période.</p>
+  <div class="grille">${TRANCHES.map(([t, a, b], i) => {
+    const n = data.livres.filter(l => l.paru >= a && l.paru <= b).length;
+    return n ? `<button class="tuile" data-nav="tranche" data-arg="${i}"><b>${esc(t)}</b><span>${pluriel(n, "livre")}</span></button>` : "";
+  }).join("")}${inconnus ? `<button class="tuile" data-nav="tranche" data-arg="x"><b>Date inconnue</b><span>${pluriel(inconnus, "livre")}</span></button>` : ""}</div>`;
+}
+function ecranTranche(i) {
+  let ls, t;
+  if (i === "x") { ls = data.livres.filter(l => !l.paru); t = "Date inconnue"; }
+  else { const [nom, a, b] = TRANCHES[+i]; t = "Parus : " + nom.toLowerCase(); ls = data.livres.filter(l => l.paru >= a && l.paru <= b); }
+  ls.sort((x, y) => (x.paru || 0) - (y.paru || 0) || x.titre.localeCompare(y.titre, "fr"));
+  return `${retour("Toutes les périodes", "tab", "parution")}${titre(t, pluriel(ls.length, "livre"))}${listeLivres(ls)}`;
+}
+
+/* ---------- Nouveautés ---------- */
+const cleTitre = s => plain(s).replace(/[^a-z0-9]/g, "");
+const dejaLu = n => data.livres.some(l => cleTitre(l.titre) === cleTitre(n.titre));
+function dateNouv(n) {
+  const [y, m, d] = (n.date || "").split("-").map(Number);
+  if (!m) return String(y);
+  return (d ? (d === 1 ? "1er" : d) + " " : "") + MOIS[m - 1] + " " + y;
+}
+const aVenir = n => (n.date || "") > new Date().toISOString().slice(0, 10);
+function carteNouveaute(n) {
+  const idx = auteursIndex();
+  const nb = auteursDe(n).reduce((s, a) => s + (idx.get(a)?.length || 0), 0);
+  return `<li>
+    <p class="t mincho">${esc(n.titre)}${aVenir(n) ? `<span class="chip">Bientôt</span>` : ""}</p>
+    <p class="a">${esc(n.auteur)}</p>
+    <p class="d">${aVenir(n) ? "Sortie prévue le " : "Sorti en "}${esc(dateNouv(n))}${n.note ? " · " + esc(n.note) : ""}</p>
+    <p class="r">Vous avez déjà lu ${pluriel(nb, "livre")} de cet auteur.</p>
+    ${artifact && !lectureSeule && !aVenir(n) ? `<div class="lu"><button class="btn clair" data-nav="ajout-nouv" data-arg="${esc(n.id)}">Je l'ai lu : l'ajouter</button></div>` : ""}
+  </li>`;
+}
+function ecranNouveautes() {
+  const ls = nouv.livres.filter(n => !dejaLu(n)).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const bientot = ls.filter(aVenir), sortis = ls.filter(n => !aVenir(n));
+  return `${titre("Nouveautés", pluriel(ls.length, "livre"))}
+  <p class="aide">Les derniers livres des écrivains que vous avez déjà lus. Liste mise à jour le ${esc(nouv.maj)}.</p>
+  ${bientot.length ? `<h3 class="mincho">Bientôt en librairie</h3><ul class="nouv">${bientot.map(carteNouveaute).join("")}</ul>` : ""}
+  ${sortis.length ? `<h3 class="mincho">Déjà en librairie</h3><ul class="nouv">${sortis.map(carteNouveaute).join("")}</ul>` : `<p class="vide">Rien de nouveau pour l'instant.</p>`}`;
+}
+
+/* ---------- Fiche d'un livre ---------- */
+function ecranLivre(id) {
+  const l = data.livres.find(x => x.id === id);
+  if (!l) return ecranLectures();
+  const as = auteursDe(l);
+  return `${retour("Revenir", "back")}
+  <div class="fiche"><h2 class="mincho">${esc(l.titre)}</h2><p class="a">${esc(l.auteur || "Auteur inconnu")}</p>
+  <dl><dt>Lu en</dt><dd>${esc(l.lu)}</dd><dt>Paru en</dt><dd>${esc(l.paru || "inconnu")}</dd></dl></div>
+  <div class="pile">
+  ${as.map(a => `<button class="btn clair" data-nav="auteur" data-arg="${esc(a)}">Tous les livres de ${esc(a)}</button>`).join("")}
+  <button class="btn clair" data-nav="annee" data-arg="${esc(l.lu)}">Tous les livres lus en ${esc(l.lu)}</button>
+  ${artifact && !lectureSeule ? `<button class="btn clair" data-nav="modif" data-arg="${esc(l.id)}">Corriger ce livre</button>` : ""}
+  </div>`;
+}
+
+/* ---------- Formulaire ajout / correction ---------- */
+let brouillon = null, confirmeSuppr = false;
+function nouveauBrouillon(src) {
+  return { id: src?.id || null, titre: src?.titre || "", auteur: src?.auteur || "",
+    lu: parseInt(src?.lu, 10) || ANNEE_COURANTE, luTexte: src?.lu || null,
+    paru: src?.paru || null, paruConnu: !!src?.paru || !src };
+}
+function ecranForm() {
+  const b = brouillon, modif = !!b.id;
+  const idx = auteursIndex();
+  const q = plain(b.auteur);
+  const sugg = q.length >= 2 ? [...idx.keys()].filter(a => plain(a).includes(q) && a !== b.auteur).slice(0, 4) : [];
+  return `${retour("Annuler", "back")}${titre(modif ? "Corriger un livre" : "Ajouter un livre lu")}
+  <form class="form" id="form" novalidate>
+    <div class="f"><label for="f-titre">Titre du livre</label><input class="champ" id="f-titre" autocomplete="off" value="${esc(b.titre)}"></div>
+    <div class="f"><label for="f-auteur">Auteur</label><input class="champ" id="f-auteur" autocomplete="off" value="${esc(b.auteur)}">
+      <div class="sugg" id="sugg">${sugg.map(a => `<button type="button" data-sugg="${esc(a)}">${esc(a)}</button>`).join("")}</div></div>
+    <div class="f"><span class="lbl" id="l-lu">Année de lecture</span>
+      <div class="stepper" role="group" aria-labelledby="l-lu"><button type="button" data-step="lu" data-d="-1" aria-label="Année précédente">−</button><output id="o-lu">${b.luTexte && !/^\d{4}$/.test(b.luTexte) ? esc(b.luTexte) : b.lu}</output><button type="button" data-step="lu" data-d="1" aria-label="Année suivante">+</button></div></div>
+    <div class="f"><span class="lbl" id="l-paru">Année de parution</span>
+      <label class="case"><input type="checkbox" id="f-paru-connu" ${b.paruConnu ? "checked" : ""}> Je connais l'année de parution</label>
+      ${b.paruConnu ? `<div class="stepper" role="group" aria-labelledby="l-paru"><button type="button" data-step="paru" data-d="-1" aria-label="Année précédente">−</button><output>${b.paru || ANNEE_COURANTE}</output><button type="button" data-step="paru" data-d="1" aria-label="Année suivante">+</button></div>` : ""}
+    </div>
+    <p class="msg" id="f-err" hidden></p>
+    <button class="btn rouge" type="submit">${modif ? "Enregistrer la correction" : "Ajouter à mes lectures"}</button>
+    ${modif ? (confirmeSuppr
+      ? `<div class="note">Retirer « ${esc(b.titre)} » du carnet ? Cette action est définitive.</div>
+         <button class="btn rouge" type="button" data-nav="suppr-ok">Oui, retirer ce livre</button>
+         <button class="btn clair" type="button" data-nav="suppr-non">Non, le garder</button>`
+      : `<button class="btn rouge-clair" type="button" data-nav="suppr">Retirer ce livre du carnet</button>`) : ""}
+  </form>`;
+}
+
+/* ---------- Rendu et navigation ---------- */
+const pileRetour = [];
+function rendre(focus) {
+  const e = etat.ecran;
+  let html;
+  if (e === "annee") html = ecranAnnee(etat.arg);
+  else if (e === "lettre") html = ecranLettre(etat.arg);
+  else if (e === "auteur") html = ecranAuteur(etat.arg);
+  else if (e === "tranche") html = ecranTranche(etat.arg);
+  else if (e === "livre") html = ecranLivre(etat.arg);
+  else if (e === "form") html = ecranForm();
+  else html = { lectures: ecranLectures, auteurs: ecranAuteurs, parution: ecranParution, nouveautes: ecranNouveautes }[etat.tab]();
+  vue.innerHTML = html;
+  document.querySelectorAll("nav.onglets button").forEach(b => {
+    if (b.dataset.tab === etat.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
+  });
+  $("#sous-titre").textContent = `Le carnet depuis 1988 · ${pluriel(data.livres.length, "livre")}`;
+  if (focus !== false) { window.scrollTo(0, 0); vue.focus({ preventScroll: true }); }
+}
+function aller(ecran, arg) {
+  pileRetour.push({ ...etat });
+  etat = { ...etat, ecran, arg };
+  rendre();
+}
+
+/* Anti double-tap : un tremblement ne doit pas déclencher deux navigations */
+let dernierTap = 0;
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-nav],[data-tab]");
+  if (!b) return;
+  const t = Date.now();
+  if (t - dernierTap < 500) { e.preventDefault(); e.stopImmediatePropagation(); return; }
+  dernierTap = t;
+}, true);
+
+document.querySelector("nav.onglets").addEventListener("click", e => {
+  const b = e.target.closest("[data-tab]"); if (!b) return;
+  message = ""; pileRetour.length = 0; etat = { tab: b.dataset.tab, ecran: null, arg: null, q: "" }; rendre();
+});
+
+vue.addEventListener("click", e => {
+  const s = e.target.closest("[data-sugg]");
+  if (s) { brouillon.auteur = s.dataset.sugg; lireChamps(true); rendre(false); return; }
+  const st = e.target.closest("[data-step]");
+  if (st) {
+    lireChamps();
+    const k = st.dataset.step, d = +st.dataset.d;
+    if (k === "lu") { brouillon.lu = Math.min(ANNEE_COURANTE, Math.max(1950, brouillon.lu + d)); brouillon.luTexte = null; }
+    else brouillon.paru = Math.min(ANNEE_COURANTE + 1, Math.max(1500, (brouillon.paru || ANNEE_COURANTE) + d));
+    rendre(false); return;
+  }
+  const b = e.target.closest("[data-nav]"); if (!b) return;
+  const nav = b.dataset.nav, arg = b.dataset.arg;
+  if (nav !== "livre") message = "";
+  switch (nav) {
+    case "tab": pileRetour.length = 0; etat = { tab: arg, ecran: null, arg: null, q: "" }; rendre(); break;
+    case "back": etat = pileRetour.pop() || { tab: etat.tab, ecran: null, arg: null, q: "" }; confirmeSuppr = false; rendre(); break;
+    case "effacer": etat.q = ""; rendre(); break;
+    case "annee": case "lettre": case "auteur": case "tranche": aller(nav, arg); break;
+    case "livre": aller("livre", b.dataset.id); break;
+    case "ajout": brouillon = nouveauBrouillon(); confirmeSuppr = false; aller("form"); break;
+    case "ajout-nouv": { const n = nouv.livres.find(x => x.id === arg); brouillon = nouveauBrouillon(); brouillon.titre = n.titre; brouillon.auteur = n.auteur; brouillon.paru = parseInt(n.date, 10); brouillon.paruConnu = true; confirmeSuppr = false; aller("form"); break; }
+    case "modif": brouillon = nouveauBrouillon(data.livres.find(x => x.id === arg)); confirmeSuppr = false; aller("form"); break;
+    case "suppr": lireChamps(); confirmeSuppr = true; rendre(false); break;
+    case "suppr-non": lireChamps(); confirmeSuppr = false; rendre(false); break;
+    case "suppr-ok": supprimer(); break;
+  }
+});
+vue.addEventListener("input", e => {
+  if (e.target.id === "q") {
+    etat.q = e.target.value;
+    const pos = e.target.selectionStart; rendre(false);
+    const q = $("#q"); if (q) { q.focus(); try { q.setSelectionRange(pos, pos); } catch (_) {} }
+  } else if (e.target.id === "f-auteur") {
+    brouillon.auteur = e.target.value;
+    const idx = auteursIndex(), q = plain(brouillon.auteur);
+    const sugg = q.length >= 2 ? [...idx.keys()].filter(a => plain(a).includes(q) && a !== brouillon.auteur).slice(0, 4) : [];
+    $("#sugg").innerHTML = sugg.map(a => `<button type="button" data-sugg="${esc(a)}">${esc(a)}</button>`).join("");
+  } else if (e.target.id === "f-titre") brouillon.titre = e.target.value;
+});
+vue.addEventListener("change", e => {
+  if (e.target.id === "f-paru-connu") { lireChamps(); brouillon.paruConnu = e.target.checked; if (brouillon.paruConnu && !brouillon.paru) brouillon.paru = ANNEE_COURANTE; rendre(false); }
+});
+vue.addEventListener("submit", e => { e.preventDefault(); lireChamps(); enregistrer(); });
+
+function lireChamps(sansAuteur) {
+  const t = $("#f-titre"), a = $("#f-auteur");
+  if (t) brouillon.titre = t.value;
+  if (a && !sansAuteur) brouillon.auteur = a.value;
+}
+
+/* ---------- Sauvegarde (le carnet se republie lui-même) ---------- */
+async function sauver(nouvellesDonnees, texteOk) {
+  const err = $("#f-err");
+  try {
+    await artifact.publish({ "livres.json": JSON.stringify(nouvellesDonnees, null, 1) });
+    data = nouvellesDonnees; message = texteOk;
+    pileRetour.length = 0; etat = { tab: "lectures", ecran: null, arg: null, q: "" }; brouillon = null; rendre();
+  } catch (x) {
+    const c = x && x.code;
+    if (c === "conflict") return; // la page se recharge avec la dernière version
+    if (["not_writer", "not_granted", "not_declared", "capability_disabled", "consent_required"].includes(c)) {
+      lectureSeule = true;
+      if (err) { err.hidden = false; err.textContent = "Ce carnet est en lecture seule sur cet appareil. Demandez à la famille de l'ouvrir pour vous."; }
+      return;
+    }
+    if (err) { err.hidden = false; err.textContent = "L'enregistrement n'a pas fonctionné. Vérifiez la connexion internet puis touchez à nouveau le bouton."; }
+  }
+}
+function enregistrer() {
+  const b = brouillon, err = $("#f-err");
+  const titreL = b.titre.trim(), auteurL = b.auteur.trim().replace(/\s+/g, " ");
+  if (!titreL) { err.hidden = false; err.textContent = "Écrivez le titre du livre."; $("#f-titre").focus(); return; }
+  const livre = { id: b.id || ("l" + Date.now().toString(36)), titre: titreL, auteur: auteurL || null,
+    lu: b.luTexte || String(b.lu), paru: b.paruConnu ? (b.paru || null) : null };
+  const livres = b.id ? data.livres.map(l => l.id === b.id ? { ...l, ...livre } : l) : [...data.livres, livre];
+  sauver({ ...data, livres }, b.id ? `« ${titreL} » a été corrigé.` : `« ${titreL} » a été ajouté à vos lectures de ${livre.lu}.`);
+}
+function supprimer() {
+  const t = brouillon.titre;
+  sauver({ ...data, livres: data.livres.filter(l => l.id !== brouillon.id) }, `« ${t} » a été retiré du carnet.`);
+}
+
+/* ---------- Taille du texte (mémorisée sur cet appareil) ---------- */
+function appliquerTaille(g) {
+  document.documentElement.classList.toggle("grand", g);
+  const b = $("#taille"); b.textContent = g ? "A−" : "A+"; b.setAttribute("aria-pressed", String(g));
+  b.setAttribute("aria-label", g ? "Réduire le texte" : "Agrandir le texte");
+}
+let grand = false;
+try { grand = localStorage.getItem("texte-grand") === "1"; } catch (_) {}
+appliquerTaille(grand);
+$("#taille").addEventListener("click", () => { grand = !grand; appliquerTaille(grand); try { localStorage.setItem("texte-grand", grand ? "1" : "0"); } catch (_) {} });
+
+/* ---------- Démarrage ---------- */
+vagues();
+vue.innerHTML = `<p class="vide">Ouverture du carnet…</p>`;
+Promise.all([
+  fetch("livres.json").then(r => r.json()),
+  fetch("nouveautes.json").then(r => r.json()).catch(() => ({ maj: "", livres: [] }))
+]).then(([l, n]) => { data = l; nouv = n; rendre(false); })
+  .catch(() => { vue.innerHTML = `<p class="msg">Le carnet n'a pas pu s'ouvrir. Vérifiez la connexion internet puis rechargez la page.</p>`; });
+
+if (window.claude && typeof window.claude.use === "function") {
+  window.claude.use("artifact").then(a => { artifact = a; if (a && data.livres.length) rendre(false); }).catch(() => {});
+}
+})();
+</script>

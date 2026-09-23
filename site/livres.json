@@ -1,0 +1,3777 @@
+{
+ "livres": [
+  {
+   "id": "c001",
+   "titre": "Une femme",
+   "auteur": "Annie Ernaux",
+   "lu": "1988",
+   "paru": 1988
+  },
+  {
+   "id": "c002",
+   "titre": "La place",
+   "auteur": "Annie Ernaux",
+   "lu": "1988",
+   "paru": 1983
+  },
+  {
+   "id": "c003",
+   "titre": "La chasse au bonheur",
+   "auteur": "Jean Giono",
+   "lu": "1988",
+   "paru": 1988
+  },
+  {
+   "id": "c004",
+   "titre": "Une femme",
+   "auteur": "Anne Delbée",
+   "lu": "1988",
+   "paru": 1982
+  },
+  {
+   "id": "c005",
+   "titre": "Maria Vandamme",
+   "auteur": "Jacques Duquesne",
+   "lu": "1989",
+   "paru": 1983
+  },
+  {
+   "id": "c006",
+   "titre": "Le zèbre",
+   "auteur": "Alexandre Jardin",
+   "lu": "1989",
+   "paru": 1988
+  },
+  {
+   "id": "c007",
+   "titre": "L'impromptu de Madrid",
+   "auteur": "Marc Lambron",
+   "lu": "1989",
+   "paru": 1988
+  },
+  {
+   "id": "c008",
+   "titre": "La gouvernante française",
+   "auteur": "Henri Troyat",
+   "lu": "1989",
+   "paru": 1989
+  },
+  {
+   "id": "c009",
+   "titre": "Théophilus North",
+   "auteur": "Thornton Wilder",
+   "lu": "1989",
+   "paru": 1973
+  },
+  {
+   "id": "c010",
+   "titre": "Chroniques napolitaines",
+   "auteur": "Jean-Noël Schifano",
+   "lu": "1989",
+   "paru": 1984
+  },
+  {
+   "id": "c011",
+   "titre": "C'est beau une ville la nuit",
+   "auteur": "Richard Bohringer",
+   "lu": "1989",
+   "paru": 1988
+  },
+  {
+   "id": "c012",
+   "titre": "Dimanches d'août",
+   "auteur": "Patrick Modiano",
+   "lu": "1989",
+   "paru": 1986
+  },
+  {
+   "id": "c013",
+   "titre": "Tous les hommes en sont fous",
+   "auteur": "Jean d'Ormesson",
+   "lu": "1989",
+   "paru": 1986
+  },
+  {
+   "id": "c014",
+   "titre": "La seconde",
+   "auteur": "Colette",
+   "lu": "1989",
+   "paru": 1929
+  },
+  {
+   "id": "c015",
+   "titre": "Colline",
+   "auteur": "Jean Giono",
+   "lu": "1989",
+   "paru": 1929
+  },
+  {
+   "id": "c016",
+   "titre": "Le bonheur à San Miniato",
+   "auteur": "Jean d'Ormesson",
+   "lu": "1989",
+   "paru": 1987
+  },
+  {
+   "id": "c017",
+   "titre": "Les corbeaux d'Alep",
+   "auteur": "Marie Seurat",
+   "lu": "1989",
+   "paru": 1988
+  },
+  {
+   "id": "c018",
+   "titre": "L'enfant multiple",
+   "auteur": "Andrée Chedid",
+   "lu": "1990",
+   "paru": 1989
+  },
+  {
+   "id": "c019",
+   "titre": "Jour de silence à Tanger",
+   "auteur": "Tahar Ben Jelloun",
+   "lu": "1990",
+   "paru": 1990
+  },
+  {
+   "id": "c020",
+   "titre": "La maison du péril",
+   "auteur": "Agatha Christie",
+   "lu": "1990",
+   "paru": 1932
+  },
+  {
+   "id": "c021",
+   "titre": "Dix-huit fantômes",
+   "auteur": "Stanislas-André Steeman",
+   "lu": "1990",
+   "paru": null
+  },
+  {
+   "id": "c022",
+   "titre": "La chasse aux lézards",
+   "auteur": "William Boyd",
+   "lu": "1990",
+   "paru": 1981
+  },
+  {
+   "id": "c023",
+   "titre": "Mon père américain",
+   "auteur": "Jean-Marc Roberts",
+   "lu": "1990",
+   "paru": 1988
+  },
+  {
+   "id": "c024",
+   "titre": "La maison Russie",
+   "auteur": "John le Carré",
+   "lu": "1990",
+   "paru": 1989
+  },
+  {
+   "id": "c025",
+   "titre": "Un de Baumugnes",
+   "auteur": "Jean Giono",
+   "lu": "1990",
+   "paru": 1929
+  },
+  {
+   "id": "c026",
+   "titre": "Un souvenir",
+   "auteur": "Michel Déon",
+   "lu": "1990",
+   "paru": 1990
+  },
+  {
+   "id": "c027",
+   "titre": "Fanfan",
+   "auteur": "Alexandre Jardin",
+   "lu": "1990",
+   "paru": 1990
+  },
+  {
+   "id": "c028",
+   "titre": "Comme neige au soleil",
+   "auteur": "William Boyd",
+   "lu": "1990",
+   "paru": 1984
+  },
+  {
+   "id": "c029",
+   "titre": "Ennemonde et autres caractères",
+   "auteur": "Jean Giono",
+   "lu": "1990",
+   "paru": 1968
+  },
+  {
+   "id": "c030",
+   "titre": "La demoiselle de grande vertu",
+   "auteur": "Suzanne Prou",
+   "lu": "1990",
+   "paru": 1990,
+   "a_verifier": true
+  },
+  {
+   "id": "c031",
+   "titre": "Sans les mains",
+   "auteur": "P.D. James",
+   "lu": "1990",
+   "paru": 1967
+  },
+  {
+   "id": "c032",
+   "titre": "Leçons particulières",
+   "auteur": "Françoise Giroud",
+   "lu": "1990",
+   "paru": 1990
+  },
+  {
+   "id": "c033",
+   "titre": "Le chat et les pigeons",
+   "auteur": "Agatha Christie",
+   "lu": "1990",
+   "paru": 1959
+  },
+  {
+   "id": "c034",
+   "titre": "Le petit garçon",
+   "auteur": "Philippe Labro",
+   "lu": "1990",
+   "paru": 1990
+  },
+  {
+   "id": "c035",
+   "titre": "L'étudiant étranger",
+   "auteur": "Philippe Labro",
+   "lu": "1990",
+   "paru": 1986
+  },
+  {
+   "id": "c036",
+   "titre": "Le pont aux trois arches",
+   "auteur": "Ismaïl Kadaré",
+   "lu": "1991",
+   "paru": 1978
+  },
+  {
+   "id": "c037",
+   "titre": "La stratégie du bouffon",
+   "auteur": "Serge Lentz",
+   "lu": "1991",
+   "paru": 1990
+  },
+  {
+   "id": "c038",
+   "titre": "Les champs d'honneur",
+   "auteur": "Jean Rouaud",
+   "lu": "1991",
+   "paru": 1990
+  },
+  {
+   "id": "c039",
+   "titre": "Le Vallon",
+   "auteur": "Agatha Christie",
+   "lu": "1991",
+   "paru": 1946
+  },
+  {
+   "id": "c040",
+   "titre": "Moi, Ninon de Lenclos, courtisane",
+   "auteur": "Paul Guth",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c041",
+   "titre": "Voyage de noces",
+   "auteur": "Patrick Modiano",
+   "lu": "1991",
+   "paru": 1990
+  },
+  {
+   "id": "c042",
+   "titre": "Aliocha",
+   "auteur": "Henri Troyat",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c043",
+   "titre": "Secret de famille",
+   "auteur": "Irène Frain",
+   "lu": "1991",
+   "paru": 1989
+  },
+  {
+   "id": "c044",
+   "titre": "Les hommes du Tsar",
+   "auteur": "Vladimir Volkoff",
+   "lu": "1991",
+   "paru": 1989
+  },
+  {
+   "id": "c045",
+   "titre": "Un soir à Londres",
+   "auteur": "Michel Mohrt",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c046",
+   "titre": "La Caste",
+   "auteur": "Georges Bordonove",
+   "lu": "1991",
+   "paru": null
+  },
+  {
+   "id": "c047",
+   "titre": "La laisse",
+   "auteur": "Françoise Sagan",
+   "lu": "1991",
+   "paru": 1989
+  },
+  {
+   "id": "c048",
+   "titre": "Jamais sans ma fille",
+   "auteur": "Betty Mahmoody",
+   "lu": "1991",
+   "paru": 1987
+  },
+  {
+   "id": "c049",
+   "titre": "La clinique du Dr H.",
+   "auteur": "Mary Higgins Clark",
+   "lu": "1991",
+   "paru": 1980
+  },
+  {
+   "id": "c050",
+   "titre": "La volte des vertugadins",
+   "auteur": "Robert Merle",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c051",
+   "titre": "La proie pour l'ombre",
+   "auteur": "P.D. James",
+   "lu": "1991",
+   "paru": 1972
+  },
+  {
+   "id": "c052",
+   "titre": "Le temps d'un soupir",
+   "auteur": "Anne Philipe",
+   "lu": "1991",
+   "paru": 1963
+  },
+  {
+   "id": "c053",
+   "titre": "La Vénitienne et autres nouvelles",
+   "auteur": "Vladimir Nabokov",
+   "lu": "1991",
+   "paru": 1990
+  },
+  {
+   "id": "c054",
+   "titre": "Un si bel orage",
+   "auteur": "Pierre Moustiers",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c055",
+   "titre": "Dîner d'adieu",
+   "auteur": "Pascal Lainé",
+   "lu": "1991",
+   "paru": 1991
+  },
+  {
+   "id": "c056",
+   "titre": "L'écrivain public",
+   "auteur": "Tahar Ben Jelloun",
+   "lu": "1991",
+   "paru": 1983
+  },
+  {
+   "id": "c057",
+   "titre": "Tous les matins du monde",
+   "auteur": "Pascal Quignard",
+   "lu": "1992",
+   "paru": 1991
+  },
+  {
+   "id": "c058",
+   "titre": "L'enfant de sable",
+   "auteur": "Tahar Ben Jelloun",
+   "lu": "1992",
+   "paru": 1985
+  },
+  {
+   "id": "c059",
+   "titre": "Le salon du Wurtemberg",
+   "auteur": "Pascal Quignard",
+   "lu": "1992",
+   "paru": 1986
+  },
+  {
+   "id": "c060",
+   "titre": "Les moulins à images",
+   "auteur": "Georges J. Arnaud",
+   "lu": "1992",
+   "paru": null
+  },
+  {
+   "id": "c061",
+   "titre": "La vieille dame de la librairie",
+   "auteur": "Jean Piat",
+   "lu": "1992",
+   "paru": 1991
+  },
+  {
+   "id": "c062",
+   "titre": "L'œil du perroquet",
+   "auteur": "Brigitte Le Varlet",
+   "lu": "1992",
+   "paru": 1992
+  },
+  {
+   "id": "c063",
+   "titre": "Le mal noir – Le laquais et la putain – L'accompagnatrice",
+   "auteur": "Nina Berberova",
+   "lu": "1992",
+   "paru": 1935
+  },
+  {
+   "id": "c064",
+   "titre": "Bélami",
+   "auteur": "Jean Colombier",
+   "lu": "1992",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c065",
+   "titre": "Youri",
+   "auteur": "Henri Troyat",
+   "lu": "1992",
+   "paru": 1992
+  },
+  {
+   "id": "c066",
+   "titre": "Adrienne Lecouvreur ou le cœur transporté",
+   "auteur": "Catherine Clément",
+   "lu": "1992",
+   "paru": 1991
+  },
+  {
+   "id": "c067",
+   "titre": "Catherine Courage",
+   "auteur": "Jacques Duquesne",
+   "lu": "1992",
+   "paru": 1990
+  },
+  {
+   "id": "c068",
+   "titre": "Le vieux qui lisait des romans d'amour",
+   "auteur": "Luis Sepúlveda",
+   "lu": "1992",
+   "paru": 1989
+  },
+  {
+   "id": "c069",
+   "titre": "Le fantôme de Lady Margaret",
+   "auteur": "Mary Higgins Clark",
+   "lu": "1992",
+   "paru": 1987
+  },
+  {
+   "id": "c070",
+   "titre": "Le prix de l'amour",
+   "auteur": "Michel Déon",
+   "lu": "1992",
+   "paru": 1992
+  },
+  {
+   "id": "c071",
+   "titre": "La nuit du renard",
+   "auteur": "Mary Higgins Clark",
+   "lu": "1992",
+   "paru": 1977
+  },
+  {
+   "id": "c072",
+   "titre": "L'arbre d'amour et de sagesse",
+   "auteur": "Henri Gougaud",
+   "lu": "1992",
+   "paru": 1992
+  },
+  {
+   "id": "c073",
+   "titre": "Un long dimanche de fiançailles",
+   "auteur": "Sébastien Japrisot",
+   "lu": "1992",
+   "paru": 1991
+  },
+  {
+   "id": "c074",
+   "titre": "Les petits poissons rouges. Contre l'esprit de sérieux et les gens importants",
+   "auteur": "Pierre Boncenne",
+   "lu": "1992",
+   "paru": null
+  },
+  {
+   "id": "c075",
+   "titre": "Haute-Pierre",
+   "auteur": "Patrick Cauvin",
+   "lu": "1993",
+   "paru": 1985
+  },
+  {
+   "id": "c076",
+   "titre": "La femme de David",
+   "auteur": "Henri Troyat",
+   "lu": "1993",
+   "paru": 1990
+  },
+  {
+   "id": "c077",
+   "titre": "Charles et Camille",
+   "auteur": "Frédéric Vitoux",
+   "lu": "1993",
+   "paru": 1988
+  },
+  {
+   "id": "c078",
+   "titre": "La notairesse",
+   "auteur": "Suzanne Prou",
+   "lu": "1993",
+   "paru": 1989
+  },
+  {
+   "id": "c079",
+   "titre": "Mémoires d'éléphant",
+   "auteur": "Gérard Oury",
+   "lu": "1993",
+   "paru": 1988
+  },
+  {
+   "id": "c080",
+   "titre": "Voyage en France",
+   "auteur": "Henry James",
+   "lu": "1993",
+   "paru": 1884
+  },
+  {
+   "id": "c081",
+   "titre": "La terrasse de Lucrezia",
+   "auteur": "Félicien Marceau",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c082",
+   "titre": "L'incertaine",
+   "auteur": "Pascal Lainé",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c083",
+   "titre": "Lettre ouverte aux hommes qui n'ont toujours rien compris aux femmes",
+   "auteur": "Maryse Wolinski",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c084",
+   "titre": "Le monde du bout du monde",
+   "auteur": "Luis Sepúlveda",
+   "lu": "1993",
+   "paru": 1989
+  },
+  {
+   "id": "c085",
+   "titre": "Quinze ans",
+   "auteur": "Philippe Labro",
+   "lu": "1993",
+   "paru": 1992
+  },
+  {
+   "id": "c086",
+   "titre": "Le bel amour",
+   "auteur": "Brigitte Le Varlet",
+   "lu": "1993",
+   "paru": 1990
+  },
+  {
+   "id": "c087",
+   "titre": "Les hanches de Laetitia",
+   "auteur": "Éric Neuhoff",
+   "lu": "1993",
+   "paru": 1989
+  },
+  {
+   "id": "c088",
+   "titre": "Les hommes illustres",
+   "auteur": "Jean Rouaud",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c089",
+   "titre": "Vingt-quatre heures de la vie d'une femme",
+   "auteur": "Stefan Zweig",
+   "lu": "1993",
+   "paru": 1927
+  },
+  {
+   "id": "c090",
+   "titre": "Annam",
+   "auteur": "Christophe Bataille",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c091",
+   "titre": "Clair de lune",
+   "auteur": "Ismaïl Kadaré",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c092",
+   "titre": "Le rocher de Tanios",
+   "auteur": "Amin Maalouf",
+   "lu": "1993",
+   "paru": 1993
+  },
+  {
+   "id": "c093",
+   "titre": "Luxe, calme et volupté",
+   "auteur": "Sempé",
+   "lu": "1993",
+   "paru": 1987
+  },
+  {
+   "id": "c094",
+   "titre": "L'homme rompu",
+   "auteur": "Tahar Ben Jelloun",
+   "lu": "1994",
+   "paru": 1994
+  },
+  {
+   "id": "c095",
+   "titre": "Pour l'amour de l'Inde",
+   "auteur": "Catherine Clément",
+   "lu": "1994",
+   "paru": 1993
+  },
+  {
+   "id": "c096",
+   "titre": "Les jeudis de Charles et de Lula",
+   "auteur": "Marie Cardinal",
+   "lu": "1994",
+   "paru": 1993
+  },
+  {
+   "id": "c097",
+   "titre": "La petite main",
+   "auteur": "Geneviève Dormann",
+   "lu": "1994",
+   "paru": 1993
+  },
+  {
+   "id": "c098",
+   "titre": "Journal d'Hannah",
+   "auteur": "Louise Lambrichs",
+   "lu": "1994",
+   "paru": 1993
+  },
+  {
+   "id": "c099",
+   "titre": "Les vestiges du jour",
+   "auteur": "Kazuo Ishiguro",
+   "lu": "1994",
+   "paru": 1989
+  },
+  {
+   "id": "c100",
+   "titre": "Le livre de ma mère",
+   "auteur": "Albert Cohen",
+   "lu": "1994",
+   "paru": 1954
+  },
+  {
+   "id": "c101",
+   "titre": "Le roman de Rabelais",
+   "auteur": "Michel Ragon",
+   "lu": "1994",
+   "paru": 1993
+  },
+  {
+   "id": "c102",
+   "titre": "La bonté même",
+   "auteur": "Elizabeth Taylor",
+   "lu": "1994",
+   "paru": 1964
+  },
+  {
+   "id": "c103",
+   "titre": "Les belles natures",
+   "auteur": "Félicien Marceau",
+   "lu": "1994",
+   "paru": 1987
+  },
+  {
+   "id": "c104",
+   "titre": "Absinthe",
+   "auteur": "Christophe Bataille",
+   "lu": "1994",
+   "paru": 1994
+  },
+  {
+   "id": "c105",
+   "titre": "Mon très cher amour",
+   "auteur": "Françoise Giroud",
+   "lu": "1994",
+   "paru": 1994
+  },
+  {
+   "id": "c106",
+   "titre": "La Garenne",
+   "auteur": "Jeanne Bourin",
+   "lu": "1994",
+   "paru": 1994
+  },
+  {
+   "id": "c107",
+   "titre": "Le collectionneur",
+   "auteur": "Christine Orban",
+   "lu": "1995",
+   "paru": 1993
+  },
+  {
+   "id": "c108",
+   "titre": "Trésors d'enfance",
+   "auteur": "Christian Signol",
+   "lu": "1995",
+   "paru": 1994
+  },
+  {
+   "id": "c109",
+   "titre": "Un été dans l'Ouest",
+   "auteur": "Philippe Labro",
+   "lu": "1995",
+   "paru": 1988
+  },
+  {
+   "id": "c110",
+   "titre": "La lenteur",
+   "auteur": "Milan Kundera",
+   "lu": "1995",
+   "paru": 1995
+  },
+  {
+   "id": "c111",
+   "titre": "L'alchimiste",
+   "auteur": "Paulo Coelho",
+   "lu": "1995",
+   "paru": 1988
+  },
+  {
+   "id": "c112",
+   "titre": "L'album de famille",
+   "auteur": "Suzanne Prou",
+   "lu": "1995",
+   "paru": 1994
+  },
+  {
+   "id": "c113",
+   "titre": "Ailleurs",
+   "auteur": "J.M.G. Le Clézio",
+   "lu": "1995",
+   "paru": 1995
+  },
+  {
+   "id": "c114",
+   "titre": "Je me suis beaucoup promené",
+   "auteur": "Michel Déon",
+   "lu": "1995",
+   "paru": 1995
+  },
+  {
+   "id": "c115",
+   "titre": "Le champ de personne",
+   "auteur": "Daniel Picouly",
+   "lu": "1995",
+   "paru": 1995
+  },
+  {
+   "id": "c116",
+   "titre": "Le testament français",
+   "auteur": "Andreï Makine",
+   "lu": "1995",
+   "paru": 1995
+  },
+  {
+   "id": "c117",
+   "titre": "Un recteur de l'île de Sein",
+   "auteur": "Henri Queffélec",
+   "lu": "1996",
+   "paru": 1944
+  },
+  {
+   "id": "c118",
+   "titre": "La lectrice",
+   "auteur": "Raymond Jean",
+   "lu": "1996",
+   "paru": 1986
+  },
+  {
+   "id": "c119",
+   "titre": "Le baron perché",
+   "auteur": "Italo Calvino",
+   "lu": "1996",
+   "paru": 1957
+  },
+  {
+   "id": "c120",
+   "titre": "Lettre à ceux qui ont tué ma femme et mon fils",
+   "auteur": "Jean Vuarnet",
+   "lu": "1996",
+   "paru": 1996
+  },
+  {
+   "id": "c121",
+   "titre": "Queen Lucia",
+   "auteur": "E.F. Benson",
+   "lu": "1996",
+   "paru": 1920
+  },
+  {
+   "id": "c122",
+   "titre": "Un héros très discret",
+   "auteur": "Jean-François Deniau",
+   "lu": "1996",
+   "paru": 1989
+  },
+  {
+   "id": "c123",
+   "titre": "Monsieur Jadis",
+   "auteur": "Antoine Blondin",
+   "lu": "1996",
+   "paru": 1970
+  },
+  {
+   "id": "c124",
+   "titre": "La dame en bleu",
+   "auteur": "Noëlle Châtelet",
+   "lu": "1996",
+   "paru": 1996
+  },
+  {
+   "id": "c125",
+   "titre": "Raison et sentiments",
+   "auteur": "Jane Austen",
+   "lu": "1996",
+   "paru": 1811
+  },
+  {
+   "id": "c126",
+   "titre": "Le palanquin des larmes",
+   "auteur": "Chow Ching Lie",
+   "lu": "1996",
+   "paru": 1975
+  },
+  {
+   "id": "c127",
+   "titre": "Le monde à peu près",
+   "auteur": "Jean Rouaud",
+   "lu": "1996",
+   "paru": 1996
+  },
+  {
+   "id": "c128",
+   "titre": "Mémoires d'une dame de cour dans la Cité interdite",
+   "auteur": "Jin Yi",
+   "lu": "1997",
+   "paru": null
+  },
+  {
+   "id": "c129",
+   "titre": "Le lit de la merveille",
+   "auteur": "Robert Sabatier",
+   "lu": "1997",
+   "paru": 1997
+  },
+  {
+   "id": "c130",
+   "titre": "Le maître des heures",
+   "auteur": "Christophe Bataille",
+   "lu": "1997",
+   "paru": 1997
+  },
+  {
+   "id": "c131",
+   "titre": "Les amoureuses",
+   "auteur": "Madeleine Chapsal",
+   "lu": "1997",
+   "paru": null
+  },
+  {
+   "id": "c132",
+   "titre": "Nouvelles du monde",
+   "auteur": "Michel Serres",
+   "lu": "1997",
+   "paru": 1997
+  },
+  {
+   "id": "c133",
+   "titre": "La madone des sleepings",
+   "auteur": "Maurice Dekobra",
+   "lu": "1997",
+   "paru": 1925
+  },
+  {
+   "id": "c134",
+   "titre": "La première gorgée de bière et autres plaisirs minuscules",
+   "auteur": "Philippe Delerm",
+   "lu": "1997",
+   "paru": 1997
+  },
+  {
+   "id": "c135",
+   "titre": "La douleur du dollar",
+   "auteur": "Zoé Valdés",
+   "lu": "1998",
+   "paru": 1996
+  },
+  {
+   "id": "c136",
+   "titre": "Hammerklavier",
+   "auteur": "Yasmina Reza",
+   "lu": "1998",
+   "paru": 1997
+  },
+  {
+   "id": "c137",
+   "titre": "La dame qui aimait les toilettes propres",
+   "auteur": "J.P. Donleavy",
+   "lu": "1998",
+   "paru": 1995
+  },
+  {
+   "id": "c138",
+   "titre": "Il avait plu toute la journée",
+   "auteur": "Philippe Delerm",
+   "lu": "1998",
+   "paru": 1994
+  },
+  {
+   "id": "c139",
+   "titre": "Le bonheur",
+   "auteur": "Philippe Delerm",
+   "lu": "1998",
+   "paru": 1986
+  },
+  {
+   "id": "c140",
+   "titre": "Outre-Manche",
+   "auteur": "Julian Barnes",
+   "lu": "1998",
+   "paru": 1996
+  },
+  {
+   "id": "c141",
+   "titre": "Nouvelles",
+   "auteur": "Tahar Ben Jelloun",
+   "lu": "1998",
+   "paru": null
+  },
+  {
+   "id": "c142",
+   "titre": "La cour des grands",
+   "auteur": "Michel Déon",
+   "lu": "1998",
+   "paru": 1996
+  },
+  {
+   "id": "c143",
+   "titre": "Meurtre à Cape Cod",
+   "auteur": "Mary Higgins Clark",
+   "lu": "1998",
+   "paru": 1994
+  },
+  {
+   "id": "c144",
+   "titre": "Une poignée de gens",
+   "auteur": "Anne Wiazemsky",
+   "lu": "1999",
+   "paru": 1998
+  },
+  {
+   "id": "c145",
+   "titre": "Histoires d'enfance",
+   "auteur": "Collectif (Sol en Si)",
+   "lu": "1999",
+   "paru": null
+  },
+  {
+   "id": "c146",
+   "titre": "Le cavalier du Louvre, Vivant Denon (1747-1825)",
+   "auteur": "Philippe Sollers",
+   "lu": "1999",
+   "paru": 1995
+  },
+  {
+   "id": "c147",
+   "titre": "Cuba libre !",
+   "auteur": "Régine Deforges",
+   "lu": "1999",
+   "paru": 1999
+  },
+  {
+   "id": "c148",
+   "titre": "L'empreinte de l'ange",
+   "auteur": "Nancy Huston",
+   "lu": "1999",
+   "paru": 1998
+  },
+  {
+   "id": "c149",
+   "titre": "La demi-pensionnaire",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "1999",
+   "paru": 1999
+  },
+  {
+   "id": "c150",
+   "titre": "C'est pas bientôt fini !",
+   "auteur": "Claude Sarraute",
+   "lu": "1999",
+   "paru": null
+  },
+  {
+   "id": "c151",
+   "titre": "Une mémoire vagabonde",
+   "auteur": "Maurice Rheims",
+   "lu": "1999",
+   "paru": 1997
+  },
+  {
+   "id": "c152",
+   "titre": "Un amour américain",
+   "auteur": "Philippe Sollers",
+   "lu": "1999",
+   "paru": null
+  },
+  {
+   "id": "c153",
+   "titre": "Le Mafardeur de la plage",
+   "auteur": "Ruth Rendell",
+   "lu": "1999",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c154",
+   "titre": "Le paradis à la carte",
+   "auteur": "Ruth Rendell",
+   "lu": "1999",
+   "paru": null
+  },
+  {
+   "id": "c155",
+   "titre": "Une désolation",
+   "auteur": "Yasmina Reza",
+   "lu": "1999",
+   "paru": 1999
+  },
+  {
+   "id": "c156",
+   "titre": "L'eau des fleurs",
+   "auteur": "Jean-Marie Gourio",
+   "lu": "1999",
+   "paru": 1999
+  },
+  {
+   "id": "c157",
+   "titre": "Mérotte",
+   "auteur": "Philippe Clay",
+   "lu": "2000",
+   "paru": null
+  },
+  {
+   "id": "c158",
+   "titre": "Histoires (presque) vraies",
+   "auteur": "Françoise Giroud",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c159",
+   "titre": "Je voudrais que quelqu'un m'attende quelque part",
+   "auteur": "Anna Gavalda",
+   "lu": "2000",
+   "paru": 1999
+  },
+  {
+   "id": "c160",
+   "titre": "Le Cheval-Vautour",
+   "auteur": "H. Verneuil",
+   "lu": "2000",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c161",
+   "titre": "Balzac et la petite tailleuse chinoise",
+   "auteur": "Dai Sijie",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c162",
+   "titre": "Les quatre vérités",
+   "auteur": "David Lodge",
+   "lu": "2000",
+   "paru": 1999
+  },
+  {
+   "id": "c163",
+   "titre": "Les cendres d'Angela",
+   "auteur": "Frank McCourt",
+   "lu": "2000",
+   "paru": 1996
+  },
+  {
+   "id": "c164",
+   "titre": "Terrasse à Rome",
+   "auteur": "Pascal Quignard",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c165",
+   "titre": "La maison de la source",
+   "auteur": "Irène Frain",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c166",
+   "titre": "Stupeur et tremblements",
+   "auteur": "Amélie Nothomb",
+   "lu": "2000",
+   "paru": 1999
+  },
+  {
+   "id": "c167",
+   "titre": "Portrait d'un homme heureux, André Le Nôtre",
+   "auteur": "Erik Orsenna",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c168",
+   "titre": "Et si c'était vrai…",
+   "auteur": "Marc Levy",
+   "lu": "2000",
+   "paru": 2000
+  },
+  {
+   "id": "c169",
+   "titre": "Harry Potter et le prisonnier d'Azkaban",
+   "auteur": "J.K. Rowling",
+   "lu": "2002",
+   "paru": 1999
+  },
+  {
+   "id": "c170",
+   "titre": "Je l'aimais",
+   "auteur": "Anna Gavalda",
+   "lu": "2002",
+   "paru": 2002
+  },
+  {
+   "id": "c171",
+   "titre": "Papa",
+   "auteur": "Patrick Cauvin",
+   "lu": "2002",
+   "paru": 1976
+  },
+  {
+   "id": "c172",
+   "titre": "La fille au bikini jaune",
+   "auteur": "Phillip M. Margolin",
+   "lu": "2002",
+   "paru": null
+  },
+  {
+   "id": "c173",
+   "titre": "C'est pas grave",
+   "auteur": "Sylvie Granotier",
+   "lu": "2002",
+   "paru": null
+  },
+  {
+   "id": "c174",
+   "titre": "Vous souvenez-vous de moi ?",
+   "auteur": "Mary Higgins Clark",
+   "lu": "2002",
+   "paru": null
+  },
+  {
+   "id": "c175",
+   "titre": "Vous avez dit Serrault ?",
+   "auteur": "Michel Serrault",
+   "lu": "2002",
+   "paru": 2001
+  },
+  {
+   "id": "c176",
+   "titre": "La nuit blanche de Saint-Pétersbourg",
+   "auteur": "Michel de Grèce",
+   "lu": "2002",
+   "paru": 2000
+  },
+  {
+   "id": "c177",
+   "titre": "Le petit grain de café argenté",
+   "auteur": null,
+   "lu": "2003",
+   "paru": null
+  },
+  {
+   "id": "c178",
+   "titre": "Soie",
+   "auteur": "Alessandro Baricco",
+   "lu": "2003",
+   "paru": 1996
+  },
+  {
+   "id": "c179",
+   "titre": "La douce empoisonneuse",
+   "auteur": "Arto Paasilinna",
+   "lu": "2003",
+   "paru": 1988
+  },
+  {
+   "id": "c180",
+   "titre": "Bonheurs d'enfance",
+   "auteur": "Christian Signol",
+   "lu": "2003",
+   "paru": 1996
+  },
+  {
+   "id": "c181",
+   "titre": "Clandestin",
+   "auteur": "Eliette Abécassis",
+   "lu": "2003",
+   "paru": 2003
+  },
+  {
+   "id": "c182",
+   "titre": "La jeune fille à la perle",
+   "auteur": "Tracy Chevalier",
+   "lu": "2004",
+   "paru": 1999
+  },
+  {
+   "id": "c183",
+   "titre": "Petits contes de printemps",
+   "auteur": "Natsume Sôseki",
+   "lu": "2004",
+   "paru": 1910
+  },
+  {
+   "id": "c184",
+   "titre": "Sous les vents de Neptune",
+   "auteur": "Fred Vargas",
+   "lu": "2004",
+   "paru": 2004
+  },
+  {
+   "id": "c185",
+   "titre": "La dernière leçon",
+   "auteur": "Noëlle Châtelet",
+   "lu": "2004",
+   "paru": 2004
+  },
+  {
+   "id": "c186",
+   "titre": "Kiffe kiffe demain",
+   "auteur": "Faïza Guène",
+   "lu": "2004",
+   "paru": 2004
+  },
+  {
+   "id": "c187",
+   "titre": "Balades indiennes",
+   "auteur": "Collectif",
+   "lu": "2004",
+   "paru": null
+  },
+  {
+   "id": "c188",
+   "titre": "Un oncle à héritage",
+   "auteur": "Madeleine Chapsal",
+   "lu": "2004",
+   "paru": null
+  },
+  {
+   "id": "c189",
+   "titre": "J'ai oublié de vous dire…",
+   "auteur": "Jean-Claude Brialy",
+   "lu": "2005",
+   "paru": 2004
+  },
+  {
+   "id": "c190",
+   "titre": "Les sentiers délicats",
+   "auteur": "Éric Holder",
+   "lu": "2005",
+   "paru": 2005
+  },
+  {
+   "id": "c191",
+   "titre": "La belle endormie",
+   "auteur": "Elizabeth Taylor",
+   "lu": "2005",
+   "paru": null
+  },
+  {
+   "id": "c192",
+   "titre": "La femme sur la plage avec un chien",
+   "auteur": "William Boyd",
+   "lu": "2005",
+   "paru": 2004
+  },
+  {
+   "id": "c193",
+   "titre": "Le roman des Jardin",
+   "auteur": "Alexandre Jardin",
+   "lu": "2005",
+   "paru": 2005
+  },
+  {
+   "id": "c194",
+   "titre": "Le ciel t'aidera",
+   "auteur": "Sylvie Testud",
+   "lu": "2005",
+   "paru": 2005
+  },
+  {
+   "id": "c195",
+   "titre": "L'enfant de Bruges",
+   "auteur": "Gilbert Sinoué",
+   "lu": "2006",
+   "paru": 1999
+  },
+  {
+   "id": "c196",
+   "titre": "Pique-nique chez Tiffany Warton",
+   "auteur": "Frédérick Tristan",
+   "lu": "2006",
+   "paru": 1998
+  },
+  {
+   "id": "c197",
+   "titre": "Les chevaliers du subjonctif",
+   "auteur": "Erik Orsenna",
+   "lu": "2006",
+   "paru": 2004
+  },
+  {
+   "id": "c198",
+   "titre": "Maintenant foutez-moi la paix",
+   "auteur": "Philippe Delerm",
+   "lu": "2006",
+   "paru": 2006
+  },
+  {
+   "id": "c199",
+   "titre": "À Garonne",
+   "auteur": "Philippe Delerm",
+   "lu": "2006",
+   "paru": 2006
+  },
+  {
+   "id": "c200",
+   "titre": "L'accro du shopping dit oui",
+   "auteur": "Sophie Kinsella",
+   "lu": "2006",
+   "paru": 2002
+  },
+  {
+   "id": "c201",
+   "titre": "Vous n'aurez pas le dernier mot",
+   "auteur": "Jean Piat et Patrick Wajsman",
+   "lu": "2007",
+   "paru": 2006
+  },
+  {
+   "id": "c202",
+   "titre": "Odette Toulemonde et autres histoires",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "lu": "2007",
+   "paru": 2006
+  },
+  {
+   "id": "c203",
+   "titre": "Les belles endormies",
+   "auteur": "Yasunari Kawabata",
+   "lu": "2007",
+   "paru": 1961
+  },
+  {
+   "id": "c204",
+   "titre": "Mal de pierres",
+   "auteur": "Milena Agus",
+   "lu": "2007",
+   "paru": 2006
+  },
+  {
+   "id": "c205",
+   "titre": "Un amour pour trois",
+   "auteur": "Madeleine Chapsal",
+   "lu": "2007",
+   "paru": null
+  },
+  {
+   "id": "c206",
+   "titre": "L'élégance du hérisson",
+   "auteur": "Muriel Barbery",
+   "lu": "2007",
+   "paru": 2006
+  },
+  {
+   "id": "c207",
+   "titre": "Le portrait",
+   "auteur": "Pierre Assouline",
+   "lu": "2007",
+   "paru": 2007
+  },
+  {
+   "id": "c208",
+   "titre": "Vingt-quatre heures d'une femme sensible",
+   "auteur": "Constance de Salm",
+   "lu": "2008",
+   "paru": 1824
+  },
+  {
+   "id": "c209",
+   "titre": "La souris bleue",
+   "auteur": "Kate Atkinson",
+   "lu": "2008",
+   "paru": 1995
+  },
+  {
+   "id": "c210",
+   "titre": "Petites phrases pour traverser la vie en cas de tempête… et par beau temps aussi",
+   "auteur": "Christine Orban",
+   "lu": "2008",
+   "paru": 2007
+  },
+  {
+   "id": "c211",
+   "titre": "L'homme aux cercles bleus",
+   "auteur": "Fred Vargas",
+   "lu": "2008",
+   "paru": 1991
+  },
+  {
+   "id": "c212",
+   "titre": "Le fait du prince",
+   "auteur": "Amélie Nothomb",
+   "lu": "2008",
+   "paru": 2008
+  },
+  {
+   "id": "c213",
+   "titre": "Un aller simple",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "2008",
+   "paru": 1994
+  },
+  {
+   "id": "c214",
+   "titre": "Totto-chan, la petite fille à la fenêtre",
+   "auteur": "Tetsuko Kuroyanagi",
+   "lu": "2008",
+   "paru": 1981
+  },
+  {
+   "id": "c215",
+   "titre": "La touche étoile",
+   "auteur": "Benoîte Groult",
+   "lu": "2009",
+   "paru": 2006
+  },
+  {
+   "id": "c216",
+   "titre": "Mon voisin",
+   "auteur": "Milena Agus",
+   "lu": "2009",
+   "paru": 2009
+  },
+  {
+   "id": "c217",
+   "titre": "Ravel",
+   "auteur": "Jean Echenoz",
+   "lu": "2009",
+   "paru": 2006
+  },
+  {
+   "id": "c218",
+   "titre": "Chagrin d'école",
+   "auteur": "Daniel Pennac",
+   "lu": "2009",
+   "paru": 2007
+  },
+  {
+   "id": "c219",
+   "titre": "Ma grand-mère avait les mêmes",
+   "auteur": "Philippe Delerm",
+   "lu": "2009",
+   "paru": 2008
+  },
+  {
+   "id": "c220",
+   "titre": "La lamentation du prépuce",
+   "auteur": "Shalom Auslander",
+   "lu": "2009",
+   "paru": 2007
+  },
+  {
+   "id": "c221",
+   "titre": "Deuxième chronique du règne de Nicolas Ier",
+   "auteur": "Patrick Rambaud",
+   "lu": "2009",
+   "paru": 2009
+  },
+  {
+   "id": "c222",
+   "titre": "Quitter le monde",
+   "auteur": "Douglas Kennedy",
+   "lu": "2009",
+   "paru": 2009
+  },
+  {
+   "id": "c223",
+   "titre": "Secrets d'enfance",
+   "auteur": "Dominique Pépin",
+   "lu": "2010",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c224",
+   "titre": "L'arche de Noël et autres contes",
+   "auteur": "Romain Sardou",
+   "lu": "2010",
+   "paru": 2008
+  },
+  {
+   "id": "c225",
+   "titre": "Le rapport de Brodeck",
+   "auteur": "Philippe Claudel",
+   "lu": "2010",
+   "paru": 2007
+  },
+  {
+   "id": "c226",
+   "titre": "Le canapé rouge",
+   "auteur": "Michèle Lesbre",
+   "lu": "2010",
+   "paru": 2007
+  },
+  {
+   "id": "c227",
+   "titre": "Un été chez Voltaire",
+   "auteur": "Jacques-Pierre Amette",
+   "lu": "2010",
+   "paru": 2007
+  },
+  {
+   "id": "c228",
+   "titre": "Mazel tov, mister Poullaouec !",
+   "auteur": "Corinne Roche",
+   "lu": "2010",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c229",
+   "titre": "Des petits coins de paradis",
+   "auteur": "Jacques Weber",
+   "lu": "2010",
+   "paru": 2009
+  },
+  {
+   "id": "c230",
+   "titre": "Sur la plage de Chesil",
+   "auteur": "Ian McEwan",
+   "lu": "2010",
+   "paru": 2007
+  },
+  {
+   "id": "c231",
+   "titre": "Le journal d'Hirondelle",
+   "auteur": "Amélie Nothomb",
+   "lu": "2010",
+   "paru": 2006
+  },
+  {
+   "id": "c232",
+   "titre": "Chaque femme est un roman",
+   "auteur": "Alexandre Jardin",
+   "lu": "2010",
+   "paru": 2008
+  },
+  {
+   "id": "c233",
+   "titre": "Lettres de château",
+   "auteur": "Michel Déon",
+   "lu": "2010",
+   "paru": 2009
+  },
+  {
+   "id": "c234",
+   "titre": "Il n'y a pas beaucoup d'étoiles ce soir",
+   "auteur": "Sylvie Testud",
+   "lu": "2010",
+   "paru": 2003
+  },
+  {
+   "id": "c235",
+   "titre": "Ru",
+   "auteur": "Kim Thúy",
+   "lu": "2011",
+   "paru": 2009
+  },
+  {
+   "id": "c236",
+   "titre": "Le goût des pépins de pommes",
+   "auteur": "Katharina Hagena",
+   "lu": "2011",
+   "paru": 2008
+  },
+  {
+   "id": "c237",
+   "titre": "Le baby-sitter",
+   "auteur": "Jean-Philippe Blondel",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c238",
+   "titre": "Parle-leur de batailles, de rois et d'éléphants",
+   "auteur": "Mathias Énard",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c239",
+   "titre": "Syngué sabour",
+   "auteur": "Atiq Rahimi",
+   "lu": "2011",
+   "paru": 2008
+  },
+  {
+   "id": "c240",
+   "titre": "Le grand n'importe quoi",
+   "auteur": "Jean-Pierre Marielle",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c241",
+   "titre": "La délicatesse",
+   "auteur": "David Foenkinos",
+   "lu": "2011",
+   "paru": 2009
+  },
+  {
+   "id": "c242",
+   "titre": "L'armée furieuse",
+   "auteur": "Fred Vargas",
+   "lu": "2011",
+   "paru": 2011
+  },
+  {
+   "id": "c243",
+   "titre": "Le noyau d'abricot",
+   "auteur": "Jean Giono",
+   "lu": "2011",
+   "paru": 2011
+  },
+  {
+   "id": "c244",
+   "titre": "Les trois lumières",
+   "auteur": "Claire Keegan",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c245",
+   "titre": "Sept contes du pays d'en face",
+   "auteur": "Georges Moustaki",
+   "lu": "2011",
+   "paru": 2006
+  },
+  {
+   "id": "c246",
+   "titre": "Une année chez les Français",
+   "auteur": "Fouad Laroui",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c247",
+   "titre": "Sept histoires qui reviennent de loin",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2011",
+   "paru": 2011
+  },
+  {
+   "id": "c248",
+   "titre": "Concerto à la mémoire d'un ange",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "lu": "2011",
+   "paru": 2010
+  },
+  {
+   "id": "c249",
+   "titre": "Au pays des pierres de lune",
+   "auteur": "Tania Sollogoub",
+   "lu": "2012",
+   "paru": 2011
+  },
+  {
+   "id": "c250",
+   "titre": "Les répliques les plus drôles du théâtre",
+   "auteur": "Pierre Arditi",
+   "lu": "2012",
+   "paru": null
+  },
+  {
+   "id": "c251",
+   "titre": "Papa part, maman ment, mémé meurt",
+   "auteur": "Fabienne Yvert",
+   "lu": "2012",
+   "paru": null
+  },
+  {
+   "id": "c252",
+   "titre": "Cyrano, ma vie dans la sienne",
+   "auteur": "Jacques Weber",
+   "lu": "2012",
+   "paru": 2011
+  },
+  {
+   "id": "c253",
+   "titre": "L'esprit de conversation",
+   "auteur": "Chantal Thomas",
+   "lu": "2012",
+   "paru": 2011
+  },
+  {
+   "id": "c254",
+   "titre": "Désaccords imparfaits",
+   "auteur": "Jonathan Coe",
+   "lu": "2012",
+   "paru": 2012
+  },
+  {
+   "id": "c255",
+   "titre": "Comme un roman",
+   "auteur": "Daniel Pennac",
+   "lu": "2012",
+   "paru": 1992
+  },
+  {
+   "id": "c256",
+   "titre": "L'histoire de Monsieur Sommer",
+   "auteur": "Patrick Süskind & Sempé",
+   "lu": "2012",
+   "paru": 1991
+  },
+  {
+   "id": "c257",
+   "titre": "Trois hommes dans un bateau (sans oublier le chien)",
+   "auteur": "Jerome K. Jerome",
+   "lu": "2012",
+   "paru": 1889
+  },
+  {
+   "id": "c258",
+   "titre": "Rose",
+   "auteur": "Tatiana de Rosnay",
+   "lu": "2012",
+   "paru": 2011
+  },
+  {
+   "id": "c259",
+   "titre": "Les dix enfants que Madame Ming n'a jamais eus",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "lu": "2012",
+   "paru": 2012
+  },
+  {
+   "id": "c260",
+   "titre": "Le potentiel érotique de ma femme",
+   "auteur": "David Foenkinos",
+   "lu": "2012",
+   "paru": 2004
+  },
+  {
+   "id": "c261",
+   "titre": "La vie très privée de Mr Sim",
+   "auteur": "Jonathan Coe",
+   "lu": "2012",
+   "paru": 2010
+  },
+  {
+   "id": "c262",
+   "titre": "Les témoins de la mariée",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "2012",
+   "paru": 2010
+  },
+  {
+   "id": "c263",
+   "titre": "Les chemins nous inventent",
+   "auteur": "Philippe Delerm",
+   "lu": "2012",
+   "paru": 1997
+  },
+  {
+   "id": "c264",
+   "titre": "Le Rajah Bourbon",
+   "auteur": "Michel de Grèce",
+   "lu": "2012",
+   "paru": 2007
+  },
+  {
+   "id": "c265",
+   "titre": "Un héros",
+   "auteur": "Félicité Herzog",
+   "lu": "2013",
+   "paru": 2012
+  },
+  {
+   "id": "c266",
+   "titre": "Le Turquetto",
+   "auteur": "Metin Arditi",
+   "lu": "2013",
+   "paru": 2011
+  },
+  {
+   "id": "c267",
+   "titre": "Le sermon sur la chute de Rome",
+   "auteur": "Jérôme Ferrari",
+   "lu": "2013",
+   "paru": 2012
+  },
+  {
+   "id": "c268",
+   "titre": "Le sel de la vie",
+   "auteur": "Françoise Héritier",
+   "lu": "2013",
+   "paru": 2012
+  },
+  {
+   "id": "c269",
+   "titre": "Le voisin",
+   "auteur": "Tatiana de Rosnay",
+   "lu": "2013",
+   "paru": 2000
+  },
+  {
+   "id": "c270",
+   "titre": "Le journal intime d'un arbre",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "2013",
+   "paru": 2011
+  },
+  {
+   "id": "c271",
+   "titre": "Nos séparations",
+   "auteur": "David Foenkinos",
+   "lu": "2013",
+   "paru": 2008
+  },
+  {
+   "id": "c272",
+   "titre": "Les sirènes de Saint-Malo",
+   "auteur": "Françoise Bourdin",
+   "lu": "2013",
+   "paru": 1997
+  },
+  {
+   "id": "c273",
+   "titre": "Oui, mais quelle est la question ?",
+   "auteur": "Bernard Pivot",
+   "lu": "2013",
+   "paru": 2012
+  },
+  {
+   "id": "c274",
+   "titre": "Les vieilles",
+   "auteur": "Pascale Gautier",
+   "lu": "2013",
+   "paru": 2010
+  },
+  {
+   "id": "c275",
+   "titre": "La vieille dame du riad",
+   "auteur": "Fouad Laroui",
+   "lu": "2013",
+   "paru": 2011
+  },
+  {
+   "id": "c276",
+   "titre": "Billie",
+   "auteur": "Anna Gavalda",
+   "lu": "2013",
+   "paru": 2013
+  },
+  {
+   "id": "c277",
+   "titre": "Un été avec Montaigne",
+   "auteur": "Antoine Compagnon",
+   "lu": "2013",
+   "paru": 2013
+  },
+  {
+   "id": "c278",
+   "titre": "Sur le zinc – Au café avec les écrivains",
+   "auteur": "Collectif",
+   "lu": "2013",
+   "paru": null
+  },
+  {
+   "id": "c279",
+   "titre": "Le vieux qui ne voulait pas fêter son anniversaire",
+   "auteur": "Jonas Jonasson",
+   "lu": "2013",
+   "paru": 2009
+  },
+  {
+   "id": "c280",
+   "titre": "Une affaire d'identité et autres aventures de Sherlock Holmes",
+   "auteur": "Arthur Conan Doyle",
+   "lu": "2013",
+   "paru": 1891
+  },
+  {
+   "id": "c281",
+   "titre": "L'extraordinaire voyage du fakir qui était resté coincé dans une armoire Ikea",
+   "auteur": "Romain Puértolas",
+   "lu": "2014",
+   "paru": 2013
+  },
+  {
+   "id": "c282",
+   "titre": "Les mots des riches, les mots des pauvres",
+   "auteur": "Jean-Louis Fournier",
+   "lu": "2014",
+   "paru": 2014
+  },
+  {
+   "id": "c283",
+   "titre": "Les Onze",
+   "auteur": "Pierre Michon",
+   "lu": "2014",
+   "paru": 2009
+  },
+  {
+   "id": "c284",
+   "titre": "Fuir Pénélope",
+   "auteur": "Denis Podalydès",
+   "lu": "2014",
+   "paru": 2014
+  },
+  {
+   "id": "c285",
+   "titre": "La bonne peinture",
+   "auteur": "Marcel Aymé",
+   "lu": "2014",
+   "paru": null
+  },
+  {
+   "id": "c286",
+   "titre": "L'œil du loup",
+   "auteur": "Daniel Pennac",
+   "lu": "2014",
+   "paru": 1984
+  },
+  {
+   "id": "c287",
+   "titre": "Comme un chant d'espérance",
+   "auteur": "Jean d'Ormesson",
+   "lu": "2014",
+   "paru": 2014
+  },
+  {
+   "id": "c288",
+   "titre": "Les enfants d'Alexandrie",
+   "auteur": "Françoise Chandernagor",
+   "lu": "2014",
+   "paru": 2011
+  },
+  {
+   "id": "c289",
+   "titre": "Ceux qui vont mourir te saluent",
+   "auteur": "Fred Vargas",
+   "lu": "2014",
+   "paru": 1994
+  },
+  {
+   "id": "c290",
+   "titre": "Pour que tu ne te perdes pas dans le quartier",
+   "auteur": "Patrick Modiano",
+   "lu": "2014",
+   "paru": 2014
+  },
+  {
+   "id": "c291",
+   "titre": "Histoire d'une mouette et du chat qui lui apprit à voler",
+   "auteur": "Luis Sepúlveda",
+   "lu": "2014",
+   "paru": 1996
+  },
+  {
+   "id": "c292",
+   "titre": "Mon père est femme de ménage",
+   "auteur": "Saphia Azzeddine",
+   "lu": "2014",
+   "paru": 2009
+  },
+  {
+   "id": "c293",
+   "titre": "Le sabotage amoureux",
+   "auteur": "Amélie Nothomb",
+   "lu": "2014",
+   "paru": 1993
+  },
+  {
+   "id": "c294",
+   "titre": "Le confident",
+   "auteur": "Hélène Grémillon",
+   "lu": "2014",
+   "paru": 2010
+  },
+  {
+   "id": "c295",
+   "titre": "Ma grand-mère russe et son aspirateur américain",
+   "auteur": "Meir Shalev",
+   "lu": "2015",
+   "paru": 2009
+  },
+  {
+   "id": "c296",
+   "titre": "Le sens de ma vie",
+   "auteur": "Romain Gary",
+   "lu": "2015",
+   "paru": 2014
+  },
+  {
+   "id": "c297",
+   "titre": "Je vais passer pour un vieux con",
+   "auteur": "Philippe Delerm",
+   "lu": "2015",
+   "paru": 2012
+  },
+  {
+   "id": "c298",
+   "titre": "Dernières nouvelles des oiseaux",
+   "auteur": "Erik Orsenna",
+   "lu": "2015",
+   "paru": 2005
+  },
+  {
+   "id": "c299",
+   "titre": "La fête de l'insignifiance",
+   "auteur": "Milan Kundera",
+   "lu": "2015",
+   "paru": 2014
+  },
+  {
+   "id": "c300",
+   "titre": "Le flûtiste invisible",
+   "auteur": "Philippe Labro",
+   "lu": "2015",
+   "paru": 2013
+  },
+  {
+   "id": "c301",
+   "titre": "Temps glaciaires",
+   "auteur": "Fred Vargas",
+   "lu": "2015",
+   "paru": 2015
+  },
+  {
+   "id": "c302",
+   "titre": "Ne lâche pas ma main",
+   "auteur": "Michel Bussi",
+   "lu": "2015",
+   "paru": 2013
+  },
+  {
+   "id": "c303",
+   "titre": "Demain j'arrête !",
+   "auteur": "Gilles Legardinier",
+   "lu": "2015",
+   "paru": 2011
+  },
+  {
+   "id": "c304",
+   "titre": "Ancien malade des hôpitaux de Paris",
+   "auteur": "Daniel Pennac",
+   "lu": "2015",
+   "paru": 2012
+  },
+  {
+   "id": "c305",
+   "titre": "Lady Susan",
+   "auteur": "Jane Austen",
+   "lu": "2015",
+   "paru": 1871
+  },
+  {
+   "id": "c306",
+   "titre": "La dame du Palatin",
+   "auteur": "Patrick de Carolis",
+   "lu": "2015",
+   "paru": 2011
+  },
+  {
+   "id": "c307",
+   "titre": "Le roi disait que j'étais diable",
+   "auteur": "Clara Dupont-Monod",
+   "lu": "2015",
+   "paru": 2014
+  },
+  {
+   "id": "c308",
+   "titre": "Soirée sushi",
+   "auteur": "Agnès Abécassis",
+   "lu": "2015",
+   "paru": 2010
+  },
+  {
+   "id": "c309",
+   "titre": "Le liseur du 6h27",
+   "auteur": "Jean-Paul Didierlaurent",
+   "lu": "2015",
+   "paru": 2014
+  },
+  {
+   "id": "c310",
+   "titre": "L'étrange affaire du pantalon de Dassoukine",
+   "auteur": "Fouad Laroui",
+   "lu": "2015",
+   "paru": 2012
+  },
+  {
+   "id": "c311",
+   "titre": "Les dames de Rome",
+   "auteur": "Françoise Chandernagor",
+   "lu": "2015",
+   "paru": 2012
+  },
+  {
+   "id": "c312",
+   "titre": "Cabot-Caboche",
+   "auteur": "Daniel Pennac",
+   "lu": "2015",
+   "paru": 1982
+  },
+  {
+   "id": "c313",
+   "titre": "La maison du chat-qui-pelote",
+   "auteur": "Honoré de Balzac",
+   "lu": "2015",
+   "paru": 1830
+  },
+  {
+   "id": "c314",
+   "titre": "Le fantôme de Canterville et autres contes",
+   "auteur": "Oscar Wilde",
+   "lu": "2015",
+   "paru": 1887
+  },
+  {
+   "id": "c315",
+   "titre": "Nos gloires secrètes",
+   "auteur": "Tonino Benacquista",
+   "lu": "2015",
+   "paru": 2013
+  },
+  {
+   "id": "c316",
+   "titre": "Catherine Certitude",
+   "auteur": "Patrick Modiano & Sempé",
+   "lu": "2016",
+   "paru": 1988
+  },
+  {
+   "id": "c317",
+   "titre": "Boomerang",
+   "auteur": "Tatiana de Rosnay",
+   "lu": "2016",
+   "paru": 2009
+  },
+  {
+   "id": "c318",
+   "titre": "Rosa candida",
+   "auteur": "Auður Ava Ólafsdóttir",
+   "lu": "2016",
+   "paru": 2007
+  },
+  {
+   "id": "c319",
+   "titre": "Nos cheveux blanchiront avec nos yeux",
+   "auteur": "Thomas Vinau",
+   "lu": "2016",
+   "paru": 2011
+  },
+  {
+   "id": "c320",
+   "titre": "Expo 58",
+   "auteur": "Jonathan Coe",
+   "lu": "2016",
+   "paru": 2013
+  },
+  {
+   "id": "c321",
+   "titre": "La petite fille qui avait avalé un nuage grand comme la tour Eiffel",
+   "auteur": "Romain Puértolas",
+   "lu": "2016",
+   "paru": 2015
+  },
+  {
+   "id": "c322",
+   "titre": "La vérité sur l'affaire Harry Quebert",
+   "auteur": "Joël Dicker",
+   "lu": "2016",
+   "paru": 2012
+  },
+  {
+   "id": "c323",
+   "titre": "Les gens heureux lisent et boivent du café",
+   "auteur": "Agnès Martin-Lugand",
+   "lu": "2016",
+   "paru": 2013
+  },
+  {
+   "id": "c324",
+   "titre": "En attendant Bojangles",
+   "auteur": "Olivier Bourdeaut",
+   "lu": "2016",
+   "paru": 2016
+  },
+  {
+   "id": "c325",
+   "titre": "Sens dessus dessous",
+   "auteur": "Milena Agus",
+   "lu": "2016",
+   "paru": 2016
+  },
+  {
+   "id": "c326",
+   "titre": "Les heures silencieuses",
+   "auteur": "Gaëlle Josse",
+   "lu": "2016",
+   "paru": 2011
+  },
+  {
+   "id": "c327",
+   "titre": "L'échange des princesses",
+   "auteur": "Chantal Thomas",
+   "lu": "2016",
+   "paru": 2013
+  },
+  {
+   "id": "c328",
+   "titre": "La vie est facile, ne t'inquiète pas",
+   "auteur": "Agnès Martin-Lugand",
+   "lu": "2016",
+   "paru": 2015
+  },
+  {
+   "id": "c329",
+   "titre": "Trois jours avec Norman Jail",
+   "auteur": "Éric Fottorino",
+   "lu": "2016",
+   "paru": 2016
+  },
+  {
+   "id": "c330",
+   "titre": "Nouvelles (11 écrivains choisis par Le 1 et La Grande Librairie)",
+   "auteur": "Collectif",
+   "lu": "2016",
+   "paru": null
+  },
+  {
+   "id": "c331",
+   "titre": "Le soleil des Scorta",
+   "auteur": "Laurent Gaudé",
+   "lu": "2016",
+   "paru": 2004
+  },
+  {
+   "id": "c332",
+   "titre": "Petit éloge de la lecture",
+   "auteur": "Pef",
+   "lu": "2016",
+   "paru": null
+  },
+  {
+   "id": "c333",
+   "titre": "Passions – La Princesse de Clèves",
+   "auteur": "Jean-Michel Delacomptée",
+   "lu": "2016",
+   "paru": 2012
+  },
+  {
+   "id": "c334",
+   "titre": "Petit pays",
+   "auteur": "Gaël Faye",
+   "lu": "2016",
+   "paru": 2016
+  },
+  {
+   "id": "c335",
+   "titre": "Le garçon qui ne parlait pas",
+   "auteur": "Donna Leon",
+   "lu": "2017",
+   "paru": 2015
+  },
+  {
+   "id": "c336",
+   "titre": "Et tu n'es pas revenu",
+   "auteur": "Marceline Loridan-Ivens",
+   "lu": "2017",
+   "paru": 2015
+  },
+  {
+   "id": "c337",
+   "titre": "L'amie prodigieuse",
+   "auteur": "Elena Ferrante",
+   "lu": "2017",
+   "paru": 2011
+  },
+  {
+   "id": "c338",
+   "titre": "Le nouveau nom",
+   "auteur": "Elena Ferrante",
+   "lu": "2017",
+   "paru": 2012
+  },
+  {
+   "id": "c339",
+   "titre": "Brunetti entre les lignes",
+   "auteur": "Donna Leon",
+   "lu": "2017",
+   "paru": 2016
+  },
+  {
+   "id": "c340",
+   "titre": "Chroniques d'un pâtachon, Paris 1930-1935",
+   "auteur": "Pierre de Régnier",
+   "lu": "2017",
+   "paru": null
+  },
+  {
+   "id": "c341",
+   "titre": "Le tour du monde du roi Zibeline",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c342",
+   "titre": "Jules",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "2017",
+   "paru": 2015
+  },
+  {
+   "id": "c343",
+   "titre": "Le bureau des jardins et des étangs",
+   "auteur": "Didier Decoin",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c344",
+   "titre": "Mort à la Fenice",
+   "auteur": "Donna Leon",
+   "lu": "2017",
+   "paru": 1992
+  },
+  {
+   "id": "c345",
+   "titre": "La porte",
+   "auteur": "Magda Szabó",
+   "lu": "2017",
+   "paru": 1987
+  },
+  {
+   "id": "c346",
+   "titre": "Le livre des Baltimore",
+   "auteur": "Joël Dicker",
+   "lu": "2017",
+   "paru": 2015
+  },
+  {
+   "id": "c347",
+   "titre": "Comédie française",
+   "auteur": "Fabrice Luchini",
+   "lu": "2017",
+   "paru": 2016
+  },
+  {
+   "id": "c348",
+   "titre": "Souvenirs de la marée basse",
+   "auteur": "Chantal Thomas",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c349",
+   "titre": "Battement d'ailes",
+   "auteur": "Milena Agus",
+   "lu": "2017",
+   "paru": 2008
+  },
+  {
+   "id": "c350",
+   "titre": "Quand sort la recluse",
+   "auteur": "Fred Vargas",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c351",
+   "titre": "Nos richesses",
+   "auteur": "Kaouther Adimi",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c352",
+   "titre": "Les passeurs de livres de Daraya",
+   "auteur": "Delphine Minoui",
+   "lu": "2017",
+   "paru": 2017
+  },
+  {
+   "id": "c353",
+   "titre": "Mémé dans les orties",
+   "auteur": "Aurélie Valognes",
+   "lu": "2017",
+   "paru": 2014
+  },
+  {
+   "id": "c354",
+   "titre": "Le chien des Baskerville",
+   "auteur": "Arthur Conan Doyle",
+   "lu": "2017",
+   "paru": 1902
+  },
+  {
+   "id": "c355",
+   "titre": "La tête de l'emploi",
+   "auteur": "David Foenkinos",
+   "lu": "2018",
+   "paru": 2014
+  },
+  {
+   "id": "c356",
+   "titre": "C'était mieux avant !",
+   "auteur": "Michel Serres",
+   "lu": "2018",
+   "paru": 2017
+  },
+  {
+   "id": "c357",
+   "titre": "Au gré des jours",
+   "auteur": "Françoise Héritier",
+   "lu": "2018",
+   "paru": 2017
+  },
+  {
+   "id": "c358",
+   "titre": "Le mystère Henri Pick",
+   "auteur": "David Foenkinos",
+   "lu": "2018",
+   "paru": 2016
+  },
+  {
+   "id": "c359",
+   "titre": "Pactum salis",
+   "auteur": "Olivier Bourdeaut",
+   "lu": "2018",
+   "paru": 2018
+  },
+  {
+   "id": "c360",
+   "titre": "Riquet à la houppe",
+   "auteur": "Amélie Nothomb",
+   "lu": "2018",
+   "paru": 2016
+  },
+  {
+   "id": "c361",
+   "titre": "La petite fille de Monsieur Linh",
+   "auteur": "Philippe Claudel",
+   "lu": "2018",
+   "paru": 2005
+  },
+  {
+   "id": "c362",
+   "titre": "La grande vie",
+   "auteur": "Christian Bobin",
+   "lu": "2018",
+   "paru": 2014
+  },
+  {
+   "id": "c363",
+   "titre": "Les mémoires d'un chat",
+   "auteur": "Hiro Arikawa",
+   "lu": "2018",
+   "paru": 2012
+  },
+  {
+   "id": "c364",
+   "titre": "Brunetti en trois actes",
+   "auteur": "Donna Leon",
+   "lu": "2018",
+   "paru": 2016
+  },
+  {
+   "id": "c365",
+   "titre": "Madame Pylinska et le secret de Chopin",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "lu": "2018",
+   "paru": 2018
+  },
+  {
+   "id": "c366",
+   "titre": "Le magasin des suicides",
+   "auteur": "Jean Teulé",
+   "lu": "2018",
+   "paru": 2007
+  },
+  {
+   "id": "c367",
+   "titre": "Les douze abbés de Challant",
+   "auteur": "Laura Mancinelli",
+   "lu": "2018",
+   "paru": 1981
+  },
+  {
+   "id": "c368",
+   "titre": "La tresse",
+   "auteur": "Laetitia Colombani",
+   "lu": "2018",
+   "paru": 2017
+  },
+  {
+   "id": "c369",
+   "titre": "Entrées libres",
+   "auteur": "Philippe Delerm",
+   "lu": "2018",
+   "paru": 2018
+  },
+  {
+   "id": "c370",
+   "titre": "Des hommes sans femmes",
+   "auteur": "Haruki Murakami",
+   "lu": "2018",
+   "paru": 2014
+  },
+  {
+   "id": "c371",
+   "titre": "La dernière des Stanfield",
+   "auteur": "Marc Levy",
+   "lu": "2018",
+   "paru": 2017
+  },
+  {
+   "id": "c372",
+   "titre": "Terres promises",
+   "auteur": "Milena Agus",
+   "lu": "2018",
+   "paru": 2017
+  },
+  {
+   "id": "c373",
+   "titre": "J'aurais voulu être égyptien",
+   "auteur": "Alaa El Aswany",
+   "lu": "2018",
+   "paru": 2004
+  },
+  {
+   "id": "c374",
+   "titre": "Au pays des vermeilles",
+   "auteur": "Noëlle Châtelet",
+   "lu": "2018",
+   "paru": 2009
+  },
+  {
+   "id": "c375",
+   "titre": "Salina – Les trois exils",
+   "auteur": "Laurent Gaudé",
+   "lu": "2018",
+   "paru": 2018
+  },
+  {
+   "id": "c376",
+   "titre": "Un pedigree",
+   "auteur": "Patrick Modiano",
+   "lu": "2018",
+   "paru": 2005
+  },
+  {
+   "id": "c377",
+   "titre": "Les rêveurs",
+   "auteur": "Isabelle Carré",
+   "lu": "2018",
+   "paru": 2018
+  },
+  {
+   "id": "c378",
+   "titre": "21 rue La Boétie",
+   "auteur": "Anne Sinclair",
+   "lu": "2018",
+   "paru": 2012
+  },
+  {
+   "id": "c379",
+   "titre": "Histoire d'un escargot qui découvrit l'importance de la lenteur",
+   "auteur": "Luis Sepúlveda",
+   "lu": "2018",
+   "paru": 2013
+  },
+  {
+   "id": "c380",
+   "titre": "L'inconnu du Grand Canal",
+   "auteur": "Donna Leon",
+   "lu": "2019",
+   "paru": 2014
+  },
+  {
+   "id": "c381",
+   "titre": "Les porteurs d'eau",
+   "auteur": "Atiq Rahimi",
+   "lu": "2019",
+   "paru": 2019
+  },
+  {
+   "id": "c382",
+   "titre": "Le cercle des impunis",
+   "auteur": "Paul Mérault",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c383",
+   "titre": "Les grands espaces",
+   "auteur": "Catherine Meurisse",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c384",
+   "titre": "Bakhita",
+   "auteur": "Véronique Olmi",
+   "lu": "2019",
+   "paru": 2017
+  },
+  {
+   "id": "c385",
+   "titre": "L'arbre du pays Toraja",
+   "auteur": "Philippe Claudel",
+   "lu": "2019",
+   "paru": 2016
+  },
+  {
+   "id": "c386",
+   "titre": "Raoul Taburin",
+   "auteur": "Sempé",
+   "lu": "2019",
+   "paru": 1995
+  },
+  {
+   "id": "c387",
+   "titre": "L'entrée des mots",
+   "auteur": "Jacques Weber",
+   "lu": "2019",
+   "paru": null
+  },
+  {
+   "id": "c388",
+   "titre": "De l'âme",
+   "auteur": "François Cheng",
+   "lu": "2019",
+   "paru": 2016
+  },
+  {
+   "id": "c389",
+   "titre": "Quand tu descendras du ciel",
+   "auteur": "Gabriel Katz",
+   "lu": "2019",
+   "paru": null
+  },
+  {
+   "id": "c390",
+   "titre": "Deux veuves pour un testament",
+   "auteur": "Donna Leon",
+   "lu": "2019",
+   "paru": 2014
+  },
+  {
+   "id": "c391",
+   "titre": "L'amour après",
+   "auteur": "Marceline Loridan-Ivens",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c392",
+   "titre": "Vers la beauté",
+   "auteur": "David Foenkinos",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c393",
+   "titre": "L'archipel du chien",
+   "auteur": "Philippe Claudel",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c394",
+   "titre": "Changer l'eau des fleurs",
+   "auteur": "Valérie Perrin",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c395",
+   "titre": "Une chambre à soi",
+   "auteur": "Virginia Woolf",
+   "lu": "2019",
+   "paru": 1929
+  },
+  {
+   "id": "c396",
+   "titre": "Le suspendu de Conakry – Les énigmes d'Aurel le Consul",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c397",
+   "titre": "Délivrances",
+   "auteur": "Toni Morrison",
+   "lu": "2019",
+   "paru": 2015
+  },
+  {
+   "id": "c398",
+   "titre": "Des pierres dans ma poche",
+   "auteur": "Kaouther Adimi",
+   "lu": "2019",
+   "paru": 2015
+  },
+  {
+   "id": "c399",
+   "titre": "La disparition de Stephanie Mailer",
+   "auteur": "Joël Dicker",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c400",
+   "titre": "Le sumo qui ne pouvait pas grossir",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "lu": "2019",
+   "paru": 2009
+  },
+  {
+   "id": "c401",
+   "titre": "Les petits de Décembre",
+   "auteur": "Kaouther Adimi",
+   "lu": "2019",
+   "paru": 2019
+  },
+  {
+   "id": "c402",
+   "titre": "Encre sympathique",
+   "auteur": "Patrick Modiano",
+   "lu": "2019",
+   "paru": 2019
+  },
+  {
+   "id": "c403",
+   "titre": "Le sillon",
+   "auteur": "Valérie Manteau",
+   "lu": "2019",
+   "paru": 2018
+  },
+  {
+   "id": "c404",
+   "titre": "La panthère des neiges",
+   "auteur": "Sylvain Tesson",
+   "lu": "2020",
+   "paru": 2019
+  },
+  {
+   "id": "c405",
+   "titre": "Le silence même n'est plus à toi",
+   "auteur": "Asli Erdogan",
+   "lu": "2020",
+   "paru": 2017
+  },
+  {
+   "id": "c406",
+   "titre": "Les trois femmes du Consul",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2020",
+   "paru": 2019
+  },
+  {
+   "id": "c407",
+   "titre": "Vie de Gérard Fulmard",
+   "auteur": "Jean Echenoz",
+   "lu": "2020",
+   "paru": 2020
+  },
+  {
+   "id": "c408",
+   "titre": "Minuit sur le canal San Boldo",
+   "auteur": "Donna Leon",
+   "lu": "2020",
+   "paru": 2017
+  },
+  {
+   "id": "c409",
+   "titre": "Le royaume des Deux-Mers",
+   "auteur": "Gilbert Sinoué",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c410",
+   "titre": "Chanson bretonne",
+   "auteur": "J.M.G. Le Clézio",
+   "lu": "2020",
+   "paru": 2020
+  },
+  {
+   "id": "c411",
+   "titre": "La jeune fille et la nuit",
+   "auteur": "Guillaume Musso",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c412",
+   "titre": "Souvenirs, souvenirs",
+   "auteur": "Catherine Nay",
+   "lu": "2020",
+   "paru": 2019
+  },
+  {
+   "id": "c413",
+   "titre": "L'amour harcelant",
+   "auteur": "Elena Ferrante",
+   "lu": "2020",
+   "paru": 1992
+  },
+  {
+   "id": "c414",
+   "titre": "Le plâtrier siffleur",
+   "auteur": "Christian Bobin",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c415",
+   "titre": "Le soleil se lève à l'ouest",
+   "auteur": "Yann Queffélec",
+   "lu": "2020",
+   "paru": null
+  },
+  {
+   "id": "c416",
+   "titre": "Moi par moi",
+   "auteur": "Jean-Michel Ribes",
+   "lu": "2020",
+   "paru": null
+  },
+  {
+   "id": "c417",
+   "titre": "Ghost in love",
+   "auteur": "Marc Levy",
+   "lu": "2020",
+   "paru": 2019
+  },
+  {
+   "id": "c418",
+   "titre": "Une comédie française",
+   "auteur": "Erik Orsenna",
+   "lu": "2020",
+   "paru": 1980
+  },
+  {
+   "id": "c419",
+   "titre": "Un bruit de balançoire",
+   "auteur": "Christian Bobin",
+   "lu": "2020",
+   "paru": 2017
+  },
+  {
+   "id": "c420",
+   "titre": "Nagori – La nostalgie de la saison qui vient de nous quitter",
+   "auteur": "Ryoko Sekiguchi",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c421",
+   "titre": "Mes vies secrètes",
+   "auteur": "Dominique Bona",
+   "lu": "2020",
+   "paru": 2019
+  },
+  {
+   "id": "c422",
+   "titre": "Les disparus de la lagune",
+   "auteur": "Donna Leon",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c423",
+   "titre": "La Daronne",
+   "auteur": "Hannelore Cayre",
+   "lu": "2020",
+   "paru": 2017
+  },
+  {
+   "id": "c424",
+   "titre": "Les prénoms épicènes",
+   "auteur": "Amélie Nothomb",
+   "lu": "2020",
+   "paru": 2018
+  },
+  {
+   "id": "c425",
+   "titre": "Numéro 11",
+   "auteur": "Jonathan Coe",
+   "lu": "2020",
+   "paru": 2015
+  },
+  {
+   "id": "c426",
+   "titre": "Le Clan des Otori, I – Le silence du rossignol",
+   "auteur": "Lian Hearn",
+   "lu": "2020",
+   "paru": 2002
+  },
+  {
+   "id": "c427",
+   "titre": "Une farouche liberté",
+   "auteur": "Gisèle Halimi & Annick Cojean",
+   "lu": "2020",
+   "paru": 2020
+  },
+  {
+   "id": "c428",
+   "titre": "Les simples",
+   "auteur": "Yannick Grannec",
+   "lu": "2021",
+   "paru": 2019
+  },
+  {
+   "id": "c429",
+   "titre": "Un homme heureux",
+   "auteur": "Arto Paasilinna",
+   "lu": "2021",
+   "paru": 1976
+  },
+  {
+   "id": "c430",
+   "titre": "Le parfum des fleurs la nuit (Ma nuit au musée)",
+   "auteur": "Leïla Slimani",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c431",
+   "titre": "Le Clan des Otori, II – Les neiges de l'exil",
+   "auteur": "Lian Hearn",
+   "lu": "2021",
+   "paru": 2003
+  },
+  {
+   "id": "c432",
+   "titre": "Le Mahabharata",
+   "auteur": "Jean-Claude Carrière",
+   "lu": "2021",
+   "paru": 1985
+  },
+  {
+   "id": "c433",
+   "titre": "Café de la mémoire",
+   "auteur": "Chantal Thomas",
+   "lu": "2021",
+   "paru": 2008
+  },
+  {
+   "id": "c434",
+   "titre": "L'affaire Arnolfini",
+   "auteur": "Jean-Philippe Postel",
+   "lu": "2021",
+   "paru": 2016
+  },
+  {
+   "id": "c435",
+   "titre": "Le meilleur de nos fils",
+   "auteur": "Donna Leon",
+   "lu": "2021",
+   "paru": 2006
+  },
+  {
+   "id": "c436",
+   "titre": "Le bal des folles",
+   "auteur": "Victoria Mas",
+   "lu": "2021",
+   "paru": 2019
+  },
+  {
+   "id": "c437",
+   "titre": "Le Clan des Otori, III – La clarté de la lune",
+   "auteur": "Lian Hearn",
+   "lu": "2021",
+   "paru": 2004
+  },
+  {
+   "id": "c438",
+   "titre": "Billy Wilder et moi",
+   "auteur": "Jonathan Coe",
+   "lu": "2021",
+   "paru": 2020
+  },
+  {
+   "id": "c439",
+   "titre": "Le lecteur de cadavres",
+   "auteur": "Antonio Garrido",
+   "lu": "2021",
+   "paru": 2011
+  },
+  {
+   "id": "c440",
+   "titre": "La nuit dernière au XVe siècle",
+   "auteur": "Didier van Cauwelaert",
+   "lu": "2021",
+   "paru": 2008
+  },
+  {
+   "id": "c441",
+   "titre": "De surprise en surprise",
+   "auteur": "Voutch",
+   "lu": "2021",
+   "paru": null
+  },
+  {
+   "id": "c442",
+   "titre": "Comme une respiration",
+   "auteur": "Jean Teulé",
+   "lu": "2021",
+   "paru": 2016
+  },
+  {
+   "id": "c443",
+   "titre": "Claude Monet – Georges Clemenceau : une histoire, deux caractères (biographie croisée)",
+   "auteur": "Alexandre Duval-Stalla",
+   "lu": "2021",
+   "paru": 2010
+  },
+  {
+   "id": "c444",
+   "titre": "Le diable est dans les détails",
+   "auteur": "Leïla Slimani",
+   "lu": "2021",
+   "paru": 2016
+  },
+  {
+   "id": "c445",
+   "titre": "Le prix de la chair",
+   "auteur": "Donna Leon",
+   "lu": "2021",
+   "paru": null
+  },
+  {
+   "id": "c446",
+   "titre": "Le banquier anarchiste",
+   "auteur": "Fernando Pessoa",
+   "lu": "2021",
+   "paru": 1922
+  },
+  {
+   "id": "c447",
+   "titre": "Vivre avec nos morts",
+   "auteur": "Delphine Horvilleur",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c448",
+   "titre": "C'est arrivé la nuit",
+   "auteur": "Marc Levy",
+   "lu": "2021",
+   "paru": 2020
+  },
+  {
+   "id": "c449",
+   "titre": "Le cerf-volant",
+   "auteur": "Laetitia Colombani",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c450",
+   "titre": "Je ne reverrai plus le monde",
+   "auteur": "Ahmet Altan",
+   "lu": "2021",
+   "paru": 2019
+  },
+  {
+   "id": "c451",
+   "titre": "Le consentement",
+   "auteur": "Vanessa Springora",
+   "lu": "2021",
+   "paru": 2020
+  },
+  {
+   "id": "c452",
+   "titre": "Premier sang",
+   "auteur": "Amélie Nothomb",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c453",
+   "titre": "13 à table ! (2022)",
+   "auteur": "Collectif (Les Restos du cœur)",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c454",
+   "titre": "Quelques amis",
+   "auteur": "Sempé",
+   "lu": "2021",
+   "paru": 2021
+  },
+  {
+   "id": "c455",
+   "titre": "Madame Hayat",
+   "auteur": "Ahmet Altan",
+   "lu": "2022",
+   "paru": 2021
+  },
+  {
+   "id": "c456",
+   "titre": "Le pays des autres",
+   "auteur": "Leïla Slimani",
+   "lu": "2022",
+   "paru": 2020
+  },
+  {
+   "id": "c457",
+   "titre": "Le discours",
+   "auteur": "Fabrice Caro",
+   "lu": "2022",
+   "paru": 2018
+  },
+  {
+   "id": "c458",
+   "titre": "Quand un fils nous est donné",
+   "auteur": "Donna Leon",
+   "lu": "2022",
+   "paru": 2020
+  },
+  {
+   "id": "c459",
+   "titre": "Haïkus du chat",
+   "auteur": "Minami Shinbô",
+   "lu": "2022",
+   "paru": null
+  },
+  {
+   "id": "c460",
+   "titre": "Les dames de Kimoto",
+   "auteur": "Sawako Ariyoshi",
+   "lu": "2022",
+   "paru": 1959
+  },
+  {
+   "id": "c461",
+   "titre": "Grand menteur (3 monologues)",
+   "auteur": "Laurent Gaudé",
+   "lu": "2022",
+   "paru": null
+  },
+  {
+   "id": "c462",
+   "titre": "Lumière d'été, puis vient la nuit",
+   "auteur": "Jón Kalman Stefánsson",
+   "lu": "2022",
+   "paru": 2005
+  },
+  {
+   "id": "c463",
+   "titre": "Paris, mille vies",
+   "auteur": "Laurent Gaudé",
+   "lu": "2022",
+   "paru": 2020
+  },
+  {
+   "id": "c464",
+   "titre": "Journal d'un homme heureux",
+   "auteur": "Philippe Delerm",
+   "lu": "2022",
+   "paru": 1988
+  },
+  {
+   "id": "c465",
+   "titre": "Le flambeur de la Caspienne – Les énigmes d'Aurel le Consul",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2022",
+   "paru": 2020
+  },
+  {
+   "id": "c466",
+   "titre": "Au soleil redouté",
+   "auteur": "Michel Bussi",
+   "lu": "2022",
+   "paru": 2020
+  },
+  {
+   "id": "c467",
+   "titre": "Des amis haut placés",
+   "auteur": "Donna Leon",
+   "lu": "2022",
+   "paru": 2000
+  },
+  {
+   "id": "c468",
+   "titre": "Célestine du Bac",
+   "auteur": "Tatiana de Rosnay",
+   "lu": "2022",
+   "paru": 2021
+  },
+  {
+   "id": "c469",
+   "titre": "Un Afghan à Paris",
+   "auteur": "Mahmud Nasimi",
+   "lu": "2022",
+   "paru": 2022
+  },
+  {
+   "id": "c470",
+   "titre": "Haïkus du temps qui passe",
+   "auteur": null,
+   "lu": "2022",
+   "paru": null,
+   "a_verifier": true
+  },
+  {
+   "id": "c471",
+   "titre": "Haïkus – Les paysages d'Hokusai",
+   "auteur": "Bashô",
+   "lu": "2022",
+   "paru": null
+  },
+  {
+   "id": "c472",
+   "titre": "Le livre des heures",
+   "auteur": "Anne Delaflotte Mehdevi",
+   "lu": "2022",
+   "paru": 2022
+  },
+  {
+   "id": "c473",
+   "titre": "Charlotte",
+   "auteur": "David Foenkinos",
+   "lu": "2022",
+   "paru": 2014
+  },
+  {
+   "id": "c474",
+   "titre": "La fille du fermier",
+   "auteur": "Jim Harrison",
+   "lu": "2022",
+   "paru": 2005
+  },
+  {
+   "id": "c475",
+   "titre": "Skidamarink",
+   "auteur": "Guillaume Musso",
+   "lu": "2022",
+   "paru": 2001
+  },
+  {
+   "id": "c476",
+   "titre": "Wolf",
+   "auteur": "Jim Harrison",
+   "lu": "2022",
+   "paru": 1971
+  },
+  {
+   "id": "c477",
+   "titre": "La classe de neige",
+   "auteur": "Emmanuel Carrère",
+   "lu": "2022",
+   "paru": 1995
+  },
+  {
+   "id": "c478",
+   "titre": "Les enfants sont rois",
+   "auteur": "Delphine de Vigan",
+   "lu": "2022",
+   "paru": 2021
+  },
+  {
+   "id": "c479",
+   "titre": "Ce matin-là",
+   "auteur": "Gaëlle Josse",
+   "lu": "2022",
+   "paru": 2021
+  },
+  {
+   "id": "c480",
+   "titre": "Des ballerines de Papicha",
+   "auteur": "Kaouther Adimi",
+   "lu": "2022",
+   "paru": 2010
+  },
+  {
+   "id": "c481",
+   "titre": "Contes de Corée",
+   "auteur": "Collectif",
+   "lu": "2022",
+   "paru": null
+  },
+  {
+   "id": "c482",
+   "titre": "Là où chantent les écrevisses",
+   "auteur": "Delia Owens",
+   "lu": "2022",
+   "paru": 2018
+  },
+  {
+   "id": "c483",
+   "titre": "L'enchanteresse de Florence",
+   "auteur": "Salman Rushdie",
+   "lu": "2022",
+   "paru": 2008
+  },
+  {
+   "id": "c484",
+   "titre": "Tant que le café est encore chaud",
+   "auteur": "Toshikazu Kawaguchi",
+   "lu": "2022",
+   "paru": 2015
+  },
+  {
+   "id": "c485",
+   "titre": "En eaux dangereuses",
+   "auteur": "Donna Leon",
+   "lu": "2023",
+   "paru": 2021
+  },
+  {
+   "id": "c486",
+   "titre": "Le chat qui venait du ciel",
+   "auteur": "Takashi Hiraide",
+   "lu": "2023",
+   "paru": 2001
+  },
+  {
+   "id": "c487",
+   "titre": "Blizzard",
+   "auteur": "Marie Vingtras",
+   "lu": "2023",
+   "paru": 2021
+  },
+  {
+   "id": "c488",
+   "titre": "L'inconnue de la Seine",
+   "auteur": "Guillaume Musso",
+   "lu": "2023",
+   "paru": 2021
+  },
+  {
+   "id": "c489",
+   "titre": "Croquis de mémoire",
+   "auteur": "Jean Cau",
+   "lu": "2023",
+   "paru": 1985
+  },
+  {
+   "id": "c490",
+   "titre": "On ne dit jamais assez aux gens qu'on les aime",
+   "auteur": "Jacques Weber",
+   "lu": "2023",
+   "paru": null
+  },
+  {
+   "id": "c491",
+   "titre": "Tenir sa langue",
+   "auteur": "Polina Panassenko",
+   "lu": "2023",
+   "paru": 2022
+  },
+  {
+   "id": "c492",
+   "titre": "L'ordre du jour",
+   "auteur": "Éric Vuillard",
+   "lu": "2023",
+   "paru": 2017
+  },
+  {
+   "id": "c493",
+   "titre": "L'usure d'un monde – Une traversée de l'Iran",
+   "auteur": "François-Henri Désérable",
+   "lu": "2023",
+   "paru": 2023
+  },
+  {
+   "id": "c494",
+   "titre": "Tsubaki – Le poids des secrets 1",
+   "auteur": "Aki Shimazaki",
+   "lu": "2023",
+   "paru": 1999
+  },
+  {
+   "id": "c495",
+   "titre": "La princesse au petit moi – Les énigmes d'Aurel le Consul",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2023",
+   "paru": 2021
+  },
+  {
+   "id": "c496",
+   "titre": "Hamaguri – Le poids des secrets 2",
+   "auteur": "Aki Shimazaki",
+   "lu": "2023",
+   "paru": 2000
+  },
+  {
+   "id": "c497",
+   "titre": "Mon maître et mon vainqueur",
+   "auteur": "François-Henri Désérable",
+   "lu": "2023",
+   "paru": 2021
+  },
+  {
+   "id": "c498",
+   "titre": "La naissance du jour",
+   "auteur": "Colette",
+   "lu": "2023",
+   "paru": 1928
+  },
+  {
+   "id": "c499",
+   "titre": "Le muguet rouge",
+   "auteur": "Christian Bobin",
+   "lu": "2023",
+   "paru": 2022
+  },
+  {
+   "id": "c500",
+   "titre": "30 jours pour trouver un mari",
+   "auteur": "Fouad Laroui",
+   "lu": "2023",
+   "paru": null
+  },
+  {
+   "id": "c501",
+   "titre": "La danseuse",
+   "auteur": "Patrick Modiano",
+   "lu": "2023",
+   "paru": 2023
+  },
+  {
+   "id": "c502",
+   "titre": "Le cantique des innocents",
+   "auteur": "Donna Leon",
+   "lu": "2023",
+   "paru": 2010
+  },
+  {
+   "id": "c503",
+   "titre": "Le grand feu",
+   "auteur": "Léonor de Récondo",
+   "lu": "2023",
+   "paru": 2023
+  },
+  {
+   "id": "c504",
+   "titre": "Le mage du Kremlin",
+   "auteur": "Giuliano da Empoli",
+   "lu": "2023",
+   "paru": 2022
+  },
+  {
+   "id": "c505",
+   "titre": "Une façon d'aimer",
+   "auteur": "Dominique Barbéris",
+   "lu": "2024",
+   "paru": 2023
+  },
+  {
+   "id": "c506",
+   "titre": "Ce que je sais de toi",
+   "auteur": "Éric Chacour",
+   "lu": "2024",
+   "paru": 2023
+  },
+  {
+   "id": "c507",
+   "titre": "La colère et l'envie",
+   "auteur": "Alice Renard",
+   "lu": "2024",
+   "paru": 2024
+  },
+  {
+   "id": "c508",
+   "titre": "L'île haute",
+   "auteur": "Valentine Goby",
+   "lu": "2024",
+   "paru": 2022
+  },
+  {
+   "id": "c509",
+   "titre": "Au prochain arrêt",
+   "auteur": "Hiro Arikawa",
+   "lu": "2024",
+   "paru": 2008
+  },
+  {
+   "id": "c510",
+   "titre": "Seul entouré de chiens qui mordent",
+   "auteur": "David Thomas",
+   "lu": "2024",
+   "paru": 2021
+  },
+  {
+   "id": "c511",
+   "titre": "Chien sauvage",
+   "auteur": "Pekka Juntti",
+   "lu": "2024",
+   "paru": null
+  },
+  {
+   "id": "c512",
+   "titre": "Les règles du Mikado",
+   "auteur": "Erri De Luca",
+   "lu": "2024",
+   "paru": 2015
+  },
+  {
+   "id": "c513",
+   "titre": "L'affaire Paola",
+   "auteur": "Donna Leon",
+   "lu": "2024",
+   "paru": null
+  },
+  {
+   "id": "c514",
+   "titre": "Les jardins de Torcello",
+   "auteur": "Claudie Gallay",
+   "lu": "2024",
+   "paru": 2022
+  },
+  {
+   "id": "c515",
+   "titre": "Le café du temps retrouvé",
+   "auteur": "Toshikazu Kawaguchi",
+   "lu": "2024",
+   "paru": 2017
+  },
+  {
+   "id": "c516",
+   "titre": "La barque de Masao",
+   "auteur": "Antoine Choplin",
+   "lu": "2024",
+   "paru": 2023
+  },
+  {
+   "id": "c517",
+   "titre": "La fileuse de verre",
+   "auteur": "Tracy Chevalier",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c518",
+   "titre": "Le vent passe et la nuit aussi",
+   "auteur": "Milena Agus",
+   "lu": "2025-2026",
+   "paru": 2025
+  },
+  {
+   "id": "c519",
+   "titre": "Le rêve du jaguar",
+   "auteur": "Miguel Bonnefoy",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c520",
+   "titre": "Dora Bruder",
+   "auteur": "Patrick Modiano",
+   "lu": "2025-2026",
+   "paru": 1997
+  },
+  {
+   "id": "c521",
+   "titre": "Une nuit au cap de la Chèvre",
+   "auteur": "François Cheng",
+   "lu": "2025-2026",
+   "paru": null
+  },
+  {
+   "id": "c522",
+   "titre": "Clara lit Proust",
+   "auteur": "Stéphane Carlier",
+   "lu": "2025-2026",
+   "paru": 2022
+  },
+  {
+   "id": "c523",
+   "titre": "Âme brisée",
+   "auteur": "Akira Mizubayashi",
+   "lu": "2025-2026",
+   "paru": 2019
+  },
+  {
+   "id": "c524",
+   "titre": "Célidan disparu",
+   "auteur": "Denis Podalydès",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c525",
+   "titre": "Les deux Beune",
+   "auteur": "Pierre Michon",
+   "lu": "2025-2026",
+   "paru": null
+  },
+  {
+   "id": "c526",
+   "titre": "Notre otage à Acapulco – Les énigmes d'Aurel le Consul",
+   "auteur": "Jean-Christophe Rufin",
+   "lu": "2025-2026",
+   "paru": 2022
+  },
+  {
+   "id": "c527",
+   "titre": "La femme de ménage",
+   "auteur": "Freida McFadden",
+   "lu": "2025-2026",
+   "paru": 2022
+  },
+  {
+   "id": "c528",
+   "titre": "Badjens",
+   "auteur": "Delphine Minoui",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c529",
+   "titre": "La petite bonne",
+   "auteur": "Bérénice Pichat",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c530",
+   "titre": "Le livre des sœurs",
+   "auteur": "Amélie Nothomb",
+   "lu": "2025-2026",
+   "paru": 2022
+  },
+  {
+   "id": "c531",
+   "titre": "Le suicide exalté de Charles Dickens",
+   "auteur": "Philippe Delerm",
+   "lu": "2025-2026",
+   "paru": 2025
+  },
+  {
+   "id": "c532",
+   "titre": "Les yeux de Mona",
+   "auteur": "Thomas Schlesser",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c533",
+   "titre": "L'homme qui lisait des livres",
+   "auteur": "Rachid Benzine",
+   "lu": "2025-2026",
+   "paru": 2025
+  },
+  {
+   "id": "c534",
+   "titre": "Comme en amour",
+   "auteur": "Alice Ferney",
+   "lu": "2025-2026",
+   "paru": 2025
+  },
+  {
+   "id": "c535",
+   "titre": "Le don du mensonge",
+   "auteur": "Donna Leon",
+   "lu": "2025-2026",
+   "paru": 2023
+  },
+  {
+   "id": "c536",
+   "titre": "Un perdant magnifique",
+   "auteur": "Florence Seyvos",
+   "lu": "2025-2026",
+   "paru": 2024
+  },
+  {
+   "id": "c537",
+   "titre": "Le soldat désaccordé",
+   "auteur": "Gilles Marchand",
+   "lu": "2025-2026",
+   "paru": 2022
+  },
+  {
+   "id": "c538",
+   "titre": "L'impossible retour",
+   "auteur": "Amélie Nothomb",
+   "lu": "2025-2026",
+   "paru": 2024
+  }
+ ]
+}

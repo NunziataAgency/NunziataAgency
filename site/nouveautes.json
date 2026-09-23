@@ -1,0 +1,222 @@
+{
+ "maj": "23 septembre 2026",
+ "livres": [
+  {
+   "id": "n01",
+   "titre": "Tant mieux",
+   "auteur": "Amélie Nothomb",
+   "date": "2025-08",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n02",
+   "titre": "L'adolescence du perroquet",
+   "auteur": "Amélie Nothomb",
+   "date": "2026-08-19",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n03",
+   "titre": "L'Éléphant",
+   "auteur": "Patrick Modiano",
+   "date": "2026-10-01",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n04",
+   "titre": "Le Palais",
+   "auteur": "François-Henri Désérable",
+   "date": "2026-08-20",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n05",
+   "titre": "Retour à Folegandros",
+   "auteur": "Agnès Martin-Lugand",
+   "date": "2026-09-17",
+   "note": "Michel Lafon"
+  },
+  {
+   "id": "n06",
+   "titre": "Mon voyage littéraire",
+   "auteur": "Donna Leon",
+   "date": "2026-09-10",
+   "note": "récit, Calmann-Lévy"
+  },
+  {
+   "id": "n07",
+   "titre": "L'Épreuve du feu",
+   "auteur": "Donna Leon",
+   "date": "2025-08",
+   "note": "une enquête de Brunetti"
+  },
+  {
+   "id": "n08",
+   "titre": "Le Café des amours inavouées",
+   "auteur": "Toshikazu Kawaguchi",
+   "date": "2026-11-02",
+   "note": "suite de Tant que le café est encore chaud"
+  },
+  {
+   "id": "n09",
+   "titre": "Les gens sont comme ça",
+   "auteur": "Philippe Delerm",
+   "date": "2026-01-02",
+   "note": "Seuil"
+  },
+  {
+   "id": "n10",
+   "titre": "La folie Sainte-Hélène",
+   "auteur": "Jean-Christophe Rufin",
+   "date": "2026-04",
+   "note": "Aurel le Consul"
+  },
+  {
+   "id": "n11",
+   "titre": "Le revenant d'Albanie",
+   "auteur": "Jean-Christophe Rufin",
+   "date": "2025",
+   "note": "Aurel le Consul"
+  },
+  {
+   "id": "n12",
+   "titre": "Je suis drôle",
+   "auteur": "David Foenkinos",
+   "date": "2026-04-02",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n13",
+   "titre": "Une unique lueur",
+   "auteur": "Fred Vargas",
+   "date": "2026-04-08",
+   "note": "un Adamsberg, Flammarion"
+  },
+  {
+   "id": "n14",
+   "titre": "Assaut contre la frontière",
+   "auteur": "Leïla Slimani",
+   "date": "2026-03-19",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n15",
+   "titre": "Les preuves de mon innocence",
+   "auteur": "Jonathan Coe",
+   "date": "2025-09-18",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n16",
+   "titre": "Juste après Dieu, il y a papa",
+   "auteur": "Éric-Emmanuel Schmitt",
+   "date": "2026-02-25",
+   "note": "sur Mozart et son père"
+  },
+  {
+   "id": "n17",
+   "titre": "Les cœurs sont faits pour être brisés",
+   "auteur": "Tatiana de Rosnay",
+   "date": "2026-03-11",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n18",
+   "titre": "L'impasse des rêves",
+   "auteur": "Didier van Cauwelaert",
+   "date": "2025-09",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n19",
+   "titre": "Zem",
+   "auteur": "Laurent Gaudé",
+   "date": "2025-08",
+   "note": "Actes Sud"
+  },
+  {
+   "id": "n20",
+   "titre": "La joie ennemie",
+   "auteur": "Kaouther Adimi",
+   "date": "2025",
+   "note": "sur la peintre Baya, Seuil"
+  },
+  {
+   "id": "n21",
+   "titre": "Le crime du paradis",
+   "auteur": "Guillaume Musso",
+   "date": "2026-03-03",
+   "note": "Calmann-Lévy"
+  },
+  {
+   "id": "n22",
+   "titre": "Que la mort nous frôle",
+   "auteur": "Michel Bussi",
+   "date": "2026",
+   "note": "Presses de la Cité"
+  },
+  {
+   "id": "n23",
+   "titre": "La très catastrophique visite du zoo",
+   "auteur": "Joël Dicker",
+   "date": "2025-03",
+   "note": "Rosie & Wolfe"
+  },
+  {
+   "id": "n24",
+   "titre": "Un jour sans femme",
+   "auteur": "Laetitia Colombani",
+   "date": "2026-05",
+   "note": "L'Iconoclaste"
+  },
+  {
+   "id": "n25",
+   "titre": "Ajisaï",
+   "auteur": "Aki Shimazaki",
+   "date": "2025-05-07",
+   "note": "Actes Sud"
+  },
+  {
+   "id": "n26",
+   "titre": "Mukudori",
+   "auteur": "Aki Shimazaki",
+   "date": "2026",
+   "note": "Actes Sud"
+  },
+  {
+   "id": "n27",
+   "titre": "Que la joie demeure : vivre avec Bach",
+   "auteur": "Erik Orsenna",
+   "date": "2026",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n28",
+   "titre": "Le grimpeur et le grognard",
+   "auteur": "Sylvain Tesson",
+   "date": "2026-04-16",
+   "note": "avec Régis Debray, Gallimard"
+  },
+  {
+   "id": "n29",
+   "titre": "Je suis Romane Monnier",
+   "auteur": "Delphine de Vigan",
+   "date": "2026-01",
+   "note": "Gallimard"
+  },
+  {
+   "id": "n30",
+   "titre": "Le chat du jardinier",
+   "auteur": "Thomas Schlesser",
+   "date": "2026-01-28",
+   "note": "Albin Michel"
+  },
+  {
+   "id": "n31",
+   "titre": "L'émerveillement",
+   "auteur": "Aurélie Valognes",
+   "date": "2026-03-11",
+   "note": "JC Lattès"
+  }
+ ]
+}
