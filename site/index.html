@@ -53,18 +53,24 @@ button{cursor:pointer;-webkit-tap-highlight-color:transparent}
 
 /* --- En-tête : cartouche + sceau + vagues seigaiha --- */
 header.tete{position:relative;padding-block:18px 0}
-.ligne-tete{display:flex;align-items:center;gap:16px}
+.ligne-tete{display:flex;flex-wrap:wrap;align-items:center;gap:14px 16px}
 .sceau{
   flex:none;width:64px;height:64px;border-radius:8px;background:var(--shu);color:var(--shu-ink);
   display:grid;place-items:center;font-size:40px;line-height:1;font-weight:800;
   box-shadow:inset 0 0 0 3px var(--shu),inset 0 0 0 5px var(--shu-ink);
 }
+.cartouche{flex:1 1 0;min-width:0}
 .cartouche h1{margin:0;font-size:1.65em;line-height:1.1;font-weight:800;text-wrap:balance}
 .cartouche p{margin:4px 0 0;color:var(--sumi-2);font-size:.86em}
 .taille{
-  margin-left:auto;flex:none;min-width:64px;min-height:64px;border-radius:14px;
-  border:2px solid var(--ai);background:transparent;color:var(--ai);font-weight:700;
+  margin-left:auto;flex:none;display:flex;align-items:center;gap:8px;min-height:68px;max-width:9.5em;
+  padding:6px 12px;border-radius:14px;border:2px solid var(--ai);background:var(--washi-2);color:var(--ai);
+  font-weight:700;font-size:.78em;line-height:1.15;text-align:left;
 }
+.taille .aa{flex:none;font-family:Georgia,serif;font-weight:700;line-height:1;white-space:nowrap}
+.taille .aa small{font-size:.7em}
+.taille .aa big{font-size:1.45em}
+@media (max-width:560px){.taille{flex:1 1 100%;max-width:none;justify-content:center;font-size:.9em}}
 .nami{display:block;width:100%;height:46px;margin-top:14px;color:var(--ai)}
 
 /* --- Titres de section --- */
@@ -212,7 +218,7 @@ nav.onglets button[aria-current="page"]{background:var(--ai);color:var(--washi);
         <h1 class="mincho">Mes lectures</h1>
         <p id="sous-titre">Le carnet depuis 1988</p>
       </div>
-      <button class="taille" id="taille" aria-pressed="false" aria-label="Agrandir le texte">A+</button>
+      <button class="taille" id="taille" aria-pressed="false"><span class="aa" aria-hidden="true"><small>A</small><big>A</big></span><span id="taille-txt">Agrandir le texte</span></button>
     </div>
   </div>
   <svg class="nami" id="nami" aria-hidden="true" preserveAspectRatio="xMidYMax slice"></svg>
@@ -613,8 +619,8 @@ function supprimer() {
 /* ---------- Taille du texte (mémorisée sur cet appareil) ---------- */
 function appliquerTaille(g) {
   document.documentElement.classList.toggle("grand", g);
-  const b = $("#taille"); b.textContent = g ? "A−" : "A+"; b.setAttribute("aria-pressed", String(g));
-  b.setAttribute("aria-label", g ? "Réduire le texte" : "Agrandir le texte");
+  const b = $("#taille"); b.setAttribute("aria-pressed", String(g));
+  $("#taille-txt").textContent = g ? "Texte normal" : "Agrandir le texte";
 }
 let grand = false;
 try { grand = localStorage.getItem("texte-grand") === "1"; } catch (_) {}
