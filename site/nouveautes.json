@@ -217,6 +217,338 @@
    "auteur": "Aurélie Valognes",
    "date": "2026-03-11",
    "note": "JC Lattès"
+  },
+  {
+   "id": "n32",
+   "titre": "Le dîner",
+   "auteur": "Freida McFadden",
+   "date": "2026-07-01",
+   "note": "un thriller où l'on choisit la suite, 22 fins possibles"
+  },
+  {
+   "id": "n33",
+   "titre": "À voix haute",
+   "auteur": "Polina Panassenko",
+   "date": "2026-08",
+   "note": "L'Olivier"
   }
- ]
+ ],
+ "rentree": {
+  "titre": "Rentrée littéraire 2026",
+  "intro": "461 romans sont parus entre la mi-août et la mi-octobre, dont 117 traduits d'une langue étrangère.",
+  "sections": [
+   {
+    "titre": "Les livres dont on parle",
+    "livres": [
+     {
+      "auteur": "Anne Godard",
+      "titre": "Nous aussi",
+      "editeur": "Actes Sud",
+      "resume": "Dans une famille de la grande bourgeoisie parisienne, le suicide d'un adolescent fait remonter des secrets enfouis. La grande surprise de la rentrée.",
+      "prix": [
+       "Goncourt"
+      ]
+     },
+     {
+      "auteur": "Thélyson Orélien",
+      "titre": "C'était ça ou mourir",
+      "editeur": "Grasset",
+      "resume": "Un professeur haïtien fuit la violence et traverse le continent, du Brésil au Mexique, pour rejoindre le Canada. Premier roman.",
+      "prix": [
+       "Prix du roman Fnac",
+       "Goncourt",
+       "Renaudot"
+      ]
+     },
+     {
+      "auteur": "Philippe Jaenada",
+      "titre": "L'inconnue du quai de Javel",
+      "editeur": "Flammarion",
+      "resume": "Il enquête sur la mort mystérieuse d'un modèle de Montparnasse retrouvée en 1949.",
+      "prix": [
+       "Goncourt",
+       "Renaudot"
+      ]
+     },
+     {
+      "auteur": "Serge Joncour",
+      "titre": "Une histoire d'amours",
+      "editeur": "Albin Michel",
+      "resume": "Deux couples se croisent dans un hameau du Morvan, autour d'une chapelle légendaire.",
+      "prix": [
+       "Renaudot"
+      ]
+     },
+     {
+      "auteur": "Yannick Haenel",
+      "titre": "La solitude des professeurs est infinie",
+      "editeur": "Gallimard",
+      "resume": "Un jeune professeur de français des années 1990 face à l'épuisement du métier.",
+      "prix": [
+       "Goncourt"
+      ]
+     },
+     {
+      "auteur": "Olivier Rolin",
+      "titre": "La Guerre éternelle",
+      "editeur": "Gallimard",
+      "resume": "De la guerre de Troie aux conflits d'aujourd'hui, une méditation sur la violence des hommes.",
+      "prix": [
+       "Goncourt"
+      ]
+     },
+     {
+      "auteur": "Clémentine Mélois",
+      "titre": "Choses que je croyais perdues",
+      "editeur": "L'Arbalète",
+      "resume": "Après une séparation, une femme fait ses cartons et retrouve sa vie dans les objets du quotidien.",
+      "prix": [
+       "Goncourt"
+      ]
+     },
+     {
+      "auteur": "Sonia Devillers",
+      "titre": "Le fabuleux piano",
+      "editeur": "Robert Laffont",
+      "resume": "L'histoire vraie d'un piano volé par les nazis.",
+      "prix": [
+       "Goncourt"
+      ]
+     },
+     {
+      "auteur": "Jean-Philippe Toussaint",
+      "titre": "La Hantise",
+      "editeur": "Minuit",
+      "resume": "Un fonctionnaire européen découvre une affaire de corruption et croise une femme mystérieuse dans un train."
+     },
+     {
+      "auteur": "Laura Kasischke",
+      "titre": "Baignade surveillée",
+      "editeur": "Gallimard",
+      "resume": "En 1969, la noyade d'un enfant révèle les fêlures d'une famille américaine."
+     },
+     {
+      "auteur": "Elizabeth Strout",
+      "titre": "Racontez-moi tout",
+      "editeur": "Flammarion",
+      "resume": "Retour à Crosby, petite ville du Maine, à travers des vies qui se croisent."
+     },
+     {
+      "auteur": "Maria McCann",
+      "titre": "Comme la viande aime le sel",
+      "editeur": "Monsieur Toussaint Louverture",
+      "resume": "Dans l'Angleterre révolutionnaire du XVIIe siècle, deux frères ruinés rejoignent une communauté utopiste."
+     }
+    ]
+   },
+   {
+    "titre": "Les plus vendus en ce moment",
+    "intro": "Classement des librairies du 22 septembre 2026.",
+    "livres": [
+     {
+      "auteur": "Freida McFadden",
+      "titre": "Le dîner",
+      "editeur": "City",
+      "resume": "Une serveuse d'un soir dans un manoir isolé… Le lecteur choisit la suite : 22 fins possibles."
+     },
+     {
+      "auteur": "Amélie Nothomb",
+      "titre": "L'adolescence du perroquet",
+      "editeur": "Albin Michel",
+      "resume": "Alban, orphelin à 17 ans, et Joe, un perroquet qui ne supporte pas la solitude, se recréent une famille."
+     },
+     {
+      "auteur": "Anne Godard",
+      "titre": "Nous aussi",
+      "editeur": "Actes Sud",
+      "resume": "Dans le Top 20 des ventes deux semaines de suite.",
+      "prix": [
+       "Goncourt"
+      ]
+     }
+    ]
+   }
+  ],
+  "selections": [
+   {
+    "prix": "Prix Goncourt",
+    "intro": "16 romans en lice. Deuxième sélection le 6 octobre, quatre finalistes le 27 octobre, lauréat le 3 novembre.",
+    "liste": [
+     [
+      "Boris Bergmann",
+      "Minotaure"
+     ],
+     [
+      "Louise Chennevière",
+      "Faire la peau"
+     ],
+     [
+      "Ananda Devi",
+      "Chronique d'un royaume perdu"
+     ],
+     [
+      "Sonia Devillers",
+      "Le fabuleux piano"
+     ],
+     [
+      "Anne Godard",
+      "Nous aussi"
+     ],
+     [
+      "Olivier Grondeau",
+      "Joseph dans la nuit"
+     ],
+     [
+      "Yannick Haenel",
+      "La solitude des professeurs est infinie"
+     ],
+     [
+      "Lilia Hassaine",
+      "Je"
+     ],
+     [
+      "Philippe Jaenada",
+      "L'inconnue du quai de Javel"
+     ],
+     [
+      "Jean-Yves Jouannais",
+      "Une forêt"
+     ],
+     [
+      "Emma Marsantes",
+      "N'efface pas mes cercles"
+     ],
+     [
+      "Clémentine Mélois",
+      "Choses que je croyais perdues"
+     ],
+     [
+      "Thélyson Orélien",
+      "C'était ça ou mourir"
+     ],
+     [
+      "Sylvain Prudhomme",
+      "De l'autre côté du lac"
+     ],
+     [
+      "Olivier Rolin",
+      "La Guerre éternelle"
+     ],
+     [
+      "Patrice Trigano",
+      "Bataille au procès"
+     ]
+    ]
+   },
+   {
+    "prix": "Prix Renaudot",
+    "intro": "17 romans en lice pour le centenaire du prix. Deuxième sélection le 7 octobre, finalistes le 28 octobre, lauréat le 3 novembre.",
+    "liste": [
+     [
+      "Boris Bergmann",
+      "Minotaure"
+     ],
+     [
+      "Jean-Marie Blas de Roblès",
+      "Cipango"
+     ],
+     [
+      "Eva Bottega",
+      "Le ciel ici déborde"
+     ],
+     [
+      "Hemley Boum",
+      "Nos vies sauvages"
+     ],
+     [
+      "François-Henri Désérable",
+      "Le Palais"
+     ],
+     [
+      "Ananda Devi",
+      "Chronique d'un royaume perdu"
+     ],
+     [
+      "David Djaïz",
+      "La Méthode"
+     ],
+     [
+      "Arthur Dreyfus",
+      "La Punition"
+     ],
+     [
+      "Philippe Jaenada",
+      "L'inconnue du quai de Javel"
+     ],
+     [
+      "Patrice Jean",
+      "Stay Free"
+     ],
+     [
+      "Serge Joncour",
+      "Une histoire d'amours"
+     ],
+     [
+      "Osvalde Lewat",
+      "Un corps indocile"
+     ],
+     [
+      "Thélyson Orélien",
+      "C'était ça ou mourir"
+     ],
+     [
+      "Anne Percin",
+      "Eugénie sous les bombes"
+     ],
+     [
+      "Marie Petitcuénot",
+      "Heures sauvages"
+     ],
+     [
+      "Sergueï Shikalov",
+      "Grenouille"
+     ],
+     [
+      "Abdellah Taïa",
+      "Debout dans tes rêves"
+     ]
+    ]
+   }
+  ],
+  "calendrier": [
+   {
+    "date": "2026-07-10",
+    "prix": "Prix du roman Fnac",
+    "laureat": "Thélyson Orélien, « C'était ça ou mourir »"
+   },
+   {
+    "date": "2026-10-27",
+    "prix": "Prix Décembre"
+   },
+   {
+    "date": "2026-10-29",
+    "prix": "Grand prix du roman de l'Académie française"
+   },
+   {
+    "date": "2026-11-02",
+    "prix": "Prix Médicis"
+   },
+   {
+    "date": "2026-11-03",
+    "prix": "Prix Goncourt et prix Renaudot"
+   },
+   {
+    "date": "2026-11-04",
+    "prix": "Prix Femina"
+   },
+   {
+    "date": "2026-11-18",
+    "prix": "Prix Interallié"
+   },
+   {
+    "date": "2026-11-26",
+    "prix": "Goncourt des lycéens"
+   }
+  ]
+ }
 }

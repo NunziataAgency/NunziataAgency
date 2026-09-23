@@ -132,6 +132,30 @@ header.tete{position:relative;padding-block:18px 0}
 .nouv .r{margin:6px 0 0;font-size:.86em}
 .nouv .lu{margin-top:12px}
 
+/* --- Rentrée littéraire --- */
+.entree{
+  display:flex;align-items:center;gap:16px;width:100%;min-height:96px;margin:18px 0 6px;padding:14px 18px;
+  border-radius:14px;border:3px solid var(--shu);background:var(--washi-2);text-align:left;
+}
+.entree .sc{flex:none;width:52px;height:52px;border-radius:6px;background:var(--shu);color:var(--shu-ink);display:grid;place-items:center;font-size:30px;font-weight:800}
+.entree b{display:block;font-size:1.08em;line-height:1.25}
+.entree span{display:block;color:var(--sumi-2);font-size:.82em}
+.entree svg{flex:none;margin-left:auto;color:var(--shu)}
+h3.mincho{font-size:1.18em;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--sumi)}
+.nouv .res{margin:8px 0 0;font-size:.9em;max-width:60ch}
+.chips{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.chips .chip{margin-left:0}
+.connu{margin:8px 0 0;font-size:.86em;font-weight:700;color:var(--shu)}
+.selection{list-style:none;margin:0 0 20px;padding:0;border-top:2px solid var(--sumi)}
+.selection li{padding:12px 0;border-bottom:1px solid var(--rule)}
+.selection .t{display:block;font-weight:800;font-size:1.02em;line-height:1.3}
+.selection .a{display:block;color:var(--ai);font-weight:700;font-size:.9em}
+.cal{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px}
+.cal li{display:grid;grid-template-columns:6.8em 1fr;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule)}
+.cal .j{font-weight:800;color:var(--shu);font-variant-numeric:tabular-nums}
+.cal .fait{color:var(--sumi-2)}
+.cal small{display:block;font-size:.86em;color:var(--sumi)}
+
 /* --- Boutons d'action --- */
 .btn{
   display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:68px;padding:10px 18px;
@@ -377,10 +401,40 @@ function carteNouveaute(n) {
 function ecranNouveautes() {
   const ls = nouv.livres.filter(n => !dejaLu(n)).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   const bientot = ls.filter(aVenir), sortis = ls.filter(n => !aVenir(n));
-  return `${titre("Nouveautés", pluriel(ls.length, "livre"))}
+  return `${nouv.rentree ? `<button class="entree" data-nav="rentree"><span class="sc mincho" aria-hidden="true">秋</span>
+    <span><b class="mincho">${esc(nouv.rentree.titre)}</b><span>Les livres dont on parle, les meilleures ventes et les prix</span></span>
+    <svg width="28" height="28" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M11 6l9 9-9 9"/></svg></button>` : ""}
+  ${titre("De vos auteurs", pluriel(ls.length, "livre"))}
   <p class="aide">Les derniers livres des écrivains que vous avez déjà lus. Liste mise à jour le ${esc(nouv.maj)}.</p>
   ${bientot.length ? `<h3 class="mincho">Bientôt en librairie</h3><ul class="nouv">${bientot.map(carteNouveaute).join("")}</ul>` : ""}
   ${sortis.length ? `<h3 class="mincho">Déjà en librairie</h3><ul class="nouv">${sortis.map(carteNouveaute).join("")}</ul>` : `<p class="vide">Rien de nouveau pour l'instant.</p>`}`;
+}
+
+/* ---------- Rentrée littéraire ---------- */
+function dateCourte(iso) { const [, m, d] = iso.split("-").map(Number); return (d === 1 ? "1er" : d) + " " + MOIS[m - 1]; }
+function carteRentree(l) {
+  const idx = auteursIndex(), nb = idx.get(l.auteur)?.length || 0;
+  return `<li>
+    <p class="t mincho">${esc(l.titre)}</p>
+    <p class="a">${esc(l.auteur)}</p>
+    <p class="d">${esc(l.editeur)}</p>
+    ${l.resume ? `<p class="res">${esc(l.resume)}</p>` : ""}
+    ${nb ? `<p class="connu">Vous avez déjà lu ${pluriel(nb, "livre")} de cet auteur.</p>` : ""}
+    ${l.prix ? `<div class="chips">${l.prix.map(p => `<span class="chip${p.startsWith("Prix") ? "" : " ai"}">${esc(p.startsWith("Prix") ? p : "Sélection " + p)}</span>`).join("")}</div>` : ""}
+  </li>`;
+}
+function ecranRentree() {
+  const r = nouv.rentree, auj = new Date().toISOString().slice(0, 10);
+  return `${retour("Nouveautés", "tab", "nouveautes")}${titre(r.titre)}
+  <p class="aide">${esc(r.intro)} Mise à jour le ${esc(nouv.maj)}.</p>
+  ${r.sections.map(sec => `<h3 class="mincho">${esc(sec.titre)}</h3>${sec.intro ? `<p class="aide">${esc(sec.intro)}</p>` : ""}
+    <ul class="nouv">${sec.livres.map(carteRentree).join("")}</ul>`).join("")}
+  <h3 class="mincho">Le calendrier des prix</h3>
+  <ul class="cal">${r.calendrier.map(c => `<li><span class="j">${esc(dateCourte(c.date))}</span>
+    <span class="${c.date < auj ? "fait" : ""}">${esc(c.prix)}${c.laureat ? `<small>Lauréat : ${esc(c.laureat)}</small>` : ""}</span></li>`).join("")}</ul>
+  ${r.selections.map(sel => `<h3 class="mincho">En lice pour le ${esc(sel.prix.replace(/^Prix /, "prix "))}</h3><p class="aide">${esc(sel.intro)}</p>
+    <ul class="selection">${sel.liste.map(([a, t]) => `<li><span class="t mincho">${esc(t)}</span><span class="a">${esc(a)}${auteursIndex().has(a) ? " · déjà lu" : ""}</span></li>`).join("")}</ul>`).join("")}
+  ${retour("Revenir aux nouveautés", "tab", "nouveautes")}`;
 }
 
 /* ---------- Fiche d'un livre ---------- */
@@ -442,6 +496,7 @@ function rendre(focus) {
   else if (e === "tranche") html = ecranTranche(etat.arg);
   else if (e === "livre") html = ecranLivre(etat.arg);
   else if (e === "form") html = ecranForm();
+  else if (e === "rentree") html = ecranRentree();
   else html = { lectures: ecranLectures, auteurs: ecranAuteurs, parution: ecranParution, nouveautes: ecranNouveautes }[etat.tab]();
   vue.innerHTML = html;
   document.querySelectorAll("nav.onglets button").forEach(b => {
@@ -491,6 +546,7 @@ vue.addEventListener("click", e => {
     case "effacer": etat.q = ""; rendre(); break;
     case "annee": case "lettre": case "auteur": case "tranche": aller(nav, arg); break;
     case "livre": aller("livre", b.dataset.id); break;
+    case "rentree": aller("rentree"); break;
     case "ajout": brouillon = nouveauBrouillon(); confirmeSuppr = false; aller("form"); break;
     case "ajout-nouv": { const n = nouv.livres.find(x => x.id === arg); brouillon = nouveauBrouillon(); brouillon.titre = n.titre; brouillon.auteur = n.auteur; brouillon.paru = parseInt(n.date, 10); brouillon.paruConnu = true; confirmeSuppr = false; aller("form"); break; }
     case "modif": brouillon = nouveauBrouillon(data.livres.find(x => x.id === arg)); confirmeSuppr = false; aller("form"); break;
