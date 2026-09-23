@@ -23,6 +23,12 @@
   --rule:#C9B999;
   --focus:#B3322A;
   --fs:21px;
+  /* estampe */
+  --e-ciel-haut:#1C3D63; --e-ciel:#F6EEDC; --e-ciel-bas:#EFD9B4;
+  --e-fuji:#2F5D8A; --e-fuji-ombre:#1C3D63; --e-neige:#FBF8F0;
+  --e-soleil:#C8392E; --e-nuage:#E7CF9E; --e-mer:#1F4B78; --e-mer-2:#2F6A9C;
+  --e-ecume:#F7F2E6; --e-bois:#3A2A22; --e-sakura:#EBA9AE; --e-sakura-coeur:#B3322A;
+  --e-cadre:#1E1A17;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
@@ -30,12 +36,22 @@
     --washi:#101826; --washi-2:#18243A; --sumi:#F3E9D4; --sumi-2:#C8BDA6;
     --ai:#9FC0E6; --ai-soft:#1F3150; --shu:#E0674F; --shu-ink:#1A0F0C;
     --kaki:#C9A56A; --rule:#34466A; --focus:#F08A6E; color-scheme:dark;
+    --e-ciel-haut:#070D18; --e-ciel:#1A2A45; --e-ciel-bas:#2A3553;
+    --e-fuji:#35587F; --e-fuji-ombre:#223D5E; --e-neige:#E9E4D6;
+    --e-soleil:#E0674F; --e-nuage:#4A4A5E; --e-mer:#16365A; --e-mer-2:#24507C;
+    --e-ecume:#DCD6C6; --e-bois:#12100E; --e-sakura:#C98C94; --e-sakura-coeur:#E0674F;
+    --e-cadre:#0A0F18;
   }
 }
 :root[data-theme="dark"]{
   --washi:#101826; --washi-2:#18243A; --sumi:#F3E9D4; --sumi-2:#C8BDA6;
   --ai:#9FC0E6; --ai-soft:#1F3150; --shu:#E0674F; --shu-ink:#1A0F0C;
   --kaki:#C9A56A; --rule:#34466A; --focus:#F08A6E; color-scheme:dark;
+    --e-ciel-haut:#070D18; --e-ciel:#1A2A45; --e-ciel-bas:#2A3553;
+    --e-fuji:#35587F; --e-fuji-ombre:#223D5E; --e-neige:#E9E4D6;
+    --e-soleil:#E0674F; --e-nuage:#4A4A5E; --e-mer:#16365A; --e-mer-2:#24507C;
+    --e-ecume:#DCD6C6; --e-bois:#12100E; --e-sakura:#C98C94; --e-sakura-coeur:#E0674F;
+    --e-cadre:#0A0F18;
 }
 :root.grand{--fs:25px}
 
@@ -74,7 +90,9 @@ header.tete{position:relative;padding-block:18px 0}
 .taille .aa small{font-size:.7em}
 .taille .aa big{font-size:1.45em}
 @media (max-width:560px){.taille{flex:1 1 100%;max-width:none;justify-content:center;font-size:.9em}}
-.nami{display:block;width:100%;height:46px;margin-top:14px;color:var(--ai)}
+.estampe{margin:0 0 18px;padding:7px;background:var(--e-cadre);border-radius:4px;box-shadow:0 2px 0 var(--rule)}
+.estampe svg{display:block;width:100%;height:auto;aspect-ratio:600/340;border-radius:1px}
+.filet{height:0;border-bottom:3px double var(--sumi);margin-top:18px}
 
 /* --- Titres de section --- */
 .titre-vue{display:flex;align-items:baseline;gap:12px;margin:22px 0 6px}
@@ -217,16 +235,17 @@ nav.onglets button[aria-current="page"]{background:var(--ai);color:var(--washi);
 
 <header class="tete">
   <div class="wrap">
+    <figure class="estampe"><svg id="estampe" viewBox="0 0 600 340" role="img" aria-label="Estampe japonaise : le mont Fuji et un soleil rouge au-dessus d'une grande vague, sous une branche de cerisier en fleurs"></svg></figure>
     <div class="ligne-tete">
       <div class="sceau mincho" aria-hidden="true">読</div>
       <div class="cartouche">
         <h1 class="mincho">Mes lectures</h1>
-        <p id="sous-titre">Le carnet depuis 1988</p>
+        <p id="sous-titre">Le carnet de Françoise depuis 1988</p>
       </div>
       <button class="taille" id="taille" aria-pressed="false"><span class="aa" aria-hidden="true"><small>A</small><big>A</big></span><span id="taille-txt">Agrandir le texte</span></button>
     </div>
   </div>
-  <svg class="nami" id="nami" aria-hidden="true" preserveAspectRatio="xMidYMax slice"></svg>
+  <div class="wrap"><div class="filet"></div></div>
 </header>
 
 <main class="wrap" id="vue" tabindex="-1" aria-live="polite"></main>
@@ -264,19 +283,82 @@ let data = { livres: [] }, nouv = { maj: "", livres: [] };
 let etat = { tab: "lectures", ecran: null, arg: null, q: "" };
 let artifact = null, lectureSeule = false, message = "";
 
-/* ---------- Vagues seigaiha dessinées à la main (SVG) ---------- */
-function vagues() {
-  const svg = $("#nami"), w = 1200, h = 46, r = 22, pas = 44;
-  let out = "";
-  for (let rang = 0; rang < 3; rang++) {
-    const y = 14 + rang * 16, dec = rang % 2 ? pas / 2 : 0;
-    for (let x = -pas + dec; x < w + pas; x += pas) {
-      out += `<circle cx="${x}" cy="${y + r}" r="${r}" fill="var(--washi)" stroke="currentColor" stroke-width="2"/>`;
-      for (const k of [15, 9]) out += `<circle cx="${x}" cy="${y + r}" r="${k}" fill="none" stroke="currentColor" stroke-width="1.6"/>`;
-    }
+/* ---------- L'estampe : Fuji, soleil, grande vague, cerisier ---------- */
+function estampe() {
+  const v = n => `var(--e-${n})`;
+  let o = `<defs>
+    <linearGradient id="e-ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${v("ciel-haut")}"/><stop offset=".2" stop-color="${v("ciel-haut")}" stop-opacity=".55"/>
+      <stop offset=".42" stop-color="${v("ciel")}"/><stop offset="1" stop-color="${v("ciel-bas")}"/></linearGradient>
+    <linearGradient id="e-fuji" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${v("fuji")}"/><stop offset=".5" stop-color="${v("fuji")}"/><stop offset=".5" stop-color="${v("fuji-ombre")}"/><stop offset="1" stop-color="${v("fuji-ombre")}"/></linearGradient>
+    <linearGradient id="e-mer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${v("mer-2")}"/><stop offset="1" stop-color="${v("mer")}"/></linearGradient>
+    <clipPath id="e-bas"><rect x="0" y="282" width="600" height="58"/></clipPath>
+  </defs>
+  <rect width="600" height="340" fill="url(#e-ciel)"/>`;
+  // soleil levant
+  o += `<circle cx="438" cy="96" r="38" fill="${v("soleil")}"/>`;
+  // vol d'oies sauvages
+  for (const [x, y, k] of [[360, 62, 1], [380, 74, .8], [398, 58, .9], [344, 80, .7], [414, 70, .7]])
+    o += `<path d="M${x} ${y} q${5 * k} ${-5 * k} ${10 * k} 0 q${5 * k} ${-5 * k} ${10 * k} 0" fill="none" stroke="${v("cadre")}" stroke-width="1.8" stroke-linecap="round"/>`;
+  // mont Fuji : versants concaves, ombre à droite, neige dentelée
+  o += `<path d="M130 262 C205 205 262 142 288 106 L312 106 C338 142 395 205 470 262 Z" fill="url(#e-fuji)"/>
+    <path d="M288 106 L312 106 C322 119 331 131 342 145 L331 140 L322 153 L312 140 L302 156 L293 139 L282 150 L276 139 L262 146 C272 132 281 119 288 106 Z" fill="${v("neige")}"/>
+    <path d="M300 106 L300 150" stroke="${v("fuji-ombre")}" stroke-width="1" opacity=".35"/>`;
+  // bandes de brume dorée (kasumi)
+  for (const [x, y, w] of [[-20, 196, 230], [372, 212, 260], [70, 232, 210], [300, 244, 120]])
+    o += `<rect x="${x}" y="${y}" width="${w}" height="14" rx="7" fill="${v("nuage")}"/>`;
+  // mer lointaine
+  o += `<rect x="0" y="258" width="600" height="82" fill="url(#e-mer)"/>`;
+  // seigaiha au premier plan
+  let sg = "";
+  for (let r = 0; r < 4; r++) {
+    const y = 266 + r * 16, d = r % 2 ? 18 : 0;
+    for (let x = -36 + d; x < 640; x += 36)
+      sg += `<circle cx="${x}" cy="${y + 18}" r="18" fill="${v("mer")}" stroke="${v("ecume")}" stroke-width="1.6"/>` +
+            `<circle cx="${x}" cy="${y + 18}" r="12" fill="none" stroke="${v("ecume")}" stroke-width="1.2" opacity=".8"/>` +
+            `<circle cx="${x}" cy="${y + 18}" r="6" fill="none" stroke="${v("ecume")}" stroke-width="1" opacity=".6"/>`;
   }
-  svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
-  svg.innerHTML = out + `<line x1="0" y1="${h - 1}" x2="${w}" y2="${h - 1}" stroke="currentColor" stroke-width="2"/>`;
+  // la grande vague, à gauche, qui s'enroule vers le Fuji
+  o += `<path d="M0 340 L0 170 C22 120 78 92 132 104 C176 114 200 148 190 178 C181 162 160 154 142 162 C122 172 124 200 148 222 C176 246 228 258 280 262 C300 263 320 262 344 262 L344 340 Z" fill="${v("mer")}"/>
+    <path d="M0 340 L0 196 C26 150 70 130 112 140 C98 156 92 182 110 212 C132 246 190 262 250 270 C286 275 316 278 344 280 L344 340 Z" fill="${v("mer-2")}"/>
+    <path d="M12 226 C30 178 64 156 100 158" fill="none" stroke="${v("ecume")}" stroke-width="2" opacity=".7"/>
+    <path d="M8 262 C28 214 60 188 96 184" fill="none" stroke="${v("ecume")}" stroke-width="2" opacity=".6"/>
+    <path d="M30 296 C50 252 82 226 118 222" fill="none" stroke="${v("ecume")}" stroke-width="2" opacity=".5"/>
+    <path d="M132 104 C176 114 200 148 190 178 C184 170 176 164 166 161 C176 150 172 128 150 116 C140 110 130 107 132 104 Z" fill="${v("ecume")}"/>`;
+  // griffes d'écume au bout de la crête
+  for (const [x, y, a] of [[150, 112, -20], [166, 122, 0], [178, 136, 20], [186, 152, 40], [188, 168, 62], [136, 106, -40], [120, 104, -60]])
+    o += `<g transform="translate(${x} ${y}) rotate(${a})"><path d="M0 0 c4 -8 10 -10 14 -6 c-4 0 -6 3 -5 7 c-3 -3 -6 -2 -9 -1 Z" fill="${v("ecume")}"/></g>`;
+  // gouttes d'écume
+  for (const [x, y, r] of [[200, 128, 2.6], [210, 146, 2], [206, 110, 1.8], [196, 96, 2.2], [214, 162, 1.6], [184, 90, 1.6]])
+    o += `<circle cx="${x}" cy="${y}" r="${r}" fill="${v("ecume")}"/>`;
+  o += `<g clip-path="url(#e-bas)">${sg}</g><line x1="0" y1="282" x2="600" y2="282" stroke="${v("ecume")}" stroke-width="1.4" opacity=".5"/>`;
+  // barque de pêcheurs sur la vague
+  o += `<path d="M204 246 C230 256 262 256 288 246 C282 256 262 262 246 262 C228 262 212 256 204 246 Z" fill="${v("nuage")}" stroke="${v("cadre")}" stroke-width="1.4"/>`;
+  for (const x of [226, 240, 254, 268]) o += `<path d="M${x} 249 l-2 -9 l4 0 Z" fill="${v("cadre")}"/>`;
+  // branche de cerisier en fleurs, en haut à droite
+  o += `<path d="M600 18 C560 22 530 34 500 56 C486 66 470 70 452 70 M548 26 C540 12 526 6 512 6 M520 44 C518 60 526 74 540 82 M500 56 C496 44 486 38 474 38"
+      fill="none" stroke="${v("bois")}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M600 18 C560 22 530 34 500 56" fill="none" stroke="${v("bois")}" stroke-width="9" stroke-linecap="round"/>`;
+  const fleur = (x, y, r) => {
+    let f = "";
+    for (let k = 0; k < 5; k++) { const a = (k * 72 - 90) * Math.PI / 180; f += `<circle cx="${(x + Math.cos(a) * r * .62).toFixed(1)}" cy="${(y + Math.sin(a) * r * .62).toFixed(1)}" r="${(r * .52).toFixed(1)}" fill="${v("sakura")}"/>`; }
+    return f + `<circle cx="${x}" cy="${y}" r="${(r * .28).toFixed(1)}" fill="${v("sakura-coeur")}"/>`;
+  };
+  for (const [x, y, r] of [[458, 72, 9], [474, 40, 8], [512, 8, 8], [540, 84, 9], [526, 58, 7], [560, 30, 8], [586, 44, 7], [490, 62, 6], [500, 30, 6], [572, 8, 6], [446, 58, 6]]) o += fleur(x, y, r);
+  // pétales qui tombent
+  for (const [x, y, a] of [[430, 150, 20], [470, 124, -30], [520, 110, 40], [404, 178, -10]])
+    o += `<ellipse cx="${x}" cy="${y}" rx="4" ry="2.4" transform="rotate(${a} ${x} ${y})" fill="${v("sakura")}"/>`;
+  // cartouche vertical et sceau
+  o += `<rect x="26" y="20" width="44" height="112" fill="${v("neige")}" stroke="${v("cadre")}" stroke-width="2"/>
+    <rect x="30" y="24" width="36" height="104" fill="none" stroke="${v("cadre")}" stroke-width=".8"/>
+    <text x="48" y="54" text-anchor="middle" font-size="24" font-family="Shippori Mincho, serif" font-weight="800" fill="${v("cadre")}">読</text>
+    <text x="48" y="82" text-anchor="middle" font-size="24" font-family="Shippori Mincho, serif" font-weight="800" fill="${v("cadre")}">書</text>
+    <text x="48" y="110" text-anchor="middle" font-size="24" font-family="Shippori Mincho, serif" font-weight="800" fill="${v("cadre")}">帖</text>
+    <rect x="34" y="140" width="28" height="28" rx="2" fill="${v("soleil")}"/>
+    <text x="48" y="161" text-anchor="middle" font-size="17" font-family="Shippori Mincho, serif" font-weight="800" fill="${v("neige")}">F</text>`;
+  $("#estampe").innerHTML = o;
 }
 
 /* ---------- Données ---------- */
@@ -515,7 +597,7 @@ function rendre(focus) {
   document.querySelectorAll("nav.onglets button").forEach(b => {
     if (b.dataset.tab === etat.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
   });
-  $("#sous-titre").textContent = `Le carnet depuis 1988 · ${pluriel(data.livres.length, "livre")}`;
+  $("#sous-titre").textContent = `Le carnet de Françoise depuis 1988 · ${pluriel(data.livres.length, "livre")}`;
   if (focus !== false) { window.scrollTo(0, 0); vue.focus({ preventScroll: true }); }
 }
 function aller(ecran, arg) {
@@ -635,7 +717,7 @@ appliquerTaille(grand);
 $("#taille").addEventListener("click", () => { grand = !grand; appliquerTaille(grand); try { localStorage.setItem("texte-grand", grand ? "1" : "0"); } catch (_) {} });
 
 /* ---------- Démarrage ---------- */
-vagues();
+estampe();
 vue.innerHTML = `<p class="vide">Ouverture du carnet…</p>`;
 Promise.resolve([
   JSON.parse(document.getElementById("donnees-livres").textContent),
