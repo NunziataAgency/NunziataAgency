@@ -24,10 +24,10 @@ Si `utilisees.md` est vide et que l'historique contient d'anciens numéros, remp
 
 ## `generer [actu|intemporel] [nombre]`
 
-Par défaut : les deux, 50 actu + 200 intemporelles. Vise une bibliothèque de **500+ intemporelles** au total.
+Par défaut : 10 actu + 40 intemporelles par appel (la bibliothèque grossit à chaque numéro, sans gros lot coûteux).
 
-- **Intemporel** : répartis le travail entre 4 à 6 sous-agents (Agent), un par grande catégorie adaptée à la thématique de la config (ex. métier, habitudes, futur, dilemmes, culture, souvenirs, opinions tranchées, « tu préfères… »). Donne à chacun la config, quelques exemples de questions déjà publiées et la liste des questions existantes pour éviter les doublons.
-- **Actu** : pars de la veille la plus récente dans `newsletter/veille/` et des dossiers, plus une recherche web des sujets de la semaine. Une question par sujet fort, avec une date d'expiration (sujet chaud : 7 jours ; tendance de fond : 30 jours).
+- **Intemporel** : fais-le toi-même, sans sous-agent, en tournant sur les catégories adaptée à la thématique de la config (ex. métier, habitudes, futur, dilemmes, culture, souvenirs, opinions tranchées, « tu préfères… »). Dédoublonne contre les fichiers existants.
+- **Actu** : pars uniquement de la veille la plus récente dans `newsletter/veille/` (pas de recherche web). Une question par sujet fort, avec une date d'expiration (sujet chaud : 7 jours ; tendance de fond : 30 jours).
 
 Une bonne question du jour :
 - se lit en une seconde et donne envie de répondre tout de suite ;
