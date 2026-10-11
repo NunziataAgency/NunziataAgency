@@ -57,7 +57,7 @@ for kind, folder in (("fiche", "fiches"), ("doc", "dossiers")):
         r[kind] = body
         if not r["title"] or kind == "fiche":
             r["title"] = h1(body, rid)
-rubriques = sorted(rubs.values(), key=lambda r: (r["id"][0], int(r["id"][1:])))
+rubriques = sorted(rubs.values(), key=lambda r: (r["id"][0] != "R", int(r["id"][1:])))
 
 tpl = open(os.path.join(here, "template.html"), encoding="utf-8").read()
 out = tpl.replace("__TITLE__", html.escape(title)).replace("__DATA__", json.dumps(items, ensure_ascii=False)).replace("__NUM__", json.dumps({"brefs": brefs, "questions": questions, "rubriques": rubriques}, ensure_ascii=False).replace("</", "<\\/"))

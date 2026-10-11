@@ -56,6 +56,9 @@ button.copy { border: 0; background: var(--accent); color: var(--bg); border-rad
 .mine .id { color: var(--accent) }
 .del { margin-left: auto; border: 0; background: none; color: var(--muted); font: .8rem var(--body); cursor: pointer; text-decoration: underline }
 button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
+.bar[hidden], [hidden] { display: none !important }
+.jump { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px }
+.jump a { font-size: .85rem; color: var(--accent); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; text-decoration: none }
 .views { display: flex; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px; margin-bottom: 14px }
 .view { flex: 1; border: 0; background: transparent; color: var(--muted); border-radius: 9px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
 .view[aria-selected="true"] { background: var(--fg); color: var(--bg) }
@@ -115,14 +118,15 @@ details.doc[open] summary::after { content: " ▴" }
   <div class="list" id="list"></div>
   </div>
   <div id="viewNum" hidden>
+    <nav class="jump"><a href="#rubs">Rubriques</a><a href="#brefs">Liens en bref</a><a href="#qdj">Question du jour</a></nav>
+    <div class="sec">Rubriques</div>
+    <p class="note">1. Lisez la fiche de l'article. 2. Donnez votre avis et votre angle. 3. Copiez et collez dans le chat : la recherche part de votre avis.</p>
+    <div class="cards" id="rubs"></div>
     <div class="sec">Liens en bref</div>
     <div class="cards" id="brefs"></div>
     <div class="sec">Question du jour</div>
     <p class="note">Touchez celle que vous gardez.</p>
     <div class="cards" id="qdj"></div>
-    <div class="sec">Rubriques</div>
-    <p class="note">1. Lisez la fiche de l'article. 2. Donnez votre avis et votre angle. 3. Copiez et collez dans le chat : la recherche part de votre avis.</p>
-    <div class="cards" id="rubs"></div>
   </div>
 </div>
 <div class="bar" id="bar">
@@ -277,7 +281,7 @@ document.getElementById("rubs").innerHTML = NUM.rubriques.map(r => `
     <label class="note" for="avis-${r.id}">Mon avis, mon angle, ce que je veux creuser</label>
     <textarea class="avis" id="avis-${r.id}" data-avis="${r.id}" rows="4" placeholder="Ex. : je pense que… ; angle : … ; cherche surtout : …">${esc(getAvis(r.id))}</textarea>
     <button class="small" data-go="${r.id}" type="button">Copier pour lancer la recherche</button>
-    ${r.doc ? `<details class="doc"><summary>Note de recherche</summary><div class="md">${md(r.doc)}</div></details>` : ""}
+    ${r.doc ? `<details class="doc" open><summary>Note de recherche</summary><div class="md">${md(r.doc)}</div></details>` : ""}
   </div>`).join("") || '<p class="note">Aucune rubrique choisie pour l\'instant.</p>';
 document.getElementById("rubs").addEventListener("input", e => { const t = e.target.closest("[data-avis]"); if (t) setAvis(t.dataset.avis, t.value); });
 document.getElementById("rubs").addEventListener("click", async e => {
