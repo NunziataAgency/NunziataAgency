@@ -49,4 +49,6 @@ Puis la question du jour (mode `choisir` du même fichier).
 <id> — <question> (<format>)
 ```
 
+Puis mets à jour la page (onglet « Mon numéro ») : `python3 newsletter/app/build.py` et publie `newsletter/app/veille.html` avec l'outil Artifact sur `https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2`.
+
 Termine dans le chat par : les rubriques et leur angle le plus fort, les liens en bref rédigés (avec ⚠️/❌ si besoin), et les chemins des fichiers. Ne rédige pas les rubriques : l'utilisateur les écrit lui-même à partir des notes.

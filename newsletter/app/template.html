@@ -1,5 +1,6 @@
 <title>Tri Order & Chaos</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
 <style>
 /* Layout : une colonne de cartes cochables, onglets en haut, barre de sélection collée en bas */
 :root {
@@ -51,11 +52,47 @@ button.copy { border: 0; background: var(--accent); color: var(--bg); border-rad
 .mine .id { color: var(--accent) }
 .del { margin-left: auto; border: 0; background: none; color: var(--muted); font: .8rem var(--body); cursor: pointer; text-decoration: underline }
 button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
+.views { display: flex; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px; margin-bottom: 14px }
+.view { flex: 1; border: 0; background: transparent; color: var(--muted); border-radius: 9px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
+.view[aria-selected="true"] { background: var(--fg); color: var(--bg) }
+.sec { font: 600 1.15rem/1.3 var(--display); margin: 22px 0 10px }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 8px; min-width: 0 }
+.cards { display: grid; gap: 10px }
+.status { font-size: .78rem; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap }
+.pill { border-radius: 999px; padding: 2px 8px; font-weight: 600; font-size: .75rem; background: var(--accent-soft); color: var(--accent) }
+.pill.warn { background: color-mix(in srgb, var(--hot) 15%, transparent); color: var(--hot) }
+.bref { font-size: 1rem; overflow-wrap: anywhere }
+.bref a { color: var(--accent) }
+.note { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere }
+.note a { color: var(--accent) }
+.small { border: 1px solid var(--line); background: transparent; color: var(--fg); border-radius: 8px; padding: 7px 10px; font: 600 .85rem var(--body); cursor: pointer; justify-self: start }
+.q { cursor: pointer }
+.q.on { border-color: var(--accent); background: var(--accent-soft) }
+details.doc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 14px }
+details.doc + details.doc { margin-top: 10px }
+details.doc summary { cursor: pointer; padding: 12px 0; font-weight: 600; list-style: none }
+details.doc summary::after { content: " ▾"; color: var(--muted) }
+details.doc[open] summary::after { content: " ▴" }
+.md { font-size: .93rem; line-height: 1.55; overflow-wrap: anywhere; padding-bottom: 12px; min-width: 0 }
+.md h1 { display: none }
+.md h2 { font: 600 1rem var(--body); margin: 18px 0 6px; padding-top: 10px; border-top: 1px solid var(--line) }
+.md h3 { font-size: .95rem; margin: 12px 0 4px }
+.md ul { padding-left: 18px; margin: 6px 0 }
+.md li { margin: 3px 0 }
+.md a { color: var(--accent) }
+.md table { display: block; overflow-x: auto; border-collapse: collapse; font-size: .85rem }
+.md td, .md th { border: 1px solid var(--line); padding: 4px 6px }
+.md code { font-size: .85em }
 </style>
 
 <div class="wrap">
-  <h1>Tri des sujets</h1>
+  <h1>Order & Chaos</h1>
   <p class="sub">__TITLE__</p>
+  <div class="views" role="tablist">
+    <button class="view" data-v="tri" role="tab">Tri des sujets</button>
+    <button class="view" data-v="num" role="tab">Mon numéro</button>
+  </div>
+  <div id="viewTri">
   <div class="tabs" role="tablist">
     <button class="tab" id="tR" role="tab" data-k="R">Rubriques</button>
     <button class="tab" id="tB" role="tab" data-k="B">Liens en bref</button>
@@ -72,8 +109,18 @@ button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); ou
     <button class="addbtn" type="submit">Ajouter</button>
   </form>
   <div class="list" id="list"></div>
+  </div>
+  <div id="viewNum" hidden>
+    <div class="sec">Liens en bref</div>
+    <div class="cards" id="brefs"></div>
+    <div class="sec">Question du jour</div>
+    <p class="note">Touchez celle que vous gardez.</p>
+    <div class="cards" id="qdj"></div>
+    <div class="sec">Rubriques : notes pour écrire</div>
+    <div id="docs"></div>
+  </div>
 </div>
-<div class="bar">
+<div class="bar" id="bar">
   <div class="sel" id="sel">Touchez les sujets à garder</div>
   <button class="copy" id="copy">Copier</button>
 </div>
@@ -165,4 +212,58 @@ document.getElementById("copy").addEventListener("click", async () => {
   setTimeout(() => btn.textContent = "Copier", 1500);
 });
 render();
+
+const NUM = __NUM__;
+const md = t => (window.marked ? marked.parse(t.replace(/</g, "&lt;")) : "<pre>" + esc(t) + "</pre>");
+function linkify(line) {
+  return esc(line).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+async function copyRich(line, btn) {
+  const m = line.match(/\[([^\]]+)\]\((https?:[^)]+)\)/);
+  const plain = line.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\((https?:[^)]+)\)/, "$1 : $2");
+  const html = linkify(line);
+  try {
+    if (window.ClipboardItem) await navigator.clipboard.write([new ClipboardItem({ "text/html": new Blob([html], { type: "text/html" }), "text/plain": new Blob([plain], { type: "text/plain" }) })]);
+    else await navigator.clipboard.writeText(plain);
+    btn.textContent = "Copié";
+  } catch (e) { try { await navigator.clipboard.writeText(plain); btn.textContent = "Copié"; } catch (e2) { btn.textContent = "Copie refusée"; } }
+  setTimeout(() => btn.textContent = "Copier", 1500);
+}
+document.getElementById("brefs").innerHTML = NUM.brefs.map((b, i) => `
+  <div class="card">
+    <div class="status"><span class="pill ${b.ok ? "" : "warn"}">${b.ok ? "✅ vérifié" : "⚠️ à relire"}</span><span>${esc(b.head)}</span></div>
+    ${b.lines.map((l, j) => `<div class="bref">${linkify(l)}</div><button class="small" data-copy="${i}-${j}" type="button">Copier</button>`).join("")}
+    ${b.note ? `<div class="note">${linkify(b.note)}</div>` : ""}
+  </div>`).join("") || '<p class="note">Aucun bref rédigé pour l\'instant.</p>';
+document.getElementById("brefs").addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]"); if (!b) return;
+  const [i, j] = b.dataset.copy.split("-").map(Number); copyRich(NUM.brefs[i].lines[j], b);
+});
+let qPick = ""; try { qPick = localStorage.getItem(KEY + "-qdj") || ""; } catch (e) {}
+function renderQ() {
+  document.getElementById("qdj").innerHTML = NUM.questions.map(q => `
+    <div class="card q ${qPick === q.id ? "on" : ""}" data-q="${q.id}" role="radio" tabindex="0" aria-checked="${qPick === q.id}">
+      <div class="status"><span class="pill">${esc(q.id)}</span><span>${esc(q.format)}</span><span>${esc(q.note)}/10</span></div>
+      <div class="bref"><b>${esc(q.text)}</b></div>
+    </div>`).join("");
+}
+document.getElementById("qdj").addEventListener("click", e => {
+  const c = e.target.closest("[data-q]"); if (!c) return;
+  qPick = qPick === c.dataset.q ? "" : c.dataset.q; try { localStorage.setItem(KEY + "-qdj", qPick); } catch (er) {} renderQ();
+});
+renderQ();
+document.getElementById("docs").innerHTML = NUM.docs.map((d, i) => `
+  <details class="doc"${i === 0 ? " open" : ""}><summary>${esc(d.title)}</summary><div class="md">${md(d.body)}</div></details>`).join("");
+for (const a of document.querySelectorAll(".md a")) { a.target = "_blank"; a.rel = "noopener"; }
+let view = "tri";
+try { view = localStorage.getItem(KEY + "-view") || (NUM.brefs.length ? "num" : "tri"); } catch (e) {}
+function setView(v) {
+  view = v; try { localStorage.setItem(KEY + "-view", v); } catch (e) {}
+  for (const b of document.querySelectorAll(".view")) b.setAttribute("aria-selected", b.dataset.v === v);
+  document.getElementById("viewTri").hidden = v !== "tri";
+  document.getElementById("viewNum").hidden = v !== "num";
+  document.getElementById("bar").hidden = v !== "tri";
+}
+for (const b of document.querySelectorAll(".view")) b.addEventListener("click", () => setView(b.dataset.v));
+setView(view);
 </script>

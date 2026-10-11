@@ -39,4 +39,6 @@ Une version par sujet, au format exact de `newsletter/style.md` :
 Vérif : <une ligne> · Autres sources : <url>, <url>
 ```
 
+Puis mets à jour la page (onglet « Mon numéro ») : `python3 newsletter/app/build.py` et publie `newsletter/app/veille.html` avec l'outil Artifact sur `https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2`.
+
 Dans le chat : tous les brefs rédigés, prêts à copier, avec leur statut, puis le chemin du fichier.
