@@ -45,6 +45,9 @@ button.copy { border: 0; background: var(--accent); color: var(--bg); border-rad
 .seg label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 600 }
 .addbtn { border: 1px solid var(--fg); background: transparent; color: var(--fg); border-radius: 10px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
 .date { margin-left: auto }
+.lnk { font-size: .8rem; margin-top: 6px; overflow-wrap: anywhere; color: var(--muted) }
+.lnk a { color: var(--accent) }
+.lnk.none, .lnk.none a { color: var(--hot) }
 .tobref { margin-top: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 999px; padding: 6px 10px; font: 500 .8rem var(--body); cursor: pointer }
 .tobref.on { border-color: var(--accent); color: var(--accent); font-weight: 600 }
 .tab { white-space: nowrap; flex: 1 0 auto }
@@ -137,6 +140,14 @@ let asBref = new Set();
 try { asBref = new Set(JSON.parse(localStorage.getItem(KEY + "-bref") || "[]")); } catch (e) {}
 const saveBref = () => { try { localStorage.setItem(KEY + "-bref", JSON.stringify([...asBref])); } catch (e) {} };
 const all = () => [...mine, ...DATA];
+const NLRE = /(beehiiv|substack\.com|techtrash\.fr|morningbrew\.com|archive\.techpresso|the-nbs\.fr|thevccorner|newcomer\.co|notboring|a16z\.news|creatorspotlight|media\.hexa)/;
+function pretty(u) { try { const x = new URL(u); const p = (x.pathname + x.search).replace(/\/$/, ""); return x.hostname.replace(/^www\./, "") + (p.length > 48 ? p.slice(0, 47) + "…" : p); } catch (e) { return u; } }
+function linkLine(u) {
+  if (!u) return '<div class="lnk none">🔗 lien d\'origine introuvable</div>';
+  let home = false; try { home = new URL(u).pathname.replace(/\/$/, "") === ""; } catch (e) {}
+  const warn = NLRE.test(u) || home;
+  return `<div class="lnk${warn ? " none" : ""}">🔗 <a href="${esc(u)}" target="_blank" rel="noopener">${esc(pretty(u))}</a>${warn ? " · page newsletter, pas l'article" : ""}</div>`;
+}
 function age(dm) {
   const [dd, mm] = dm.split("/").map(Number), now = new Date();
   let dt = new Date(now.getFullYear(), mm - 1, dd);
@@ -169,7 +180,7 @@ function render() {
       <div style="min-width:0">
         <div class="meta"><span class="id">${d.id}</span><span class="score ${d.score >= 8 ? "hi" : ""}">${String(d.score).replace(".", ",")}/10</span>${d.date ? `<span class="date">📅 ${d.date} · ${age(d.date)}</span>` : ""}</div>${d.kind === "R" ? `<button class="tobref ${asBref.has(d.id) ? "on" : ""}" data-bref="${d.id}" type="button">${asBref.has(d.id) ? "✓ En Lien en bref" : "Passer en Lien en bref"}</button>` : ""}
         <div class="t">${esc(d.title)}</div>
-        <div class="b">${esc(d.body)}${d.url ? ` · <a href="${esc(d.url)}" target="_blank" rel="noopener">source</a>` : ""}</div>
+        <div class="b">${esc(d.body)}</div>${linkLine(d.url)}
       </div>
     </div>`).join("");
   const ids = [...sel].sort((a, b) => order(a) - order(b));
@@ -232,7 +243,7 @@ async function copyRich(line, btn) {
 document.getElementById("brefs").innerHTML = NUM.brefs.map((b, i) => `
   <div class="card">
     <div class="status"><span class="pill ${b.ok ? "" : "warn"}">${b.ok ? "✅ vérifié" : "⚠️ à relire"}</span><span>${esc(b.head)}</span></div>
-    ${b.lines.map((l, j) => `<div class="bref">${linkify(l)}</div><button class="small" data-copy="${i}-${j}" type="button">Copier</button>`).join("")}
+    ${b.lines.map((l, j) => { const u = (l.match(/\]\((https?:[^)]+)\)/) || [])[1]; return `<div class="bref">${linkify(l)}</div>${u ? linkLine(u) : ""}<button class="small" data-copy="${i}-${j}" type="button">Copier</button>`; }).join("")}
     ${b.note ? `<div class="note">${linkify(b.note)}</div>` : ""}
   </div>`).join("") || '<p class="note">Aucun bref rédigé pour l\'instant.</p>';
 document.getElementById("brefs").addEventListener("click", e => {
