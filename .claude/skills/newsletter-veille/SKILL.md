@@ -19,13 +19,15 @@ But : transformer la pile de newsletters reçues en une **short-list de sujets t
 
 **Période** : depuis le dernier numéro envoyé (cherche le plus récent `from:order-chaos@mail.beehiiv.com subject:📰`), pas 7 jours fixes. Si `$ARGUMENTS` est un nombre de jours, il prime.
 
+**Fraîcheur (règle stricte)** : uniquement des actus publiées il y a **7 jours au plus**, idéalement 5. Chaque info porte sa **date de publication** : celle de l'article d'origine (dans l'URL, l'en-tête ou le texte), sinon la date de la newsletter. Une info plus vieille que 7 jours va dans « Écartés » avec la mention « trop ancien », même si une newsletter récente la relaie.
+
 **Cache** : les extractions brutes sont dans `newsletter/veille/brut/AAAA-MM-JJ.md` (une par jour). Ne relis jamais un jour déjà extrait.
 
 **Tri sans lire** : une seule recherche `search_threads` (vue MINIMAL, pageSize 50, paginée) avec :
 `after:<date> -subject:"Votre accès est confirmé" -from:buzz@tx.beehiiv.com -from:google.com -from:accounts.google.com -from:instagram.com -from:linkedin.com -from:order-chaos@mail.beehiiv.com -from:order-and-chaos@mail.beehiiv.com -in:sent`
 À partir des objets et extraits seulement, garde les newsletters éditoriales pertinentes et écarte le reste (personnel, candidatures, notifications, promos, sujets hors business/tech/IA/éco). N'ouvre jamais un e-mail écarté.
 
-**Lecture** : confie la lecture à des sous-agents **Agent avec `model: "haiku"`**, 12 à 15 newsletters chacun, au plus 3 sous-agents. Chacun ouvre ses fils avec `get_thread` en `messageFormat: PLAIN_TEXT`, renvoie uniquement les lignes `[R|B] Titre | fait + chiffre | URL | Newsletter, date`, et écrit son résultat dans `newsletter/veille/brut/`. Le fil principal ne lit jamais les e-mails lui-même.
+**Lecture** : confie la lecture à des sous-agents **Agent avec `model: "haiku"`**, 12 à 15 newsletters chacun, au plus 3 sous-agents. Chacun ouvre ses fils avec `get_thread` en `messageFormat: PLAIN_TEXT`, renvoie uniquement les lignes `[R|B] JJ/MM | Titre | fait + chiffre | URL | Newsletter` (JJ/MM = date de publication de l'article, sinon de la newsletter), et écrit son résultat dans `newsletter/veille/brut/`. Le fil principal ne lit jamais les e-mails lui-même.
 
 **Historique** : utilise `newsletter/style.md` (sujets déjà traités). Ne relis pas les anciens numéros.
 
@@ -68,11 +70,11 @@ Chaque entrée est **courte et synthétique** : on doit pouvoir parcourir toute 
 # Veille du JJ/MM/AAAA — <N> newsletters analysées (<période>)
 
 ## Rubrique — sujets longs (<nombre>)
-R1. **<Titre>** — 8,5/10 — <l'enjeu en une phrase> — angle possible : <…> — vu dans <n> newsletters
+R1. **<Titre>** — 8,5/10 — 📅 JJ/MM — <l'enjeu en une phrase> — angle possible : <…> — vu dans <n> newsletters
 R2. …
 
 ## Lien en bref — infos croustillantes (<nombre>)
-B1. **<Titre>** — 7/10 — <le fait + le détail qui accroche, une phrase> — [source](url)
+B1. **<Titre>** — 7/10 — 📅 JJ/MM — <le fait + le détail qui accroche, une phrase> — [source](url)
 B2. …
 
 ## Écartés

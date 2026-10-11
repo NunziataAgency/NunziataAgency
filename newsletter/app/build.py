@@ -11,13 +11,13 @@ text = open(src, encoding="utf-8").read()
 
 title = re.search(r"^# (.+)$", text, re.M).group(1)
 items = []
-for m in re.finditer(r"^([RB])(\d+)\. \*\*(.+?)\*\* — ([\d,]+)/10 — (.+)$", text, re.M):
-    kind, num, head, score, rest = m.groups()
+for m in re.finditer(r"^([RB])(\d+)\. \*\*(.+?)\*\* — ([\d,]+)/10 — (?:📅 (\d\d/\d\d) — )?(.+)$", text, re.M):
+    kind, num, head, score, date, rest = m.groups()
     url = re.search(r"\[source\]\((.+?)\)", rest)
     rest = re.sub(r"\s*—?\s*\[source\]\(.+?\)", "", rest).strip(" —")
     items.append({"id": f"{kind}{num}", "kind": kind, "title": head,
                   "score": float(score.replace(",", ".")), "body": rest,
-                  "url": url.group(1) if url else ""})
+                  "url": url.group(1) if url else "", "date": date or ""})
 
 tpl = open(os.path.join(here, "template.html"), encoding="utf-8").read()
 out = tpl.replace("__TITLE__", html.escape(title)).replace("__DATA__", json.dumps(items, ensure_ascii=False))
