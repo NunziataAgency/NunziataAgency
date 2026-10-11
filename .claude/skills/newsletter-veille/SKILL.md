@@ -81,5 +81,7 @@ B2. …
 
 Numérote `R1, R2…` et `B1, B2…` : l'utilisateur choisit en citant les numéros.
 
-Puis, dans le chat : le nombre de sujets par liste, les 3 meilleurs de chaque en une ligne, le chemin du fichier, et la consigne de choix : « Réponds avec les numéros, ex. R2, R5, B1, B4, B7… ».
+Puis mets à jour la page mobile : `python3 newsletter/app/build.py`, et publie `newsletter/app/veille.html` avec l'outil Artifact sur l'URL existante `https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2` (passe `url`, pas d'icône), pour garder le même lien.
+
+Puis, dans le chat : le lien de la page mobile, le nombre de sujets par liste, les 3 meilleurs de chaque en une ligne, le chemin du fichier, et la consigne de choix : « Réponds avec les numéros, ex. R2, R5, B1, B4, B7… ».
 Si la commande a été lancée par `/newsletter`, rends la main à l'orchestrateur pour l'étape de choix.

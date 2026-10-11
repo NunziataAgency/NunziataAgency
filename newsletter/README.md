@@ -32,6 +32,11 @@ ailleurs) et le stock complet d'articles avec liens
 | `/question-du-jour generer` | Enrichit la bibliothèque : questions liées à l'actu + intemporelles |
 | `/question-du-jour choisir` | Te propose 4 questions, tu choisis |
 
+## Sur téléphone
+
+- **Lancer le workflow** : app Claude → onglet **Code** → dépôt `NunziataAgency`, branche `claude/newsletter-workflow-analysis-5wqo54` → tape `/newsletter`.
+- **Choisir les sujets** : la page **Tri Order & Chaos** (https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2) est mise à jour à chaque veille. Coche du bout du doigt, touche **Copier**, colle la sélection dans le chat.
+
 ## Installation sur Mac (une seule fois)
 
 1. **Installer Claude Code** : ouvre l'app **Terminal** et colle :
