@@ -25,7 +25,7 @@ Sujet d'actualité qui mérite un traitement long : enjeu, contexte, débat, con
 
 ## Historique de la newsletter
 
-- **Dans Gmail** : les numéros envoyés depuis `order-and-chaos@mail.beehiiv.com` (`from:order-and-chaos@mail.beehiiv.com`)
+- **Dans Gmail** : `from:order-chaos@mail.beehiiv.com OR from:order-and-chaos@mail.beehiiv.com` (42 numéros depuis le 19/05/2026 ; écarter les [TEST] et « Votre accès est confirmé »)
 - **Dossier des anciens numéros sur mon Mac** : _(ex. `~/Documents/Ma newsletter`)_
   Sinon, les fichiers déposés dans `newsletter/historique/` sont utilisés.
 
@@ -35,7 +35,7 @@ Sujet d'actualité qui mérite un traitement long : enjeu, contexte, débat, con
 
 - **Libellé Gmail des newsletters** (facultatif, le plus fiable) : _(ex. `Newsletters`)_
 - **Expéditeurs à toujours inclure** : _(ex. `@substack.com`, `hello@morningbrew.com`)_
-- **Expéditeurs à ignorer** : `order-and-chaos@mail.beehiiv.com` (c'est l'historique, pas une source), rapports DMARC, alertes Google, promos
+- **Expéditeurs à ignorer** : `order-chaos@mail.beehiiv.com`, `order-and-chaos@mail.beehiiv.com`, les réponses « Votre accès est confirmé » (c'est l'historique, pas une source), rapports DMARC, alertes Google, promos
 
 ## Préférences de recherche
 
