@@ -11,7 +11,7 @@ text = open(src, encoding="utf-8").read()
 
 title = re.search(r"^# (.+)$", text, re.M).group(1)
 items = []
-for m in re.finditer(r"^([RB])(\d+)\. \*\*(.+?)\*\* — ([\d,]+)/10 — (?:📅 (\d\d/\d\d) — )?(.+)$", text, re.M):
+for m in re.finditer(r"^([RBF])(\d+)\. \*\*(.+?)\*\* — ([\d,]+)/10 — (?:📅 (\d\d/\d\d) — )?(.+)$", text, re.M):
     kind, num, head, score, date, rest = m.groups()
     url = re.search(r"\[source\]\((.+?)\)", rest)
     rest = re.sub(r"\s*—?\s*\[source\]\(.+?\)", "", rest).strip(" —")

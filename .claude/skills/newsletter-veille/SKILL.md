@@ -24,7 +24,8 @@ But : transformer la pile de newsletters reçues en une **short-list de sujets t
 **Cache** : les extractions brutes sont dans `newsletter/veille/brut/AAAA-MM-JJ.md` (une par jour). Ne relis jamais un jour déjà extrait.
 
 **Tri sans lire** : une seule recherche `search_threads` (vue MINIMAL, pageSize 50, paginée) avec :
-`after:<date> -subject:"Votre accès est confirmé" -from:buzz@tx.beehiiv.com -from:google.com -from:accounts.google.com -from:instagram.com -from:linkedin.com -from:order-chaos@mail.beehiiv.com -from:order-and-chaos@mail.beehiiv.com -in:sent`
+`after:<date> -subject:"Votre accès est confirmé" -from:buzz@tx.beehiiv.com -from:google.com -from:accounts.google.com -from:instagram.com -from:linkedin.com -from:order-chaos@mail.beehiiv.com -from:order-and-chaos@mail.beehiiv.com -from:arthur@order-and-chaos.fr -in:sent`
+Les **sources prioritaires** de la config (The Next Big Sh*t, Techpresso, The Hustle, Morning Brew, Aktionnaire) sont toujours ouvertes en entier.
 À partir des objets et extraits seulement, garde les newsletters éditoriales pertinentes et écarte le reste (personnel, candidatures, notifications, promos, sujets hors business/tech/IA/éco). N'ouvre jamais un e-mail écarté.
 
 **Lecture** : confie la lecture à des sous-agents **Agent avec `model: "haiku"`**, 12 à 15 newsletters chacun, au plus 3 sous-agents. Chacun ouvre ses fils avec `get_thread` en `messageFormat: PLAIN_TEXT`, renvoie uniquement les lignes `[R|B] JJ/MM | Titre | fait + chiffre | URL | Newsletter` (JJ/MM = date de publication de l'article, sinon de la newsletter), et écrit son résultat dans `newsletter/veille/brut/`. Le fil principal ne lit jamais les e-mails lui-même.
@@ -81,7 +82,12 @@ B2. …
 - <sujet> : <raison courte>
 ```
 
-Numérote `R1, R2…` et `B1, B2…` : l'utilisateur choisit en citant les numéros.
+## Fun & actionnable (8 à 15)
+F1. **<Titre>** — 7/10 — 📅 JJ/MM — <le jeu, quiz ou truc fun / l'outil ou l'astuce, et ce qu'on en fait> — [source](url)
+
+**Titres** : ne recopie jamais l'intitulé de la newsletter source. Reformule chaque titre avec tes mots, court et percutant.
+
+Numérote `R1, R2…`, `B1, B2…` et `F1, F2…` : l'utilisateur choisit en citant les numéros.
 
 Puis mets à jour la page mobile : `python3 newsletter/app/build.py`, et publie `newsletter/app/veille.html` avec l'outil Artifact sur l'URL existante `https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2` (passe `url`, pas d'icône), pour garder le même lien.
 

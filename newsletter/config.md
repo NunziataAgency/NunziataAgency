@@ -34,8 +34,9 @@ Sujet d'actualité qui mérite un traitement long : enjeu, contexte, débat, con
 - **Compte Gmail à connecter** : media.dream2030@gmail.com
 
 - **Libellé Gmail des newsletters** (facultatif, le plus fiable) : _(ex. `Newsletters`)_
-- **Expéditeurs à toujours inclure** : _(ex. `@substack.com`, `hello@morningbrew.com`)_
-- **Expéditeurs à ignorer** : `order-chaos@mail.beehiiv.com`, `order-and-chaos@mail.beehiiv.com`, les réponses « Votre accès est confirmé » (c'est l'historique, pas une source), rapports DMARC, alertes Google, promos
+- **Sources prioritaires pour les Liens en bref** : The Next Big Sh*t (the-nbs.fr), Techpresso, The Hustle, Morning Brew, Aktionnaire. Toujours ouvertes en entier, jamais seulement à l'objet.
+- **Fun & actionnable** : jeux, quiz, énigmes, sondages et trucs fun (surtout The Hustle), plus les outils, astuces, prompts et ressources gratuites à tester.
+- **Expéditeurs à ignorer** : `order-chaos@mail.beehiiv.com`, `arthur@order-and-chaos.fr`, `order-and-chaos@mail.beehiiv.com`, les réponses « Votre accès est confirmé » (c'est l'historique, pas une source), rapports DMARC, alertes Google, promos
 
 ## Préférences de recherche
 

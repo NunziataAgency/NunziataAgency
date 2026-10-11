@@ -10,7 +10,7 @@ argument-hint: "<numéros de la veille, ex. B1 B4 B7 — ou sujets séparés par
 
 1. Lis `newsletter/config.md` (ton, lectorat, format des Liens en bref).
 2. **Style maison** : lis `newsletter/style.md` (format : emoji + titre-phrase en gras de 6 à 15 mots + « Lien »). Ne relis pas les anciens numéros.
-3. **Sujets** : les numéros `B…` de `$ARGUMENTS`, pris dans la veille la plus récente de `newsletter/veille/` ; ou les sujets donnés en clair. Rien de fourni → demande lesquels, ne choisis pas à la place de l'utilisateur.
+3. **Sujets** : les numéros `B…` et `F…` de `$ARGUMENTS`, plus les `R…` marqués « (en bref) » (une Rubrique que l'utilisateur veut en Lien en bref), pris dans la veille la plus récente de `newsletter/veille/` ; ou les sujets donnés en clair. Rien de fourni → demande lesquels, ne choisis pas à la place de l'utilisateur.
 
 ## 1. Vérifier (sans sous-agent)
 

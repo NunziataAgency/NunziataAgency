@@ -44,6 +44,10 @@ button.copy { border: 0; background: var(--accent); color: var(--bg); border-rad
 .seg label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 600 }
 .addbtn { border: 1px solid var(--fg); background: transparent; color: var(--fg); border-radius: 10px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
 .date { margin-left: auto }
+.tobref { margin-top: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 999px; padding: 6px 10px; font: 500 .8rem var(--body); cursor: pointer }
+.tobref.on { border-color: var(--accent); color: var(--accent); font-weight: 600 }
+.tab { white-space: nowrap; flex: 1 0 auto }
+.tabs { overflow-x: auto }
 .mine .id { color: var(--accent) }
 .del { margin-left: auto; border: 0; background: none; color: var(--muted); font: .8rem var(--body); cursor: pointer; text-decoration: underline }
 button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
@@ -55,6 +59,7 @@ button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); ou
   <div class="tabs" role="tablist">
     <button class="tab" id="tR" role="tab" data-k="R">Rubriques</button>
     <button class="tab" id="tB" role="tab" data-k="B">Liens en bref</button>
+    <button class="tab" id="tF" role="tab" data-k="F">Fun</button>
   </div>
   <form class="add" id="add">
     <div class="addhead">Ajouter mon lien</div>
@@ -79,7 +84,11 @@ const KEY = "oc-sel-" + document.querySelector(".sub").textContent.slice(0, 24);
 let sel = new Set(), tab = "R", mine = [];
 try { sel = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); mine = JSON.parse(localStorage.getItem(KEY + "-mine") || "[]"); } catch (e) {}
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify([...sel])); localStorage.setItem(KEY + "-mine", JSON.stringify(mine)); } catch (e) {} };
-const order = id => (id[0] === "R" ? 0 : 1000) + +id.slice(1);
+const order = id => ({ R: 0, B: 1000, F: 2000 }[id[0]]) + +id.slice(1);
+const LABEL = { R: "Rubriques", B: "Liens en bref", F: "Fun" };
+let asBref = new Set();
+try { asBref = new Set(JSON.parse(localStorage.getItem(KEY + "-bref") || "[]")); } catch (e) {}
+const saveBref = () => { try { localStorage.setItem(KEY + "-bref", JSON.stringify([...asBref])); } catch (e) {} };
 const all = () => [...mine, ...DATA];
 function age(dm) {
   const [dd, mm] = dm.split("/").map(Number), now = new Date();
@@ -95,7 +104,7 @@ function render() {
     const k = t.dataset.k;
     const n = all().filter(d => d.kind === k).length;
     const c = [...sel].filter(id => id[0] === k).length + mine.filter(m => m.kind === k).length;
-    t.textContent = (k === "R" ? "Rubriques" : "Liens en bref") + ` · ${c}/${n}`;
+    t.textContent = LABEL[k] + ` · ${c}/${n}`;
     t.setAttribute("aria-selected", k === tab);
   }
   const mineHtml = mine.filter(d => d.kind === tab).map(d => `
@@ -111,7 +120,7 @@ function render() {
     <div class="item ${sel.has(d.id) ? "on" : ""}" data-id="${d.id}" role="checkbox" tabindex="0" aria-checked="${sel.has(d.id)}">
       <div class="box">${sel.has(d.id) ? "✓" : ""}</div>
       <div style="min-width:0">
-        <div class="meta"><span class="id">${d.id}</span><span class="score ${d.score >= 8 ? "hi" : ""}">${String(d.score).replace(".", ",")}/10</span>${d.date ? `<span class="date">📅 ${d.date} · ${age(d.date)}</span>` : ""}</div>
+        <div class="meta"><span class="id">${d.id}</span><span class="score ${d.score >= 8 ? "hi" : ""}">${String(d.score).replace(".", ",")}/10</span>${d.date ? `<span class="date">📅 ${d.date} · ${age(d.date)}</span>` : ""}</div>${d.kind === "R" ? `<button class="tobref ${asBref.has(d.id) ? "on" : ""}" data-bref="${d.id}" type="button">${asBref.has(d.id) ? "✓ En Lien en bref" : "Passer en Lien en bref"}</button>` : ""}
         <div class="t">${esc(d.title)}</div>
         <div class="b">${esc(d.body)}${d.url ? ` · <a href="${esc(d.url)}" target="_blank" rel="noopener">source</a>` : ""}</div>
       </div>
@@ -121,7 +130,7 @@ function render() {
   document.getElementById("sel").innerHTML = n ? `<b>${n}</b> · ${[...ids, ...(mine.length ? [`${mine.length} lien(s) perso`] : [])].join(", ")}` : "Touchez les sujets à garder";
 }
 function exportText() {
-  const ids = [...sel].sort((a, b) => order(a) - order(b)).join(", ");
+  const ids = [...sel].sort((a, b) => order(a) - order(b)).map(id => asBref.has(id) ? id + " (en bref)" : id).join(", ");
   const lines = mine.map(m => `- [${m.kind === "R" ? "Rubrique" : "Lien en bref"}] ${m.url}${m.note ? " — " + m.note : ""}`);
   return [ids, lines.length ? "Mes liens :\n" + lines.join("\n") : ""].filter(Boolean).join("\n");
 }
@@ -136,6 +145,8 @@ document.getElementById("add").addEventListener("submit", e => {
 });
 document.getElementById("list").addEventListener("click", e => {
   if (e.target.closest("a")) return;
+  const tb = e.target.closest("[data-bref]");
+  if (tb) { const id = tb.dataset.bref; if (asBref.has(id)) asBref.delete(id); else { asBref.add(id); sel.add(id); } saveBref(); save(); render(); return; }
   const del = e.target.closest("[data-del]");
   if (del) { mine = mine.filter(m => m.id !== del.dataset.del); save(); render(); return; }
   const it = e.target.closest(".item[data-id]"); if (!it) return;

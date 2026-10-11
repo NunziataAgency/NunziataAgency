@@ -19,6 +19,8 @@ La veille donne une grosse liste numérotée (R1… pour les Rubriques, B1… po
 Affiche-la en entier dans le chat, une ligne par sujet, puis attends que l'utilisateur réponde avec les numéros choisis (autant qu'il veut dans chaque liste).
 Ne choisis jamais à sa place.
 
+Un numéro `R…` suivi de « (en bref) » se traite comme un Lien en bref. Les `F…` (Fun & actionnable) aussi.
+
 La sélection peut contenir un bloc « Mes liens : » (ajouté depuis la page mobile), une ligne par lien : `- [Lien en bref|Rubrique] <url> — <note>`. Traite chaque lien perso comme un sujet choisi du type indiqué : lis la page (WebFetch) pour en tirer le sujet, puis envoie-le au même traitement que les autres (rédaction pour un Lien en bref, note de synthèse pour une Rubrique, avec ce lien comme première source).
 
 ## Étape 3 — Recherche
