@@ -24,10 +24,10 @@ Avec AskUserQuestion, en une seule fois :
 
 En parallèle :
 - le dossier complet sur le sujet de Rubrique choisi : `.claude/skills/newsletter-dossier/SKILL.md` ;
-- le copywriting des Liens en bref retenus : `.claude/skills/newsletter-brefs/SKILL.md` (vérification + versions A et B) ;
+- les fiches des Liens en bref retenus : `.claude/skills/newsletter-brefs/SKILL.md` ;
 - la génération des questions du jour liées à l'actu de la semaine : `.claude/skills/question-du-jour/SKILL.md`, mode `generer actu`.
 
-Puis, avec AskUserQuestion : la version (A ou B) de chaque bref, et la question du jour (mode `choisir` du même fichier).
+Puis la question du jour (mode `choisir` du même fichier).
 
 ## Étape 4 — Récap
 
@@ -37,13 +37,13 @@ Puis, avec AskUserQuestion : la version (A ou B) de chaque bref, et la question 
 # Numéro du JJ/MM/AAAA — préparation
 
 ## Rubrique : <sujet>
-Angle recommandé : … — dossier : newsletter/dossiers/<fichier>.md
+Angle le plus fort : … — note : newsletter/dossiers/<fichier>.md
 
-## Liens en bref (prêts à coller)
-1. **<Titre>** — <texte> — [lien](url) ✅
+## Liens en bref
+1. **<Sujet>** ✅ — le fait en une ligne — fiche : newsletter/brefs/<fichier>.md
 
 ## Question du jour
 <id> — <question> (<format>)
 ```
 
-Termine dans le chat par : la rubrique et son angle recommandé, les liens en bref validés (avec ⚠️/❌ si besoin), les chemins des fichiers, et la proposition : « Je rédige la rubrique sur cet angle ? ».
+Termine dans le chat par : la rubrique et son angle recommandé, les liens en bref validés (avec ⚠️/❌ si besoin), et les chemins des fichiers. Ne rédige rien : l'utilisateur écrit lui-même à partir des notes.

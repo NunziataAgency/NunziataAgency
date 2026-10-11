@@ -24,6 +24,8 @@ Lance les recherches Gmail suivantes (opérateurs de recherche Gmail), puis fusi
 - Toujours : `(from:substack.com OR from:beehiiv.com OR from:mailchimp OR from:kit.com OR from:ghost.io) newer_than:<N>d`
 - Pour chaque expéditeur « à toujours inclure » : `from:<expéditeur> newer_than:<N>d`
 
+Si l'historique des anciens numéros est disponible (dossier indiqué dans la config, sinon `newsletter/historique/`), parcours les 8 derniers numéros pour savoir quels sujets ont déjà été traités : un sujet déjà couvert n'est reproposé que s'il y a du nouveau, et tu le signales.
+
 Écarte les expéditeurs « à ignorer », les reçus, confirmations, alertes de sécurité et promos purement commerciales.
 Pagine jusqu'au bout. Note le nombre total de newsletters analysées.
 

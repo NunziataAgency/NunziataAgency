@@ -23,6 +23,11 @@ Sujet d'actualité qui mérite un traitement long : enjeu, contexte, débat, con
 - Format : 600 à 1 200 mots, avec un angle clair.
 - Nombre visé par numéro : 1.
 
+## Historique de la newsletter
+
+- **Dossier des anciens numéros sur mon Mac** : _(ex. `~/Documents/Ma newsletter`)_
+  Sinon, les fichiers déposés dans `newsletter/historique/` sont utilisés.
+
 ## Sources Gmail
 
 - **Libellé Gmail des newsletters** (facultatif, le plus fiable) : _(ex. `Newsletters`)_
