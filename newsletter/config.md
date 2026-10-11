@@ -5,11 +5,11 @@ Complète-le une fois : plus il est précis, plus le tri des sujets est pertinen
 
 ## Ma newsletter
 
-- **Nom** : _(à compléter)_
-- **Thématique** : _(ex. tech & IA, business, culture, marketing…)_
-- **Lectorat** : _(qui me lit, ce qu'il sait déjà, ce qu'il attend)_
-- **Ton** : _(ex. direct, un peu ironique, tutoiement)_
-- **Fréquence** : hebdomadaire _(veille sur les 7 derniers jours)_
+- **Nom** : Order & Chaos (beehiiv, par Arthur Dekeyser)
+- **Thématique** : l'actu Business & Tech / IA « en 3 minutes chrono »
+- **Lectorat** : entrepreneurs et freelances francophones intéressés par l'IA _(déduit des anciens numéros, à corriger)_
+- **Ton** : direct, titres choc avec emoji 📰, vouvoiement (« Bonjour 👋 ») _(déduit, à corriger)_
+- **Fréquence** : 2 numéros par semaine (mardi et vendredi, 7 h)
 
 ## Les deux rubriques
 
@@ -25,14 +25,17 @@ Sujet d'actualité qui mérite un traitement long : enjeu, contexte, débat, con
 
 ## Historique de la newsletter
 
+- **Dans Gmail** : les numéros envoyés depuis `order-and-chaos@mail.beehiiv.com` (`from:order-and-chaos@mail.beehiiv.com`)
 - **Dossier des anciens numéros sur mon Mac** : _(ex. `~/Documents/Ma newsletter`)_
   Sinon, les fichiers déposés dans `newsletter/historique/` sont utilisés.
 
 ## Sources Gmail
 
+- **Compte Gmail à connecter** : media.dream2030@gmail.com
+
 - **Libellé Gmail des newsletters** (facultatif, le plus fiable) : _(ex. `Newsletters`)_
 - **Expéditeurs à toujours inclure** : _(ex. `@substack.com`, `hello@morningbrew.com`)_
-- **Expéditeurs à ignorer** : _(promos, notifications, factures…)_
+- **Expéditeurs à ignorer** : `order-and-chaos@mail.beehiiv.com` (c'est l'historique, pas une source), rapports DMARC, alertes Google, promos
 
 ## Préférences de recherche
 
