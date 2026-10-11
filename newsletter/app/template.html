@@ -36,6 +36,15 @@ h1 { font: 600 1.5rem/1.2 var(--display); margin: 0 0 4px; text-wrap: balance }
 .sel { flex: 1; min-width: 0; font: 500 .9rem var(--body); white-space: nowrap; overflow-x: auto; color: var(--muted) }
 .sel b { color: var(--fg) }
 button.copy { border: 0; background: var(--accent); color: var(--bg); border-radius: 10px; padding: 12px 16px; font: 600 .95rem var(--body); cursor: pointer }
+.add { display: grid; gap: 8px; background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 14px; margin-top: 8px }
+.addhead { font-weight: 600 }
+.add input[type=url], .add input[type=text] { width: 100%; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 8px; padding: 10px; font: 15px var(--body) }
+.seg { display: flex; gap: 8px; flex-wrap: wrap }
+.seg label { flex: 1; display: flex; gap: 6px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 999px; padding: 8px 10px; cursor: pointer; font-size: .9rem }
+.seg label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 600 }
+.addbtn { border: 1px solid var(--fg); background: transparent; color: var(--fg); border-radius: 10px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
+.mine .id { color: var(--accent) }
+.del { margin-left: auto; border: 0; background: none; color: var(--muted); font: .8rem var(--body); cursor: pointer; text-decoration: underline }
 button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
 </style>
 
@@ -46,6 +55,16 @@ button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); ou
     <button class="tab" id="tR" role="tab" data-k="R">Rubriques</button>
     <button class="tab" id="tB" role="tab" data-k="B">Liens en bref</button>
   </div>
+  <form class="add" id="add">
+    <div class="addhead">Ajouter mon lien</div>
+    <input id="aUrl" type="url" inputmode="url" placeholder="https://… (article, post X, vidéo)" required>
+    <input id="aNote" type="text" placeholder="Note pour moi (facultatif)">
+    <div class="seg" role="radiogroup" aria-label="Type">
+      <label><input type="radio" name="aKind" value="B" checked> Lien en bref</label>
+      <label><input type="radio" name="aKind" value="R"> Rubrique</label>
+    </div>
+    <button class="addbtn" type="submit">Ajouter</button>
+  </form>
   <div class="list" id="list"></div>
 </div>
 <div class="bar">
@@ -56,20 +75,31 @@ button:focus-visible, .item:focus-visible { outline: 3px solid var(--accent); ou
 <script>
 const DATA = __DATA__;
 const KEY = "oc-sel-" + document.querySelector(".sub").textContent.slice(0, 24);
-let sel = new Set(), tab = "R";
-try { sel = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch (e) {}
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify([...sel])); } catch (e) {} };
+let sel = new Set(), tab = "R", mine = [];
+try { sel = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); mine = JSON.parse(localStorage.getItem(KEY + "-mine") || "[]"); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify([...sel])); localStorage.setItem(KEY + "-mine", JSON.stringify(mine)); } catch (e) {} };
 const order = id => (id[0] === "R" ? 0 : 1000) + +id.slice(1);
+const all = () => [...mine, ...DATA];
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 function render() {
   for (const t of document.querySelectorAll(".tab")) {
-    const n = DATA.filter(d => d.kind === t.dataset.k).length;
-    const k = [...sel].filter(id => id[0] === t.dataset.k).length;
-    t.textContent = (t.dataset.k === "R" ? "Rubriques" : "Liens en bref") + ` · ${k}/${n}`;
-    t.setAttribute("aria-selected", t.dataset.k === tab);
+    const k = t.dataset.k;
+    const n = all().filter(d => d.kind === k).length;
+    const c = [...sel].filter(id => id[0] === k).length + mine.filter(m => m.kind === k).length;
+    t.textContent = (k === "R" ? "Rubriques" : "Liens en bref") + ` · ${c}/${n}`;
+    t.setAttribute("aria-selected", k === tab);
   }
-  document.getElementById("list").innerHTML = DATA.filter(d => d.kind === tab).map(d => `
+  const mineHtml = mine.filter(d => d.kind === tab).map(d => `
+    <div class="item on mine">
+      <div class="box">✓</div>
+      <div style="min-width:0">
+        <div class="meta"><span class="id">Mon lien</span><button class="del" data-del="${d.id}" type="button">Retirer</button></div>
+        <div class="t">${esc(d.note || d.url)}</div>
+        <div class="b"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.url)}</a></div>
+      </div>
+    </div>`).join("");
+  document.getElementById("list").innerHTML = mineHtml + DATA.filter(d => d.kind === tab).map(d => `
     <div class="item ${sel.has(d.id) ? "on" : ""}" data-id="${d.id}" role="checkbox" tabindex="0" aria-checked="${sel.has(d.id)}">
       <div class="box">${sel.has(d.id) ? "✓" : ""}</div>
       <div style="min-width:0">
@@ -79,11 +109,28 @@ function render() {
       </div>
     </div>`).join("");
   const ids = [...sel].sort((a, b) => order(a) - order(b));
-  document.getElementById("sel").innerHTML = ids.length ? `<b>${ids.length}</b> · ${ids.join(", ")}` : "Touchez les sujets à garder";
+  const n = ids.length + mine.length;
+  document.getElementById("sel").innerHTML = n ? `<b>${n}</b> · ${[...ids, ...(mine.length ? [`${mine.length} lien(s) perso`] : [])].join(", ")}` : "Touchez les sujets à garder";
 }
+function exportText() {
+  const ids = [...sel].sort((a, b) => order(a) - order(b)).join(", ");
+  const lines = mine.map(m => `- [${m.kind === "R" ? "Rubrique" : "Lien en bref"}] ${m.url}${m.note ? " — " + m.note : ""}`);
+  return [ids, lines.length ? "Mes liens :\n" + lines.join("\n") : ""].filter(Boolean).join("\n");
+}
+document.getElementById("add").addEventListener("submit", e => {
+  e.preventDefault();
+  const url = document.getElementById("aUrl").value.trim();
+  if (!url) return;
+  const kind = document.querySelector('input[name="aKind"]:checked').value;
+  mine.unshift({ id: "M" + Date.now(), kind, url, note: document.getElementById("aNote").value.trim() });
+  document.getElementById("aUrl").value = ""; document.getElementById("aNote").value = "";
+  tab = kind; save(); render();
+});
 document.getElementById("list").addEventListener("click", e => {
   if (e.target.closest("a")) return;
-  const it = e.target.closest(".item"); if (!it) return;
+  const del = e.target.closest("[data-del]");
+  if (del) { mine = mine.filter(m => m.id !== del.dataset.del); save(); render(); return; }
+  const it = e.target.closest(".item[data-id]"); if (!it) return;
   const id = it.dataset.id; sel.has(id) ? sel.delete(id) : sel.add(id); save(); render();
 });
 document.getElementById("list").addEventListener("keydown", e => {
@@ -91,11 +138,11 @@ document.getElementById("list").addEventListener("keydown", e => {
 });
 for (const t of document.querySelectorAll(".tab")) t.addEventListener("click", () => { tab = t.dataset.k; render(); window.scrollTo(0, 0); });
 document.getElementById("copy").addEventListener("click", async () => {
-  const text = [...sel].sort((a, b) => order(a) - order(b)).join(", ");
+  const text = exportText();
   const btn = document.getElementById("copy");
   if (!text) { btn.textContent = "Rien de coché"; setTimeout(() => btn.textContent = "Copier", 1500); return; }
   try { await navigator.clipboard.writeText(text); btn.textContent = "Copié"; }
-  catch (e) { const r = document.createRange(); r.selectNodeContents(document.getElementById("sel")); getSelection().removeAllRanges(); getSelection().addRange(r); btn.textContent = "Sélectionné"; }
+  catch (e) { document.getElementById("sel").textContent = text; const r = document.createRange(); r.selectNodeContents(document.getElementById("sel")); getSelection().removeAllRanges(); getSelection().addRange(r); btn.textContent = "Sélectionné"; }
   setTimeout(() => btn.textContent = "Copier", 1500);
 });
 render();
