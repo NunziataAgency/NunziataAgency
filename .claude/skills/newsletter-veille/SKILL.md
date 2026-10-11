@@ -60,24 +60,28 @@ Pour chaque newsletter, ouvre le fil complet et relève chaque info distincte :
 
 ## 4. Livrer
 
+L'utilisateur veut **beaucoup de choix** : ne coupe pas à un top 5. Garde tout ce qui est pertinent, classé par note.
+Objectif : **20 à 30 sujets Rubrique** et **40 à 60 Liens en bref** (moins seulement si les newsletters ne contiennent pas assez de matière, et dis-le).
+Chaque entrée est **courte et synthétique** : on doit pouvoir parcourir toute la liste en quelques minutes.
+
 Écris `newsletter/veille/AAAA-MM-JJ.md` (date du jour) avec ce plan :
 
 ```markdown
 # Veille du JJ/MM/AAAA — <N> newsletters analysées (<période>)
 
-## Rubrique — sujets longs (top 5)
-### 1. <Titre> — 8,5/10
-- **En une phrase** : …
-- **Pourquoi c'est un bon sujet** : …
-- **Angles possibles** : … / …
-- **Vu dans** : <newsletter A>, <newsletter B> (+ liens)
+## Rubrique — sujets longs (<nombre>)
+R1. **<Titre>** — 8,5/10 — <l'enjeu en une phrase> — angle possible : <…> — vu dans <n> newsletters
+R2. …
 
-## Lien en bref — infos croustillantes (top 10)
-1. **<Titre>** — 7/10 — <2 phrases avec le détail qui accroche> — [source](url) — vu dans <newsletter>
+## Lien en bref — infos croustillantes (<nombre>)
+B1. **<Titre>** — 7/10 — <le fait + le détail qui accroche, une phrase> — [source](url)
+B2. …
 
 ## Écartés
 - <sujet> : <raison courte>
 ```
 
-Puis, dans le chat : un résumé de 5 lignes maximum et le chemin du fichier.
+Numérote `R1, R2…` et `B1, B2…` : l'utilisateur choisit en citant les numéros.
+
+Puis, dans le chat : le nombre de sujets par liste, les 3 meilleurs de chaque en une ligne, le chemin du fichier, et la consigne de choix : « Réponds avec les numéros, ex. R2, R5, B1, B4, B7… ».
 Si la commande a été lancée par `/newsletter`, rends la main à l'orchestrateur pour l'étape de choix.

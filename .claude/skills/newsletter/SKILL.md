@@ -1,6 +1,6 @@
 ---
 name: newsletter
-description: Workflow complet de préparation d'un numéro de la newsletter — veille de toutes les newsletters Gmail, choix des sujets, recherche approfondie (web, X/Twitter, autres newsletters) et dossier avec angles. À utiliser quand on dit « prépare ma newsletter », « lance la veille de la semaine » ou qu'on tape /newsletter.
+description: Workflow complet de préparation d'un numéro de la newsletter — veille de toutes les newsletters Gmail en grosse liste numérotée, choix par l'utilisateur, rédaction des Liens en bref choisis et note de synthèse de recherche pour chaque Rubrique choisie. À utiliser quand on dit « prépare ma newsletter », « lance la veille de la semaine » ou qu'on tape /newsletter.
 argument-hint: "[nombre de jours, ex. 7]"
 ---
 
@@ -15,16 +15,15 @@ Si Gmail n'est pas connecté, arrête-toi là avec l'explication prévue dans ce
 
 ## Étape 2 — Choix (c'est l'utilisateur qui décide)
 
-Avec AskUserQuestion, en une seule fois :
-
-1. **Rubrique** (choix unique) : les 3 sujets les mieux notés + leur note et une phrase. La 1re option porte « (Recommandé) ».
-2. **Liens en bref** (choix multiple) : les 4 meilleurs sujets courts. Préciser que les autres restent dans le fichier de veille et qu'on peut en citer d'autres via « Autre ».
+La veille donne une grosse liste numérotée (R1… pour les Rubriques, B1… pour les Liens en bref).
+Affiche-la en entier dans le chat, une ligne par sujet, puis attends que l'utilisateur réponde avec les numéros choisis (autant qu'il veut dans chaque liste).
+Ne choisis jamais à sa place.
 
 ## Étape 3 — Recherche
 
 En parallèle :
-- le dossier complet sur le sujet de Rubrique choisi : `.claude/skills/newsletter-dossier/SKILL.md` ;
-- les fiches des Liens en bref retenus : `.claude/skills/newsletter-brefs/SKILL.md` ;
+- **Rubriques choisies** → le process de recherche complet, un par sujet : `.claude/skills/newsletter-dossier/SKILL.md` (note de synthèse, pas de texte rédigé) ;
+- **Liens en bref choisis** → vérification et **rédaction** : `.claude/skills/newsletter-brefs/SKILL.md` ;
 - la génération des questions du jour liées à l'actu de la semaine : `.claude/skills/question-du-jour/SKILL.md`, mode `generer actu`.
 
 Puis la question du jour (mode `choisir` du même fichier).
@@ -36,14 +35,14 @@ Puis la question du jour (mode `choisir` du même fichier).
 ```markdown
 # Numéro du JJ/MM/AAAA — préparation
 
-## Rubrique : <sujet>
-Angle le plus fort : … — note : newsletter/dossiers/<fichier>.md
+## Rubriques
+- <sujet> — angle le plus fort : … — note : newsletter/dossiers/<fichier>.md
 
-## Liens en bref
-1. **<Sujet>** ✅ — le fait en une ligne — fiche : newsletter/brefs/<fichier>.md
+## Liens en bref (rédigés, prêts à coller)
+1. **<Titre>** — <texte> — [lien](url) ✅
 
 ## Question du jour
 <id> — <question> (<format>)
 ```
 
-Termine dans le chat par : la rubrique et son angle recommandé, les liens en bref validés (avec ⚠️/❌ si besoin), et les chemins des fichiers. Ne rédige rien : l'utilisateur écrit lui-même à partir des notes.
+Termine dans le chat par : les rubriques et leur angle le plus fort, les liens en bref rédigés (avec ⚠️/❌ si besoin), et les chemins des fichiers. Ne rédige pas les rubriques : l'utilisateur les écrit lui-même à partir des notes.

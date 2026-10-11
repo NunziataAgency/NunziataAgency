@@ -6,8 +6,8 @@ Un workflow Claude Code pour préparer chaque numéro :
 Gmail (toutes tes newsletters)
         │  /newsletter-veille
         ▼
-Short-list notée ── Lien en bref (infos courtes et croustillantes)
-                └─ Rubrique (sujets à traiter en long)
+Grosse liste numérotée ── B1…B60 Lien en bref (infos courtes et croustillantes)
+                       └─ R1…R30 Rubrique (sujets à traiter en long)
         │  tu choisis
         ▼
 /newsletter-dossier ── 5 recherches en parallèle :
@@ -18,7 +18,8 @@ chiffres et citations sourcés, débat, angles (dont ceux déjà pris
 ailleurs) et le stock complet d'articles avec liens
 ```
 
-Le système **n'écrit jamais tes textes** : il te donne les notes, tu écris.
+- **Liens en bref** : tu choisis dans une grosse liste, le système les vérifie et les **rédige**.
+- **Rubriques** : tu choisis, le système fait la recherche et te livre une **note de synthèse** ; c'est toi qui écris.
 
 ## Les commandes
 
@@ -27,7 +28,7 @@ Le système **n'écrit jamais tes textes** : il te donne les notes, tu écris.
 | `/newsletter` | Tout le workflow : veille → tu choisis → recherches → récap du numéro |
 | `/newsletter-veille 7` | Seulement la veille Gmail sur 7 jours |
 | `/newsletter-dossier <sujet>` | Le tour complet d'un sujet + angles proposés |
-| `/newsletter-brefs` | Une fiche par Lien en bref : vérif, le fait, le détail qui accroche, chiffres, stock d'articles |
+| `/newsletter-brefs B1 B4…` | Vérifie et rédige les Liens en bref choisis, prêts à coller |
 | `/question-du-jour generer` | Enrichit la bibliothèque : questions liées à l'actu + intemporelles |
 | `/question-du-jour choisir` | Te propose 4 questions, tu choisis |
 
@@ -62,7 +63,7 @@ Ensuite, chaque semaine : ouvre le dossier, lance `claude`, tape `/newsletter`.
 
 - `veille/` : la short-list de chaque semaine
 - `dossiers/` : un dossier par sujet creusé
-- `brefs/` : les fiches des Liens en bref
+- `brefs/` : les Liens en bref rédigés
 - `questions/` : la bibliothèque de questions du jour (actu, intemporel, déjà utilisées)
 - `numeros/` : le récap de préparation de chaque numéro
 
