@@ -21,6 +21,7 @@ Source : <média> — 📅 <date de publication> — <URL d'origine>
 ## Ce que dit l'article (5 à 8 puces : faits, chiffres, citations exactes)
 ## Ce qui est solide / ce qui est fragile
 ## Ce que l'article ne dit pas (les questions qu'il laisse ouvertes)
+## Ce que d'autres en disent autrement (1 ou 2 avis divergents trouvés au passage, sinon « à chercher dans la recherche »)
 ## Pistes d'angle (3 idées en une ligne, pour aider à se positionner)
 ```
 

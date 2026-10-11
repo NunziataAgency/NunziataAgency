@@ -19,7 +19,7 @@ Pour un simple Lien en bref, utilise plutôt `/newsletter-brefs`.
 Lance **en même temps** 3 sous-agents (Agent, `general-purpose`, `model: "sonnet"`), chacun avec le sujet, la période utile et la consigne de renvoyer pour chaque source : titre, auteur/média, date, URL, 3 à 5 faits clés, citations exactes utiles, et une note de fiabilité. Chacun vise **8 à 10 sources** pertinentes, pas des doublons. Pas plus de 2 pages lues en entier (WebFetch) par sous-agent : le reste se fait sur les extraits de recherche.
 
 1. **Presse et sources primaires** — WebSearch (mode `standard`) en français et en anglais, médias de référence de la config en priorité, plus les communiqués, études et chiffres officiels ; vérifier chaque chiffre clé à la source.
-2. **X/Twitter et voix contraires** — WebSearch `site:x.com <sujet>`, comptes prioritaires de la config, réactions d'experts et posts viraux (qui dit quoi, avec lien), puis les critiques et ce que le récit dominant oublie. (Pas d'API X : le dire si la couverture est faible.)
+2. **X/Twitter et avis divergents** (priorité : trouver des gens crédibles qui pensent autrement) — WebSearch `site:x.com <sujet>`, comptes prioritaires de la config, réactions d'experts et posts viraux (qui dit quoi, avec lien), puis les critiques et ce que le récit dominant oublie. (Pas d'API X : le dire si la couverture est faible.)
 3. **Autres newsletters** — Gmail `search_threads` en vue MINIMAL sur `<mots-clés> newer_than:30d` : travailler sur les objets et extraits, n'ouvrir au plus que 3 fils, pour repérer les angles **déjà pris**.
 
 Note la date de publication de chaque source (📅 JJ/MM) et privilégie les 7 derniers jours ; une source plus ancienne ne sert qu'au contexte et est signalée comme telle.
@@ -39,6 +39,7 @@ Croise les résultats : dédoublonne, repère les contradictions entre sources, 
 
 ## L'essentiel en 5 lignes
 ## Ton avis à l'épreuve des faits (ce qui le soutient, ce qui le contredit, comment le muscler)
+## Avis divergents (obligatoire : au moins 3 voix qui ne disent pas la même chose que l'article ni que l'avis de l'utilisateur — qui, son argument en une phrase, sa crédibilité, citation exacte et lien daté ; dire clairement s'il n'en existe pas)
 ## Ce qui s'est passé (chronologie datée)
 ## Les chiffres clés (chacun avec sa source)
 ## Les acteurs et leurs positions
