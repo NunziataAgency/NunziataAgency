@@ -1,7 +1,7 @@
 ---
 name: newsletter-dossier
 description: Recherche approfondie sur UN sujet choisi pour la newsletter — articles de presse, posts X/Twitter, autres newsletters Gmail, sources primaires, avis contraires — puis synthèse en un dossier qui donne la vision d'ensemble et propose des angles. À utiliser après le choix d'un sujet dans la veille, ou quand on demande « fais-moi le tour du sujet X ».
-argument-hint: "<sujet> [--bref pour une simple vérification de Lien en bref]"
+argument-hint: "<sujet>"
 ---
 
 # Dossier de recherche sur un sujet
@@ -10,15 +10,7 @@ Sujet : `$ARGUMENTS`. Si vide, prends le sujet n°1 de la veille la plus récent
 
 Lis d'abord `newsletter/config.md` (lectorat, ton, comptes X et médias de référence) et, s'il existe, l'extrait de veille qui concerne ce sujet.
 
-## Mode `--bref` (Lien en bref)
-
-Vérification rapide, pas de sous-agents : 2 à 4 recherches web pour **confirmer le fait**, trouver la source d'origine et le chiffre exact.
-Livre directement dans le chat, pour chaque sujet :
-- texte prêt à coller (2-3 phrases, dans le ton de la config) ;
-- le meilleur lien (source primaire de préférence) ;
-- ✅ confirmé / ⚠️ nuance / ❌ faux ou exagéré, avec une ligne d'explication.
-
-Sinon, mode complet ci-dessous.
+Pour un simple Lien en bref, utilise plutôt `/newsletter-brefs`.
 
 ## 1. Recherche en parallèle
 

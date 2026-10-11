@@ -24,18 +24,23 @@ Dossier : l'essentiel, chronologie, chiffres sourcés, débat,
 | `/newsletter` | Tout le workflow : veille → tu choisis → recherches → récap du numéro |
 | `/newsletter-veille 7` | Seulement la veille Gmail sur 7 jours |
 | `/newsletter-dossier <sujet>` | Le tour complet d'un sujet + angles proposés |
-| `/newsletter-dossier <sujet> --bref` | Vérifie une info courte et rédige le Lien en bref |
+| `/newsletter-brefs` | Vérifie les Liens en bref et en rédige 2 versions (A fidèle au style, B plus audacieuse) |
+| `/question-du-jour generer` | Enrichit la bibliothèque : questions liées à l'actu + intemporelles |
+| `/question-du-jour choisir` | Te propose 4 questions, tu choisis |
 
 ## Avant la première utilisation
 
 1. **Connecter Gmail** : claude.ai → Paramètres → Connecteurs → Gmail, puis l'activer dans la conversation.
-2. **Remplir `config.md`** : thématique, lectorat, ton, libellé Gmail des newsletters, comptes X à suivre.
+2. **Déposer les anciens numéros** dans `historique/` : le style maison des brefs et la liste des questions déjà publiées en sont tirés.
+3. **Remplir `config.md`** : thématique, lectorat, ton, libellé Gmail des newsletters, comptes X à suivre.
    Astuce : un libellé Gmail « Newsletters » (avec un filtre automatique) rend la veille bien plus fiable.
 
 ## Où vont les résultats
 
 - `veille/` : la short-list de chaque semaine
 - `dossiers/` : un dossier par sujet creusé
+- `brefs/` : les Liens en bref rédigés, prêts à coller
+- `questions/` : la bibliothèque de questions du jour (actu, intemporel, déjà utilisées)
 - `numeros/` : le récap de préparation de chaque numéro
 
 ## Limites à connaître
