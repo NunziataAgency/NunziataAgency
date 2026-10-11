@@ -26,7 +26,7 @@ La sélection peut contenir un bloc « Mes liens : » (ajouté depuis la page mo
 ## Étape 3 — Recherche
 
 En parallèle :
-- **Rubriques choisies** → le process de recherche complet, un par sujet : `.claude/skills/newsletter-dossier/SKILL.md` (note de synthèse, pas de texte rédigé) ;
+- **Rubriques choisies** → d'abord la **fiche de l'article d'origine** : `.claude/skills/newsletter-fiche/SKILL.md`. Puis attends l'avis de l'utilisateur (message « Recherche R4 — mon avis : … », ou bloc « Mes avis : » dans la sélection). Seulement alors, la recherche complète guidée par cet avis : `.claude/skills/newsletter-dossier/SKILL.md` (note de synthèse, pas de texte rédigé). Si l'avis est déjà donné dans la sélection, enchaîne fiche puis recherche sans attendre ;
 - **Liens en bref choisis** → vérification et **rédaction** : `.claude/skills/newsletter-brefs/SKILL.md` ;
 - la génération des questions du jour liées à l'actu de la semaine : `.claude/skills/question-du-jour/SKILL.md`, mode `generer actu`.
 

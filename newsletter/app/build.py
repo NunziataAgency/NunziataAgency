@@ -41,14 +41,25 @@ if os.path.exists(qf):
         if len(c) == 6 and c[0].startswith("A-") and "dispo" in c[5]:
             questions.append({"id": c[0], "text": c[1], "format": c[2], "note": c[4]})
 
-docs = []
-day = os.path.basename(bf)[:10] if bf else ""
-for f in sorted(glob.glob(os.path.join(here, "..", "dossiers", f"{day}*.md"))):
-    body = open(f, encoding="utf-8").read()
+# Rubriques : fiche de l'article d'origine + note de recherche, rangées par identifiant (R4, M1…)
+titles = {f"{i['id']}": i["title"] for i in items}
+rubs = {}
+def h1(body, fallback):
     t = re.search(r"^# (.+)$", body, re.M)
-    docs.append({"title": re.sub(r"\s+—\s+note du.*$", "", t.group(1)) if t else os.path.basename(f), "body": body})
+    return re.sub(r"\s+—\s+(note|fiche) du.*$", "", t.group(1)) if t else fallback
+for kind, folder in (("fiche", "fiches"), ("doc", "dossiers")):
+    for f in sorted(glob.glob(os.path.join(here, "..", folder, "*.md"))):
+        m = re.search(r"\d{4}-\d\d-\d\d-((?:R|M)\d+)", os.path.basename(f))
+        if not m:
+            continue
+        rid, body = m.group(1), open(f, encoding="utf-8").read()
+        r = rubs.setdefault(rid, {"id": rid, "title": titles.get(rid, ""), "fiche": "", "doc": ""})
+        r[kind] = body
+        if not r["title"] or kind == "fiche":
+            r["title"] = h1(body, rid)
+rubriques = sorted(rubs.values(), key=lambda r: (r["id"][0], int(r["id"][1:])))
 
 tpl = open(os.path.join(here, "template.html"), encoding="utf-8").read()
-out = tpl.replace("__TITLE__", html.escape(title)).replace("__DATA__", json.dumps(items, ensure_ascii=False)).replace("__NUM__", json.dumps({"brefs": brefs, "questions": questions, "docs": docs}, ensure_ascii=False).replace("</", "<\\/"))
+out = tpl.replace("__TITLE__", html.escape(title)).replace("__DATA__", json.dumps(items, ensure_ascii=False)).replace("__NUM__", json.dumps({"brefs": brefs, "questions": questions, "rubriques": rubriques}, ensure_ascii=False).replace("</", "<\\/"))
 open(os.path.join(here, "veille.html"), "w", encoding="utf-8").write(out)
-print(f"{len(items)} sujets, {len(brefs)} brefs, {len(questions)} questions, {len(docs)} notes → newsletter/app/veille.html")
+print(f"{len(items)} sujets, {len(brefs)} brefs, {len(questions)} questions, {len(rubriques)} rubriques → newsletter/app/veille.html")

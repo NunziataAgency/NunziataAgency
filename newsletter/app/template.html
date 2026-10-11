@@ -45,6 +45,7 @@ button.copy { border: 0; background: var(--accent); color: var(--bg); border-rad
 .seg label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 600 }
 .addbtn { border: 1px solid var(--fg); background: transparent; color: var(--fg); border-radius: 10px; padding: 10px; font: 600 .95rem var(--body); cursor: pointer }
 .date { margin-left: auto }
+.avis { width: 100%; margin-top: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 8px; padding: 8px 10px; font: 14px/1.4 var(--body); resize: vertical }
 .lnk { font-size: .8rem; margin-top: 6px; overflow-wrap: anywhere; color: var(--muted) }
 .lnk a { color: var(--accent) }
 .lnk.none, .lnk.none a { color: var(--hot) }
@@ -119,8 +120,9 @@ details.doc[open] summary::after { content: " ▴" }
     <div class="sec">Question du jour</div>
     <p class="note">Touchez celle que vous gardez.</p>
     <div class="cards" id="qdj"></div>
-    <div class="sec">Rubriques : notes pour écrire</div>
-    <div id="docs"></div>
+    <div class="sec">Rubriques</div>
+    <p class="note">1. Lisez la fiche de l'article. 2. Donnez votre avis et votre angle. 3. Copiez et collez dans le chat : la recherche part de votre avis.</p>
+    <div class="cards" id="rubs"></div>
   </div>
 </div>
 <div class="bar" id="bar">
@@ -140,6 +142,8 @@ let asBref = new Set();
 try { asBref = new Set(JSON.parse(localStorage.getItem(KEY + "-bref") || "[]")); } catch (e) {}
 const saveBref = () => { try { localStorage.setItem(KEY + "-bref", JSON.stringify([...asBref])); } catch (e) {} };
 const all = () => [...mine, ...DATA];
+const getAvis = id => { try { return localStorage.getItem(KEY + "-avis-" + id) || ""; } catch (e) { return ""; } };
+const setAvis = (id, v) => { try { localStorage.setItem(KEY + "-avis-" + id, v); } catch (e) {} };
 const NLRE = /(beehiiv|substack\.com|techtrash\.fr|morningbrew\.com|archive\.techpresso|the-nbs\.fr|thevccorner|newcomer\.co|notboring|a16z\.news|creatorspotlight|media\.hexa)/;
 function pretty(u) { try { const x = new URL(u); const p = (x.pathname + x.search).replace(/\/$/, ""); return x.hostname.replace(/^www\./, "") + (p.length > 48 ? p.slice(0, 47) + "…" : p); } catch (e) { return u; } }
 function linkLine(u) {
@@ -178,7 +182,7 @@ function render() {
     <div class="item ${sel.has(d.id) ? "on" : ""}" data-id="${d.id}" role="checkbox" tabindex="0" aria-checked="${sel.has(d.id)}">
       <div class="box">${sel.has(d.id) ? "✓" : ""}</div>
       <div style="min-width:0">
-        <div class="meta"><span class="id">${d.id}</span><span class="score ${d.score >= 8 ? "hi" : ""}">${String(d.score).replace(".", ",")}/10</span>${d.date ? `<span class="date">📅 ${d.date} · ${age(d.date)}</span>` : ""}</div>${d.kind === "R" ? `<button class="tobref ${asBref.has(d.id) ? "on" : ""}" data-bref="${d.id}" type="button">${asBref.has(d.id) ? "✓ En Lien en bref" : "Passer en Lien en bref"}</button>` : ""}
+        <div class="meta"><span class="id">${d.id}</span><span class="score ${d.score >= 8 ? "hi" : ""}">${String(d.score).replace(".", ",")}/10</span>${d.date ? `<span class="date">📅 ${d.date} · ${age(d.date)}</span>` : ""}</div>${d.kind === "R" && sel.has(d.id) && !asBref.has(d.id) ? `<textarea class="avis" data-avis="${d.id}" rows="2" placeholder="Mon avis / mon angle (facultatif)">${esc(getAvis(d.id))}</textarea>` : ""}${d.kind === "R" ? `<button class="tobref ${asBref.has(d.id) ? "on" : ""}" data-bref="${d.id}" type="button">${asBref.has(d.id) ? "✓ En Lien en bref" : "Passer en Lien en bref"}</button>` : ""}
         <div class="t">${esc(d.title)}</div>
         <div class="b">${esc(d.body)}</div>${linkLine(d.url)}
       </div>
@@ -189,8 +193,9 @@ function render() {
 }
 function exportText() {
   const ids = [...sel].sort((a, b) => order(a) - order(b)).map(id => asBref.has(id) ? id + " (en bref)" : id).join(", ");
+  const avis = [...sel].filter(id => id[0] === "R" && !asBref.has(id) && getAvis(id).trim()).map(id => `- ${id} — mon avis : ${getAvis(id).trim()}`);
   const lines = mine.map(m => `- [${m.kind === "R" ? "Rubrique" : "Lien en bref"}] ${m.url}${m.note ? " — " + m.note : ""}`);
-  return [ids, lines.length ? "Mes liens :\n" + lines.join("\n") : ""].filter(Boolean).join("\n");
+  return [ids, avis.length ? "Mes avis :\n" + avis.join("\n") : "", lines.length ? "Mes liens :\n" + lines.join("\n") : ""].filter(Boolean).join("\n");
 }
 document.getElementById("add").addEventListener("submit", e => {
   e.preventDefault();
@@ -201,8 +206,9 @@ document.getElementById("add").addEventListener("submit", e => {
   document.getElementById("aUrl").value = ""; document.getElementById("aNote").value = "";
   tab = kind; save(); render();
 });
+document.getElementById("list").addEventListener("input", e => { const t = e.target.closest("[data-avis]"); if (t) setAvis(t.dataset.avis, t.value); });
 document.getElementById("list").addEventListener("click", e => {
-  if (e.target.closest("a")) return;
+  if (e.target.closest("a") || e.target.closest("textarea")) return;
   const tb = e.target.closest("[data-bref]");
   if (tb) { const id = tb.dataset.bref; if (asBref.has(id)) asBref.delete(id); else { asBref.add(id); sel.add(id); } saveBref(); save(); render(); return; }
   const del = e.target.closest("[data-del]");
@@ -263,8 +269,24 @@ document.getElementById("qdj").addEventListener("click", e => {
   qPick = qPick === c.dataset.q ? "" : c.dataset.q; try { localStorage.setItem(KEY + "-qdj", qPick); } catch (er) {} renderQ();
 });
 renderQ();
-document.getElementById("docs").innerHTML = NUM.docs.map((d, i) => `
-  <details class="doc"${i === 0 ? " open" : ""}><summary>${esc(d.title)}</summary><div class="md">${md(d.body)}</div></details>`).join("");
+document.getElementById("rubs").innerHTML = NUM.rubriques.map(r => `
+  <div class="card">
+    <div class="status"><span class="pill">${esc(r.id)}</span><span>${r.doc ? "note de recherche prête" : r.fiche ? "fiche prête, en attente de votre avis" : "fiche à faire"}</span></div>
+    <div class="bref"><b>${esc(r.title)}</b></div>
+    ${r.fiche ? `<details class="doc"><summary>L'article en bref</summary><div class="md">${md(r.fiche)}</div></details>` : ""}
+    <label class="note" for="avis-${r.id}">Mon avis, mon angle, ce que je veux creuser</label>
+    <textarea class="avis" id="avis-${r.id}" data-avis="${r.id}" rows="4" placeholder="Ex. : je pense que… ; angle : … ; cherche surtout : …">${esc(getAvis(r.id))}</textarea>
+    <button class="small" data-go="${r.id}" type="button">Copier pour lancer la recherche</button>
+    ${r.doc ? `<details class="doc"><summary>Note de recherche</summary><div class="md">${md(r.doc)}</div></details>` : ""}
+  </div>`).join("") || '<p class="note">Aucune rubrique choisie pour l\'instant.</p>';
+document.getElementById("rubs").addEventListener("input", e => { const t = e.target.closest("[data-avis]"); if (t) setAvis(t.dataset.avis, t.value); });
+document.getElementById("rubs").addEventListener("click", async e => {
+  const b = e.target.closest("[data-go]"); if (!b) return;
+  const id = b.dataset.go, a = getAvis(id).trim();
+  const text = `Recherche ${id}` + (a ? ` — mon avis : ${a}` : "");
+  try { await navigator.clipboard.writeText(text); b.textContent = "Copié, collez dans le chat"; } catch (er) { b.textContent = "Copie refusée"; }
+  setTimeout(() => b.textContent = "Copier pour lancer la recherche", 2000);
+});
 for (const a of document.querySelectorAll(".md a")) { a.target = "_blank"; a.rel = "noopener"; }
 let view = "tri";
 try { view = localStorage.getItem(KEY + "-view") || (NUM.brefs.length ? "num" : "tri"); } catch (e) {}

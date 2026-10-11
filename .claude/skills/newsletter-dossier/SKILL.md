@@ -8,6 +8,8 @@ argument-hint: "<sujet>"
 
 Sujet : `$ARGUMENTS`. Si vide, prends le sujet n°1 de la veille la plus récente dans `newsletter/veille/` et dis-le.
 
+**Avis de l'utilisateur** : le message peut être « Recherche R4 — mon avis : … ». Lis aussi la fiche `newsletter/fiches/*-R4.md` si elle existe. L'avis oriente tout : chaque sous-agent reçoit l'avis et la fiche, cherche en priorité ce qui **confirme et ce qui contredit** cet avis, creuse les points que l'utilisateur veut creuser, et ne refait pas ce que la fiche couvre déjà.
+
 Lis d'abord `newsletter/config.md` (lectorat, ton, comptes X et médias de référence) et, s'il existe, l'extrait de veille qui concerne ce sujet.
 
 Pour un simple Lien en bref, utilise plutôt `/newsletter-brefs`.
@@ -29,13 +31,14 @@ C'est une **note de travail pour écrire à la main**, pas un article : puces, f
 
 Croise les résultats : dédoublonne, repère les contradictions entre sources, garde le chiffre le mieux sourcé, signale ce qui n'est pas vérifié.
 
-Écris `newsletter/dossiers/AAAA-MM-JJ-<slug-du-sujet>.md` :
+Écris `newsletter/dossiers/AAAA-MM-JJ-<ID>-<slug-du-sujet>.md` (ID = R4, M1… pour l'afficher sur la page), puis reconstruis et republie la page (`python3 newsletter/app/build.py`, Artifact sur `https://claude.ai/artifact/CKhVmMUZynduL57bPZrDG2`) :
 
 ```markdown
 # <Sujet> — dossier du JJ/MM/AAAA
 <nombre> sources consultées · presse <n> · X <n> · newsletters <n> · primaires <n>
 
 ## L'essentiel en 5 lignes
+## Ton avis à l'épreuve des faits (ce qui le soutient, ce qui le contredit, comment le muscler)
 ## Ce qui s'est passé (chronologie datée)
 ## Les chiffres clés (chacun avec sa source)
 ## Les acteurs et leurs positions
