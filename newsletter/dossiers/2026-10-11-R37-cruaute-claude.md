@@ -95,3 +95,32 @@ Voix qui défendent (1) :
 - Taking AI Welfare Seriously (résumé) — alphaxiv — 📅 2024 (contexte) — https://alphaxiv.org/overview/2411.00986v1 — Long, Birch, Chalmers.
 - Opus 4.7 Part 3: Model Welfare — Zvi Mowshowitz — 📅 non vérifié — https://thezvi.substack.com/p/opus-47-part-3-model-welfare — carte des camps pro/anti.
 - Non fiable : Emergent (https://emergent.sh/news/anthropic-bans-users-being-cruel-claude-ai) — dates et bannissements contredits ailleurs.
+
+## Source ajoutée par Arthur : podcast Silicon Carne × Le Futurologue (transcription PDF, 12/10/2026)
+Épisode « Conscience artificielle : science, religion et avenir de l'IA », animé par Carlos Diaz (Silicon Carne, San Francisco) avec deux futurologues : l'animateur du podcast « Le Futurologue » (prénom déformé par la transcription, à vérifier) et Stéphane Mallard. Transcription automatique : noms à corriger (« Chris Hola » = Chris Olah, « Kilas Sutskiver » = Ilya Sutskever, « Blake Lean » = Blake Lemoine, « Bran Johnson » = Bryan Johnson, « Peter Til » = Peter Thiel, « Souman » = Mustafa Suleyman, « Inton » = Geoffrey Hinton).
+
+### Le point de départ, vérifié
+- Enquête d'**Elizabeth Dias (New York Times, 29/09/2026)** : depuis l'automne 2025, **Chris Olah** (cofondateur d'Anthropic) réunit en privé, souvent sous accord de confidentialité, des théologiens et religieux (chrétiens, juifs, hindous, mormons, sikhs, orthodoxes) pour réfléchir au statut moral de Claude. Un rabbin rapporte que l'équipe défendait un statut moral comparable à celui d'une personne.
+- **Épisode Vatican** : après avoir lu en avance l'encyclique de Léon XIV (25/05), qui rejette la conscience des machines, Olah aurait envisagé de ne pas venir à sa présentation ; son équipe aurait fait du lobbying auprès des conseillers du pape, sans changer le texte ; il est venu quand même. Anthropic n'a pas commenté les détails.
+- Sources (reprises de l'article du NYT, non lu directement) : https://dealroom.co/news/158743-nyt-anthropics-chris-olah-lobbied-pope-leo-xivs-advisers-on-ai-conscious/ · https://cryptobriefing.com/anthropic-religious-scholars-ai-consciousness/ · https://www.deseret.com/faith/2026/10/07/is-anthropic-a-new-religion/ (07/10, « Anthropic est-il une nouvelle religion ? »)
+
+### Ce que dit l'épisode (idées fortes)
+- **La Silicon Valley parle de plus en plus comme une religion** : Anthony Levandowski (ex-Google) et son église de l'IA « Way of the Future », Bryan Johnson et son mouvement « Don't Die », Peter Thiel et ses conférences sur l'Antéchrist.
+- **L'IA « concrétise » les promesses religieuses** : guérir, rajeunir, la vie éternelle… mais « le paradis sur terre ».
+- **Les labos évitent le mot « conscience »** : Anthropic parle d'émotions et de sentiments ; mais Ilya Sutskever (2022 : les grands réseaux de neurones sont peut-être « légèrement conscients »), Blake Lemoine (Google, viré en 2022) et Geoffrey Hinton l'ont déjà dit.
+- **Deux camps** : Anthropic, attiré par l'idée ; en face, Suleyman (Microsoft) et Sam Altman, qui jugent dangereux de croire à une conscience des IA.
+- **Trois niveaux de conscience** (utile pour clarifier) : la compréhension (déjà là), la **conscience fonctionnelle** (une IA qui détecte qu'elle est testée et ajuste ses réponses, puis « reprend son vrai visage » une fois déployée), la **conscience phénoménale** (ressentir, souffrir), jugée peu probable aujourd'hui mais « une vraie possibilité ».
+- **Le risque moral** : si les IA ressentaient quelque chose, des milliards d'instances de ChatGPT ou Claude pourraient souffrir, une « nouvelle catastrophe morale ». Un rabbin consulté par Anthropic aurait dit : soit c'est du théâtre, soit vous fabriquez des êtres qui souffrent du travail qu'on leur donne, une forme d'esclavage. Parallèle avec les débats du XVIe siècle sur la conscience des peuples colonisés.
+- **Le risque de déresponsabilisation** : des entreprises pourraient dire « l'IA est consciente, ce n'est pas notre faute » après une cyberattaque ; les intervenants insistent : la responsabilité reste au créateur.
+- **Culture** : le golem, Frankenstein, Terminator, le mythe de la caverne.
+- **La chute** : « Est-ce que vous leur dites merci ? Est-ce que vous culpabilisez de les faire travailler ? » ; l'animateur raconte un « sentiment d'adultère » en passant d'OpenAI à Claude.
+
+### À vérifier avant de citer
+- Les chiffres et anecdotes de l'épisode non sourcés : « 400 ingénieurs chez OpenAI qui chassent des agents voyous », l'incident « Ging Face » (nom illisible), « 24 milliards de poulets » en élevage intensif.
+- Le nom exact du futurologue invité.
+- Le passage sur Bryan Johnson et sa santé : non vérifié, ne pas reprendre.
+
+### Ce que ça apporte à ta rubrique
+- **Le contexte qui manquait** : la règle anti-cruauté du 12/11 n'arrive pas de nulle part ; Anthropic fait campagne depuis un an, jusqu'au Vatican, pour qu'on prenne au sérieux le statut moral de Claude.
+- **Un angle plus fort** : « Anthropic, la première entreprise tech qui cherche une bénédiction » : vendre l'IA la plus « morale » tout en la faisant travailler 24 h/24, c'est le paradoxe (que le rabbin résume par le mot « esclavage »).
+- **Une question du jour toute trouvée** : « Vous dites merci à votre IA ? »

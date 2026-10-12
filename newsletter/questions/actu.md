@@ -12,3 +12,4 @@
 | A-0008 | Budget 2027 : allez-vous changer de statut ou de montage ? | ouverte | fiscalité | 8 | dispo · expire 08/11 |
 | A-0009 | Claude ou ChatGPT : avez-vous changé d'outil cette année ? | sondage | IA | 7,5 | dispo · expire 08/11 |
 | A-0010 | Quel est l'abonnement le plus dur que vous ayez dû résilier ? | ouverte (fun) | fun | 6,5 | dispo · expire 18/10 |
+| A-0011 | Vous dites merci à votre IA ? | sondage (toujours / parfois / jamais) | IA | 8,5 | dispo · expire 08/11 |
