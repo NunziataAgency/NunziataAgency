@@ -20,7 +20,7 @@ for l in lines:
 seen = {re.sub(r"\W+", " ", re.match(r"\*\*(.+?)\*\*", r).group(1).lower()) for v in old.values() for r in v}
 new = {"R": [], "B": [], "F": []}
 for l in open(brut, encoding="utf-8"):
-    m = re.match(r"^\[?([RBF])\]?\s*\|\s*(\d\d/\d\d)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(\S+|aucun)\s*\|\s*(.+)$", l.strip())
+    m = re.match(r"^\[?([RBF])\]?\s*\|?\s*(\d\d/\d\d)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(\S+|aucun)\s*\|\s*(.+)$", l.strip())
     if not m:
         continue
     k, d, t, fait, url, src = m.groups()
