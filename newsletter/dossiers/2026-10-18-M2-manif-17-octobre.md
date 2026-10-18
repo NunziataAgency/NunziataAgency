@@ -1,0 +1,141 @@
+# Manif du 17 octobre : la facture pour les commerçants et ce qu'elle dit de la France — dossier du 18/10/2026
+19 sources consultées · presse 11 · X 0 (aucun post trouvé, pas d'API X) · newsletters 0 · primaires/études 8
+
+## L'essentiel en 5 lignes
+- Le 17/10 a eu lieu une mobilisation nationale contre la « vie chère » : carburants, fiscalité, coût de la vie. Lycéens, syndicats, gilets jaunes et agriculteurs y ont participé, avec environ 250 appels à des actions et 80 cortèges attendus.
+- **Le bilan pour le commerce :** Alexandre Bompard, président de la Fédération du commerce et de la distribution (FCD) et PDG de Carrefour, estime à **environ 1 500 les commerces directement touchés**, pour **des centaines de millions d'euros** (AFP, 18/10). Plus de 500 personnes ont été placées en garde à vue à Paris. Le Premier ministre annonce que « le bilan va être lourd ».
+- La crise arrive au pire moment :
+  - inflation à 3,1 % en septembre ;
+  - taux d'emprunt de la France à 10 ans (l'OAT) autour de 4,8 % ;
+  - environ 72 000 défaillances d'entreprises sur 12 mois, presque un record.
+  Les petits commerces, déjà fragiles, encaissent un choc de trésorerie.
+- **Sur les taux : les manifs ne sont pas la cause.** Les taux étaient déjà au plus haut avant le 17/10. Ils s'expliquent par la dette, le déficit et le calendrier politique (budget 2027, présidentielle). La manif peut ajouter au climat d'instabilité, mais elle n'explique pas la hausse.
+- **Sur l'expatriation :** le récit « les entrepreneurs partent » est fort, mais les chiffres de départs restent faibles et mal mesurés. Le vrai business se trouve plutôt dans l'accompagnement à l'expatriation (fiscalité, relocalisation).
+
+## Ton avis à l'épreuve des faits
+Ton avis portait sur l'impact business, la hausse des taux, les petits commerçants touchés, le business de l'expatriation et l'avenir de la France.
+- **Ce qui le soutient :**
+  - le chiffre de 1 500 commerces est confirmé par la FCD (même s'il s'agit d'une estimation) ;
+  - les précédents montrent un vrai coût pour les commerçants. Pendant les gilets jaunes, ceux qui étaient touchés ont perdu 20 à 30 % de leur chiffre d'affaires, et les assureurs ont payé 217 M€ ;
+  - le contexte économique est tendu (inflation, taux, défaillances).
+- **Ce qui le contredit :**
+  - **Les taux :** l'OAT était déjà à 4,72-4,90 % début octobre, et l'écart avec l'Allemagne atteignait 121 points fin septembre, son plus haut depuis 2012. Ne lie pas les manifs à la hausse des taux. Dis plutôt que les manifs ajoutent au « risque France » que les marchés font déjà payer.
+  - **L'économie dans son ensemble :** après les émeutes de 2023, qui ont coûté environ 1 Md€, le Sénat a conclu qu'elles n'avaient pas eu « d'incidence majeure sur l'économie française ». C'est un choc pour les commerçants touchés, pas pour le pays.
+  - **L'exode :** en 2018, 49 000 foyers imposables sont partis, soit environ 0,13 % (0,52 % pour les plus de 300 k€ de revenus, selon l'IFRAP). C'est réel, mais marginal.
+- **Pour le muscler :** pars du petit commerçant, qui encaisse la casse, la hausse de ses coûts et des taux plus chers, puis élargis au climat qui pousse certains à partir. Le business de l'expatriation est un angle actionnable, mais présente-le comme une opportunité de niche, pas comme un exode massif.
+
+## Avis divergents (au moins 3 voix)
+1. **Le Sénat** (rapport sur les émeutes de 2023, crédibilité haute) : même avec environ 1 Md€ de dégâts, les émeutes « n'ont cependant pas eu d'incidence majeure sur l'économie française ». Public Sénat, 📅 11/04/2024 — https://www.publicsenat.fr/actualites/parlementaire/emeutes-de-2023-un-cout-colossal-estime-a-un-milliard-deuros-selon-le-rapport-du-senat
+2. **Ce que disent les marchés** (données de taux, crédibilité moyenne, à recouper avec l'Agence France Trésor) : les taux étaient déjà tendus avant le 17/10. L'OAT était à 4,77 % le 30/09 et l'écart avec l'Allemagne à 121 points, au plus haut depuis 2012. Les causes citées sont le déficit, le budget 2027 et la présidentielle.
+   - France Épargne, 📅 ~30/09/2026 — https://www.france-epargne.fr/news/lecart-entre-loat-et-le-bund-atteint-120-points-de-base-un-niveau-inedit-depuis-2012.md
+   - Pretto, 2026 — https://www.pretto.fr/actualites/actualites-2026/hausse-oat-10-ans-impact-taux-credit/
+3. **Les chiffres de l'exil** (IFRAP, think tank libéral, donc partisan dans l'autre sens) : les départs augmentent avec la pression fiscale, mais restent faibles en proportion (environ 0,13 % des foyers imposables en 2018). Le Petit Journal (2013) rappelait qu'il est « techniquement et légalement impossible de différencier » un expatrié d'un exilé fiscal. https://www.ifrap.org/budget-et-fiscalite/exil-fiscal-oui-la-pression-fiscale-sur-les-hauts-revenus-exacerbe-le-nombre-de-departs
+4. **Les manifestants** : leur motif (vie chère, carburants, fiscalité) rejoint en partie ta thèse sur le pouvoir d'achat des petits patrons. Pour Laurent Nuñez, ministre de l'Intérieur, ce sont surtout « l'ultragauche, très souvent en fin de cortège » qui commet les dégradations, pas les manifestants dans leur ensemble (LCP, 16/10).
+
+⚠️ Je n'ai trouvé **aucune réaction d'économiste ni de fédération datée d'après le 17/10**, en dehors de la FCD. Sur X, la recherche n'a rien donné.
+
+## Ce qui s'est passé
+- **Avant le 17/10** :
+  - appels à une « convergence des luttes » contre la vie chère, avec plus de 1 000 manifestations annoncées par les organisateurs (Sud Radio) ;
+  - le ministère prévoyait 250 appels à des actions et 80 cortèges, et la préfecture 20 000 à 40 000 personnes à Paris ;
+  - la grenade assourdissante a été suspendue après qu'un lycéen a perdu une main à Lens.
+- **Le 17/10** :
+  - violences à Paris : rues et magasins saccagés, voitures incendiées, pompiers empêchés d'intervenir ;
+  - à Lille, plusieurs magasins pillés ou saccagés : Optic 2000, le Sephora de la Grand Place, l'Apple Store, un Carrefour City, une agence de la Banque postale et même la boutique du LOSC (AFP via RTS).
+- **Le 18/10** :
+  - plus de 500 gardes à vue à Paris ;
+  - Alexandre Bompard (FCD) parle d'environ 1 500 commerces touchés et de centaines de millions d'euros ;
+  - le Premier ministre déclare : « le bilan va être lourd ».
+
+## Les chiffres clés
+- **Le 17/10 :** environ 1 500 commerces touchés et des centaines de M€ de dégâts (estimation de la FCD, AFP via RTS, 18/10). Plus de 500 gardes à vue à Paris (même source).
+- **Les précédents :**
+  - émeutes de 2023 : environ 1 Md€ au total, 793 M€ payés par les assureurs pour 16 400 sinistres, plus de 1 000 commerces touchés dont 366 agences bancaires, 672 communes concernées (Sénat, France Assureurs) ;
+  - gilets jaunes : 217 M€ payés par les assureurs ; les commerçants touchés ont perdu 20 à 30 % de leur chiffre d'affaires ; à Rennes, 77 % des commerçants du centre ont été touchés, pour 47 M€ de manque à gagner ; l'État a autorisé plus de 38 M€ d'aides pour plus de 5 200 entreprises (Public Sénat, 2019).
+- **Le contexte économique :**
+  - inflation à 3,1 % en septembre, dont +21,3 % sur l'énergie (Insee, 15/10) ;
+  - OAT à 10 ans autour de 4,8 %, écart de 121 points avec l'Allemagne, au plus haut depuis 2012 ;
+  - défaillances d'entreprises : 14 652 au 3e trimestre 2026, environ 72 000 sur 12 mois, un niveau record depuis 2009 en début d'année (Altares).
+- **L'expatriation :**
+  - 49 000 départs de foyers imposables en 2018 (IFRAP) ;
+  - pour partir à Dubaï, l'exit tax (impôt sur les plus-values au départ) impose une garantie de 12,8 % des plus-values ; pour le Portugal, le paiement est suspendu sans garantie (cabinet Kohen Avocats, source commerciale).
+
+## Les acteurs et leurs positions
+- **Alexandre Bompard (FCD, Carrefour)** : chiffre la facture pour le commerce. Attention, Carrefour est lui-même touché (un Carrefour City pillé à Lille).
+- **Laurent Nuñez (ministre de l'Intérieur)** : « On sera extrêmement vigilant et réactif » ; impute la casse à « l'ultragauche, très souvent en fin de cortège » (LCP, 16/10).
+- **Le Premier ministre** : « Le bilan va être lourd ».
+- **Les organisateurs** (lycéens, syndicats, gilets jaunes, agriculteurs) : dénoncent la vie chère, les carburants et la fiscalité.
+- **France Assureurs, CPME, U2P** : pas encore de réaction trouvée. À surveiller cette semaine : chiffrage par les assureurs, aides de l'État, délais de paiement des cotisations sociales pour les commerçants touchés.
+
+## Ce que dit X/Twitter
+Rien trouvé (pas d'API X). À regarder à la main : #17octobre, les comptes de commerçants de Lille et de Paris, la CPME, la FCD.
+
+## Ce que disent les autres newsletters (angles déjà pris → à éviter)
+Aucune newsletter reçue n'a encore traité le bilan du 17/10, qui date d'hier : **l'angle est libre**.
+
+## Les points de débat et ce qui reste incertain
+- Le chiffre de 1 500 commerces et de « centaines de M€ » est une estimation à chaud de la FCD. Il faut attendre le chiffrage des assureurs.
+- On ne sait pas encore quelles aides l'État va débloquer : fonds d'urgence, report des cotisations sociales, garanties.
+- Le lien entre les manifs et la hausse des taux n'est **pas démontré**.
+- Il n'existe aucune statistique récente sur les départs d'entrepreneurs.
+- L'article d'Ouest-France n'a pas pu être lu (accès bloqué). Si tu as le texte, colle-le-moi pour compléter.
+
+## 3 à 5 angles proposés
+1. ⭐ **« Les petits commerçants paient trois fois la facture »**
+   - La thèse : d'abord la casse du 17/10, ensuite l'inflation et l'énergie, enfin des taux et un crédit plus chers. Et ce, avec 72 000 défaillances déjà sur 12 mois.
+   - Les faits : 1 500 commerces touchés, 3,1 % d'inflation, OAT à 4,8 %, les chiffres d'Altares.
+   - La limite : le chiffre de 1 500 est provisoire.
+2. **« Ce n'est pas la manif qui fait monter les taux, c'est le risque France »**
+   - La thèse : les marchés faisaient déjà payer l'instabilité avant le 17/10. La manif est un symptôme, pas la cause.
+   - Original parce que : ça corrige une idée reçue.
+   - La limite : c'est plus technique.
+3. **« Quitter la France : le business florissant de l'expatriation »**
+   - La thèse : à chaque crise, les cabinets de relocalisation et de fiscalité gagnent des clients. Les opportunités sont là : Dubaï, Portugal, accompagnement, exit tax.
+   - La limite : peu de chiffres fiables. L'exode est faible en proportion, il ne faut pas l'exagérer.
+4. **« Quel futur pour entreprendre en France ? »**
+   - La thèse : vie chère, taux, instabilité et casse rendent l'entrepreneuriat plus dur, mais les repreneurs ont des opportunités (on peut faire le lien avec ton sujet boring business du 16/10 : les commerces en difficulté se rachètent pour pas cher).
+   - La limite : le sujet est large et risque d'être flou.
+
+→ **L'angle le plus fort : le 1, avec le 2 en encadré.** Le 1 est concret, frais (personne ne l'a encore traité) et parle à ton lectorat d'entrepreneurs. Le 2 rectifie ton intuition sur les taux. Garde l'expatriation pour une chute « idée business », en restant prudent sur les chiffres.
+
+## Les munitions
+- **Chiffres :**
+  - 1 500 commerces touchés et des centaines de M€ ;
+  - plus de 500 gardes à vue ;
+  - 72 000 défaillances sur 12 mois ;
+  - 20 à 30 % de chiffre d'affaires perdu par les commerçants touchés pendant les gilets jaunes ;
+  - un écart de taux avec l'Allemagne au plus haut depuis 2012.
+- **Citations :**
+  - « Le bilan va être lourd » (le Premier ministre) ;
+  - « l'ultragauche, très souvent en fin de cortège, provoque des dégradations » (Nuñez) ;
+  - les émeutes « n'ont cependant pas eu d'incidence majeure sur l'économie française » (Sénat) ;
+  - « techniquement et légalement impossible de différencier » un expatrié d'un exilé fiscal (Le Petit Journal).
+- **Détails surprenants :** même la boutique du LOSC a été pillée à Lille. Les grenades assourdissantes avaient été suspendues juste avant, après qu'un lycéen a perdu une main.
+- **Ordre de grandeur :** les émeutes de 2023 ont coûté environ 1 Md€. Le 17/10 en est déjà à plusieurs centaines de millions en une seule journée.
+
+## Le stock d'articles
+**Presse**
+- ⭐ « Le bilan va être lourd » après les manifestations (direct AFP) — RTS — 📅 17-18/10/2026 — https://www.rts.ch/info/monde/2026/minute-par-minute/29388542.html — le chiffre de 1 500 commerces, Lille, les 500 gardes à vue — fiabilité bonne (AFP), mais en direct, donc susceptible d'évoluer.
+- ⭐ Article d'origine — Ouest-France — 📅 18/10 — https://www.ouest-france.fr/economie/commerce/manifestations-du-17-octobre-1-500-commercants-touches-des-centaines-de-millions-deuros-de-degats-2133ec34-cadb-11f1-ad87-e24a1a2986e9 — non lu (accès bloqué).
+- Manifestation du 17 octobre : Laurent Nuñez s'attend à une mobilisation importante — LCP — 📅 16/10 — https://lcp.fr/actualites/manifestation-du-17-octobre-laurent-nunez-s-attend-a-une-mobilisation-importante-et — fiabilité haute.
+- 17 octobre : entre 250 et 1 000 actions prévues — Public Sénat — 📅 avant le 17/10 — https://www.publicsenat.fr/actualites/societe/17-octobre-le-mouvement-sorganise-peu-a-peu-entre-250-et-1000-actions-prevues-dans-toute-la-france
+- Vers une convergence des luttes — Sud Radio — https://www.sudradio.fr/sud-radio/manifestations-du-17-octobre-vers-une-convergence-des-luttes-massive-et-une-mobilisation-generale — fiabilité moyenne.
+- Sécurité, grenades, casseurs — Sud Radio — https://www.sudradio.fr/sud-radio/securite-grenades-casseurs-la-mobilisation-du-17-octobre-va-t-elle-sombrer-dans-la-violence — fiabilité moyenne.
+- Inflation à 3,1 % — BFM — 📅 15/10 — https://www.bfmtv.com/economie/l-inflation-atteint-3-1-en-france-son-plus-haut-niveau-depuis-pres-de-trois-ans_AN-202610150251.html
+
+**Précédents et études**
+- ⭐ Émeutes de 2023 : environ 1 milliard d'euros — Public Sénat — 📅 11/04/2024 — https://www.publicsenat.fr/actualites/parlementaire/emeutes-de-2023-un-cout-colossal-estime-a-un-milliard-deuros-selon-le-rapport-du-senat
+- ⭐ Gilets jaunes : une addition salée pour les commerçants — Public Sénat — 📅 2019 — https://www.publicsenat.fr/actualites/politique/gilets-jaunes-une-addition-salee-pour-les-commercants-142455
+- Émeutes : 1 Md€ selon le Medef — Journal de l'Économie — 📅 07/2023 — https://www.journaldeleconomie.fr/emeutes-en-france-un-milliard-deuros-de-degats-selon-le-medef/
+- ⭐ Défaillances au 3e trimestre 2026 — Altares, repris par L'Écho touristique — 📅 10/2026 — https://www.lechotouristique.com/economie/accalmie-sur-le-front-des-defaillances-d-entreprises — et le communiqué du 1er trimestre : https://www.altares.com/wp-content/uploads/CP260414_ALTARES_DEFAILLANCES-ENTREPRISES-T1-2026.pdf
+
+**Taux (avis contraires sur le lien manifs → taux)**
+- Écart OAT-Bund à 120 points — France Épargne — 📅 ~30/09/2026 — https://www.france-epargne.fr/news/lecart-entre-loat-et-le-bund-atteint-120-points-de-base-un-niveau-inedit-depuis-2012.md
+- OAT 10 ans au-dessus de 4 % — Pretto — https://www.pretto.fr/actualites/actualites-2026/hausse-oat-10-ans-impact-taux-credit/
+- OAT à 4,90 % — Selectra — 📅 10/2026 — https://selectra.info/finance/actualites/marche/oat-4-90-pourcent-particulier-revente-echeance — fiabilité faible à moyenne.
+- Données OAT 10 ans — Eco3min — https://eco3min.fr/taux-oat-10-ans-dataset/
+
+**Expatriation**
+- Exil fiscal — IFRAP — https://www.ifrap.org/budget-et-fiscalite/exil-fiscal-oui-la-pression-fiscale-sur-les-hauts-revenus-exacerbe-le-nombre-de-departs — partisan.
+- Exit tax : Portugal ou Dubaï — Kohen Avocats — https://kohenavocats.fr/?p=2135482 — source commerciale.
+- Podcast « Quitter la France : la question qui divise la French Tech » — https://podcast.ausha.co/l-info-des-francais-dans-le-monde/quitter-la-france-la-question-qui-divise-la-french-tech — non écouté.
