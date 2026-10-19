@@ -1,5 +1,25 @@
 # Manif du 17 octobre : la facture pour les commerçants et ce qu'elle dit de la France — dossier du 18/10/2026
-19 sources consultées · presse 11 · X 0 (aucun post trouvé, pas d'API X) · newsletters 0 · primaires/études 8
+26 sources consultées · presse 15 · X 0 (aucun post trouvé, pas d'API X) · newsletters 0 · primaires/études 8
+
+## 🆕 Mise à jour du 19/10 : tes infos + Qonto (à lire en premier)
+**Tes infos (ton texte, à sourcer si tu les cites telles quelles)**
+- 550 000 à 800 000 manifestants contre la vie chère (fourchette police/organisateurs probable — vérifie qui donne quoi).
+- ≥ 1 500 commerces détruits, plusieurs centaines de M€ (✅ confirmé : Alexandre Bompard, FCD, via AFP/RTS).
+- Carrefour « ramasse le verre » d'une cinquantaine de magasins (non revérifié ; cohérent avec le Carrefour City pillé à Lille).
+- L'assureur rembourse vitrine et stock avec les primes de tous ses clients ; émeutes 2023 : 793 M€ pour les assureurs, dont 65 % commerces et entreprises (✅ Sénat / France Assureurs).
+- Le lendemain, chacun son coupable : Nuñez → l'ultragauche (✅ cohérent LCP) ; Marine Le Pen → Jean-Luc Mélenchon ; Mélenchon → médias et police (150 policiers blessés) ; Sébastien Lecornu (Premier ministre) promet de « faire payer les casseurs » (déclarations non revérifiées une à une).
+- **Le paradoxe juridique ✅** : l'article L211-10 du Code de la sécurité intérieure rend l'État civilement responsable, sans faute, des dégâts commis par des attroupements → in fine, le contribuable paie. Nuance utile : il faut des dommages liés « de manière directe et certaine » à des délits commis par un attroupement identifié ; les casseurs organisés « détachés » du cortège peuvent sortir du régime (TA Nîmes ; blog Landot Avocats) → les dossiers sont souvent contestés et longs. Sources : https://blog.landot-avocats.net/2023/03/13/indemnisations-a-la-suite-du-mouvement-des-gilets-jaunes-reparation-des-depredations-oui-des-pertes-dexploitation-a-la-suite-des-blocages-routiers-non/ · https://kohenavocats.fr/?p=2139717 · à vérifier sur Légifrance.
+- Comité interministériel, cellule de crise, numéro vert ; plus de 2 000 interpellations, parquets appelés à la fermeté. ⚠️ Le direct d'Actu17 parlait de 1 200 interpellations le soir même : chiffre en hausse, garde « plus de 2 000 » si ta source est postérieure.
+- **Limoges** : l'hôtel de ville (inauguré en 1883, sur le modèle de celui de Paris) a perdu son campanile de 43 m samedi vers 21h. ✅ Partiellement confirmé : Wikipédia mentionne l'effondrement du campanile de 43 m dans un incendie en 2026 (https://en.wikipedia.org/wiki/H%C3%B4tel_de_Ville,_Limoges) ; lien direct avec la manif non trouvé dans mes recherches — prends la presse régionale (Le Populaire du Centre, France 3 Nouvelle-Aquitaine).
+- ⚠️ La page Wikipédia de l'événement mentionne aussi **un manifestant mort** : à vérifier, ça change le ton (https://fr.wikipedia.org/wiki/Manifestations_du_17_octobre_2026).
+
+**Qonto ✅ (ton lien X illisible, mais confirmé par la presse)**
+- Le **nouveau siège de Qonto** (Grands Boulevards, Paris 10e) a été vandalisé et en partie incendié samedi en marge des manifestations : le tout nouvel auditorium du rez-de-chaussée est détruit, feu circonscrit à cette partie, aucun blessé. Qonto « condamne fermement » et évalue les dégâts. Préfecture : des individus « ont pénétré et dégradé les locaux ».
+- Sources : Maddyness, 18/10 — https://www.maddyness.com/2026/10/18/manifestations-du-17-octobre-le-nouveau-qg-de-qonto-vandalise-et-incendie/ · Actu17 (direct) — https://actu17.fr/faits-divers/en-direct-mobilisation-du-17-octobre-suivez-les-evenements-partout-en-france.html · ton post X : https://x.com/emile_douysset/status/2111763558639739202
+- Symbole fort pour ton lectorat : la néobanque des entrepreneurs et des TPE, licorne de la French Tech, attaquée le jour où les petits commerçants trinquent.
+
+**Angle mis à jour**
+→ ⭐ « Samedi, tout le monde a perdu » : les commerçants (1 500 boutiques), une licorne (Qonto), un patrimoine (Limoges)… et au bout du compte le contribuable, puisque l'article L211-10 fait payer l'État. Puis le contexte (inflation, taux, défaillances) et, en chute, la question de l'avenir : rester, reprendre, ou partir.
 
 ## L'essentiel en 5 lignes
 - Le 17/10 a eu lieu une mobilisation nationale contre la « vie chère » : carburants, fiscalité, coût de la vie. Lycéens, syndicats, gilets jaunes et agriculteurs y ont participé, avec environ 250 appels à des actions et 80 cortèges attendus.
