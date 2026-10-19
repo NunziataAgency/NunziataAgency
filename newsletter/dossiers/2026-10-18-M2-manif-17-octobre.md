@@ -21,6 +21,36 @@
 **Angle mis à jour**
 → ⭐ « Samedi, tout le monde a perdu » : les commerçants (1 500 boutiques), une licorne (Qonto), un patrimoine (Limoges)… et au bout du compte le contribuable, puisque l'article L211-10 fait payer l'État. Puis le contexte (inflation, taux, défaillances) et, en chute, la question de l'avenir : rester, reprendre, ou partir.
 
+## 🆕 Comparaison 17/10/2026 vs émeutes 2023 (sources au 19/10)
+| | Émeutes 2023 (environ une semaine) | 17/10/2026 (une journée) |
+|---|---|---|
+| Coût total | environ 1 Md€ (Sénat, avril 2024 ; 793 M€ déclarés aux assureurs, le reste non déclaré) | « plusieurs centaines de M€ » (FCD, premier chiffrage, « appelé à s'alourdir ») |
+| Commerces | **1 000 à 1 500** vandalisés ou pillés (Sénat) | environ 1 500 (FCD) |
+| Arrestations | environ 3 500 interpellations (Maire-Info) | 2 331 gardes à vue sur le week-end (Darmanin) ; 1 200 interpellations le soir même (AFP) |
+| Bâtiments publics | 2 508 incendiés ou dégradés, dont 105 mairies et 243 écoles | mairies de Limoges et de Lille ; bâtiments publics à Marseille, Lyon, Bordeaux (aucun total) |
+| Autres | 12 031 véhicules brûlés ; 2 morts ; plus de 1 000 blessés dont 782 policiers et gendarmes | Qonto, environ 50 magasins Carrefour, Galeries Lafayette touchées |
+⚠️ Correction : le nombre de commerces touchés est **comparable** à 2023 (1 000 à 1 500), pas 1,5 fois plus. La bonne formule : « en une journée, autant de commerces touchés qu'en une semaine d'émeutes en 2023 ».
+
+**Détail par ville et par enseigne**
+- **Carrefour** : environ 50 magasins touchés, « plusieurs dizaines de millions d'euros » selon Echos Plus ; plus de 10 M€ rien que pour les travaux selon une autre source.
+- **Lyon** : plus de 200 commerces saccagés ou pillés, dégâts en « dizaines de millions d'euros » ; le maire Grégory Doucet demande un fonds d'urgence.
+- **Bordeaux** : 50 à 100 magasins pillés (rue Sainte-Catherine, d'après Sud Ouest via Économie Matin).
+- **Paris** : des rues entières « ravagées » selon le maire Emmanuel Grégoire, aucun chiffrage.
+- **Galeries Lafayette** : « conséquences significatives » sur une grande partie de leur réseau.
+- **Bercy** : réunion des fédérations, des banques et des assureurs pour un premier bilan et des mesures de soutien.
+- **France Assureurs** : aucun chiffrage publié pour l'instant.
+
+**Sources**
+- JDD — https://www.lejdd.fr/Societe/violences-du-17-octobre-1-500-commercants-touches-des-centaines-de-millions-deuros-de-degats-186372
+- Journal du Net — https://www.journaldunet.com/business/action-publique/1556775-les-violences-du-17-octobre-2026-entrainent-des-pertes-majeures-pour-les-commercants/
+- Echos Plus (Carrefour) — https://echosplus.com/2026/10/18/carrefour-alexandre-bompard-estime-les-degats-des-violences-du-17-octobre-a-plusieurs-dizaines-de-millions-deuros/
+- Économie Matin — https://www.economiematin.fr/emeutes-commerces-dommages-17-octobre
+- Lyon (L'Express via Orange) — https://actu.orange.fr/politique/violences-du-17-octobre-de-lourds-degats-a-lyon-le-maire-gregory-doucet-reclame-une-aide-d-urgence-pour-les-communes-et-les-commercants-touches-l-express-via-6medias-CNT000002t9Qd5.html
+- franceinfo — https://www.franceinfo.fr/replay-radio/le-decryptage-eco/apres-les-violences-du-17-octobre-une-facture-de-plusieurs-centaines-de-millions-d-euros-appelee-a-s-alourdir_8222740.html
+- JeChange (comparatif des précédents) — https://www.jechange.fr/credit/news/gilets-jaunes-emeutes-2023-nouvelle-caledonie-facture-casseurs
+- 2023 : Sénat — https://www.senat.fr/rap/r23-521/r23-5218.html · Public Sénat — https://www.publicsenat.fr/actualites/parlementaire/emeutes-de-2023-un-cout-colossal-estime-a-un-milliard-deuros-selon-le-rapport-du-senat · France Assureurs — https://www.franceassureurs.fr/espace-presse/les-communiques-de-presse/cout-sinistres-declares-violences-urbains-fin-juin-reevalue-730millions-euros/ · Maire-Info — https://maire-info.com/neuf-mois-apres-les-emeutes-un-bilan-et-25-propositions-article2-28511
+- Sources marquées politiquement (à ne pas citer seules) : Police & Réalités, Fdesouche.
+
 ## 🆕 Limoges : coût de la restauration de l'hôtel de ville (au 19/10)
 - ✅ Confirmé : incendié le soir du 17/10 en marge de la mobilisation ; le campanile de 43 m (emblème de la ville) s'est effondré ; toiture effondrée sur les étages sauf l'aile ouest ; charpente du XIXe et décors peints perdus. Monument historique classé depuis 1975, inauguré en 1883.
 - **Aucune estimation officielle du coût.** Le maire Guillaume Guérin parle de montants « astronomiques » ; Sébastien Lecornu promet que l'État participera, sans montant ni calendrier.
