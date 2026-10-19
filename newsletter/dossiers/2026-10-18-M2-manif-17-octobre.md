@@ -21,6 +21,23 @@
 **Angle mis à jour**
 → ⭐ « Samedi, tout le monde a perdu » : les commerçants (1 500 boutiques), une licorne (Qonto), un patrimoine (Limoges)… et au bout du compte le contribuable, puisque l'article L211-10 fait payer l'État. Puis le contexte (inflation, taux, défaillances) et, en chute, la question de l'avenir : rester, reprendre, ou partir.
 
+## 🆕 Le coût de la dette après le 17/10 (lundi 19/10)
+- **Réaction des marchés lundi 19/10** : l'OAT à 10 ans frôle **4,85 à 4,95 %** selon les sources ; l'écart avec l'Allemagne (Bund) passe de 137 points (clôture du 16/10) à **142-146 points** (il était de 104 le 22/09) ; le CAC 40 recule de 1,1 à 1,6 %, et les articles relient la baisse aux violences du week-end, juste avant l'examen de la note de la France par **Moody's**. Pour un stratégiste de Pictet AM, à ce niveau d'écart, la dette française se traite comme celle d'un émetteur noté **BB+**, c'est-à-dire en catégorie spéculative.
+  → **Ton intuition « manif → taux » tient désormais, comme accélérateur.** Les taux étaient déjà hauts avant, mais le week-end a élargi l'écart avec l'Allemagne d'environ 5 à 9 points en une séance.
+- **Le budget 2027 (PLF déposé le 01/10)** : la charge de la dette de l'État passe de **62,6 Md€ en 2026 à 72,9 Md€ en 2027**, soit plus que le budget des Armées ; **91,2 Md€** pour l'ensemble des administrations publiques. Le taux moyen d'emprunt monte à 3,55 % en 2026, contre 3,14 % en 2025. Record d'emprunt : **339,7 Md€** à lever en 2027.
+- **Sensibilité** : je n'ai pas trouvé de chiffre officiel 2026. L'ordre de grandeur souvent cité par Bercy et l'Agence France Trésor : +1 point sur tous les taux ≈ +3 Md€ la première année, puis bien plus à mesure que la dette se refinance (près de 20 Md€ au bout d'une dizaine d'années). C'est **de mémoire, à vérifier** dans l'annexe du PLF « charge de la dette ».
+- ⚠️ **À vérifier avant de citer** : Journal du Coin titre « Un mort, Qonto en flammes, Nuñez démissionnaire ». La démission de Laurent Nuñez n'est confirmée nulle part ailleurs dans mes recherches.
+- Sources :
+  - France Épargne, 19/10 — https://www.france-epargne.fr/news/violences-du-week-end-loat-a-dix-ans-frole-5-et-le-cac-40-perd-plus-de-1
+  - Renseignement Économique — https://renseignementeconomique.fr/la-bourse-de-paris-plonge-la-dette-francaise-sous-tension-avant-l-examen-de-moody-s
+  - Contrepoints (sur l'écart de 120 points) — https://contrepoints.org/oat-ou-bund-ce-que-le-spread-de-120-points-de-base-dit-vraiment-du-risque-francais/
+  - Ideal Investisseur (suivi de l'écart) — https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html
+  - franceinfo (340 Md€) — https://www.franceinfo.fr/economie/crise/crise-de-la-dette/la-france-va-emprunter-un-montant-record-de-340-milliards-d-euros-sur-les-marches-en-2027_8215745.html
+  - JeChange (+10,3 Md€) — https://www.jechange.fr/credit/news/charge-dette-ministere-2027-budget-hausse-10-3-milliards
+  - Fondation Jean-Jaurès — https://www.jean-jaures.org/publication/la-charge-de-la-dette-premier-poste-des-depenses-de-letat/
+  - Upside24 (72,9 Md€) — https://www.upside24.com/articles/dette-francaise-72-9-milliards-d-interets-en-2027-plus-que-le-budget-des-armees-721082
+  - Journal du Coin — https://journalducoin.com/actualites/budget-2027-apres-le-17-octobre-la-taxe-sur-les-stablecoins-passe-au-vote-mardi
+
 ## 🆕 Comparaison 17/10/2026 vs émeutes 2023 (sources au 19/10)
 | | Émeutes 2023 (environ une semaine) | 17/10/2026 (une journée) |
 |---|---|---|
