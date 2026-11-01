@@ -1,11 +1,4 @@
-# Liens en bref — 27/10/2026
-
-## B3 — ✅ 📅 09/01
-🇰🇷 **La vague « tout coréen » cartonne : 11,43 Md$ de cosmétiques exportés en 2025, +12,3 %** [Lien](https://en.yna.co.kr/view/AEN20260109010100320)
-
-Variante : 🍜 **Les nouilles instantanées coréennes dépassent 1,5 Md$ d'exports en 2025, +21,9 % grâce à la hype** [Lien](https://en.yna.co.kr/view/AEN20260109010100320)
-
-Vérif : page Yonhap non lisible (fetch bloqué) ; chiffres recoupés via extraits : cosmétiques 11,43 Md$, +12,3 % (ministère de la Sécurité alimentaire et des médicaments ; JoongAng Daily donne 11,8 %), nouilles 1,52 Md$, +21,9 % selon le ministère de l'Agriculture (+21,8 % selon les douanes). Source de 09/01, donc ancienne : contexte seulement. · Autres sources : https://www.koreajoongangdaily.com/business/exports-of-instant-noodles-gain-22-in-2025/12228736, https://www.personalcaremagazine.com/story/50378/korean-cosmetics-exports-hit-11-billion-record-high-in-2025
+# Liens en bref publiés le 30/10/2026
 
 ## B5 — ✅ 📅 23/10
 💶 **French Tech : 270,9 M€ levés en une semaine, dont 82 % pour la seule Pigment** [Lien](https://www.maddyness.com/2026/10/23/french-tech-pres-de-271-millions-deuros-leves-en-une-semaine-portes-par-pigment/)
