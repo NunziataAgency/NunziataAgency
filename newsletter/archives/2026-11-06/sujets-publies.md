@@ -1,0 +1,1 @@
+Publié le 06/11 (« Anthropic s'effondre ») : Anthropic S-1 ; taxe au Go (5,5 c/Go, VideoLAN) ; monde post-AGI ; musique IA et boomeuses ; Lovable données exposées ; levée de fonds (vidéo) ; laser anti-moustiques ; Google coupe Search aux écoles ; sondage Jobs ou Musk ; députés erreur de bouton ; Vitalik voyager ou bosser.
