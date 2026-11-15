@@ -1,2 +1,0 @@
-## Board Members — 14/11
-R | 14/11 | Un business à 500 K€/an né d'un podcast gratuit et d'une planche de surf | Flavie (Board Members) raconte que Le Board était un podcast gratuit pendant 2 ans en parallèle d'un emploi salarié, devenu un média à ~500 K€/an ; c'est l'envie de surfer qui l'a poussée à créer des revenus asynchrones, puis des séjours surf entre solopreneurs. Sa règle : 80 % de focus, 20 % de « quêtes secondaires » (là, DJ techno, premier mix le 18 décembre). | https://boardmembers.substack.com/p/je-me-lance-dans-une-nouvelle-carriere | Board Members
