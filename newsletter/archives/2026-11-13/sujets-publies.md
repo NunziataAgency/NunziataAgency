@@ -1,0 +1,1 @@
+Publié le 13/11 (« Nvidia en chute libre ») : Nvidia/Huang/Megaspeed ; tribunaux noyés par l'IA ; OVNI made in China (triangle noir, Pentagone) ; question du jour affaire sexuelle et business ; sondage études ou dropout ; Anthropic en Bourse (19/11) ; cryptos abandonnés (vidéo) ; Cybertruck arrêté ; Durif contre Lalanne ; Hermès théâtre.
