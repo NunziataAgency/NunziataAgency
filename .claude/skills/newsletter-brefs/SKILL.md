@@ -25,6 +25,7 @@ Une version par sujet, au format exact de `newsletter/style.md` :
 `<emoji> **<titre-phrase de 6 à 15 mots, avec le chiffre ou le détail qui surprend>** [Lien](url)`
 - parfois une prise de position en tête (« J'ai halluciné : », « Insane : », « Cocorico : ») ;
 - uniquement des faits vérifiés ; pas de question, pas d'appel à l'action.
+- **Titres courts et punchy (5 à 10 mots), proches du titre de la veille** : l'auteur préfère ces titres d'origine aux versions rallongées. Ne retravaille pas le titre qu'il donne pour ses propres liens (corrige seulement l'orthographe). Les chiffres et nuances vont dans « Vérif », pas dans le titre.
 
 ## 3. Livrer
 
